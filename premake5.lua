@@ -17,6 +17,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "ODVM/libs/GLFW/include"
 IncludeDir["Glad"] = "ODVM/libs/Glad/include"
 IncludeDir["ImGui"] = "ODVM/libs/ImGui"
+IncludeDir["glm"] = "ODVM/libs/glm/glm"
 
 startproject "Sandbox"
 
@@ -45,7 +46,8 @@ project "ODVM"
 		"%{prj.name}/libs/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links

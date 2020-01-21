@@ -46,6 +46,12 @@
     <ClInclude Include="src\ODVM\ImGui\ImGuiLayer.h">
       <Filter>ODVM\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\Input.h">
+      <Filter>ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\KeyCodes.h">
+      <Filter>ODVM</Filter>
+    </ClInclude>
     <ClInclude Include="src\ODVM\Layer.h">
       <Filter>ODVM</Filter>
     </ClInclude>
@@ -55,20 +61,22 @@
     <ClInclude Include="src\ODVM\Log.h">
       <Filter>ODVM</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\MouseButtonCodes.h">
+      <Filter>ODVM</Filter>
+    </ClInclude>
     <ClInclude Include="src\ODVM\Window.h">
       <Filter>ODVM</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGl\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGl</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\odvmpch.h" />
-    <ClInclude Include="src\ODVM\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\ODVM\KeyCodes.h" />
-    <ClInclude Include="src\ODVM\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ODVM\Application.cpp">
@@ -89,10 +97,12 @@
     <ClCompile Include="src\Platform\OpenGl\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGl</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\odvmpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
