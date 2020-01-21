@@ -1,2 +1,2 @@
-# Hazel-Engine
-A game engine using thecherno's Game Engine series
+# ODVM Engine
+A game engine based on the Hazel Engine
