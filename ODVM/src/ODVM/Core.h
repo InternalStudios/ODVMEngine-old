@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef ODVM_PLATFORM_WINDOWS
-	#ifdef ODVM_BUILD_DLL
-		#define ODVM_API __declspec(dllexport)
+	#ifdef HZ_DYNAMIC_LINK
+		#ifdef ODVM_BUILD_DLL
+			#define ODVM_API __declspec(dllexport)
+		#else
+			#define ODVM_API __declspec(dllimport)
+		#endif 
 	#else
-		#define ODVM_API __declspec(dllimport)
-	#endif 
+		#define ODVM_API
+	#endif
 #else
 	#error Hazel Only Supports Windows!
 #endif

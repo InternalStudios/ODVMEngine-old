@@ -1,5 +1,7 @@
 #include <ODVM.h>
 
+#include "imgui.h"
+
 class ExampleLayer : public ODVM::Layer
 {
 public:
@@ -16,6 +18,15 @@ public:
 			ODVM_TRACE("Tab was pressed");
 	}
 
+	virtual void OnImGuiRender()
+	{
+		bool close = true;
+		ImGui::Begin("Test", &close);
+		ImGui::Text("Hello");
+		ImGui::End();
+
+	}
+
 	void OnEvent(ODVM::Event& event) override
 	{
 		//ODVM_TRACE("{0}", event);
@@ -28,7 +39,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new ODVM::ImGuiLayer());
 	}
 
 	~Sandbox()

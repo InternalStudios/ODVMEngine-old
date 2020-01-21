@@ -13,20 +13,12 @@ namespace ODVM
 		ImGuiLayer();
 		~ImGuiLayer();
 
-		virtual void OnAttach();
-		virtual void OnDetach();
+		virtual void OnAttach() override;
+		virtual void OnDetach() override;
+		virtual void OnImGuiRender() override;
 
-		void OnUpdate();
-		void OnEvent(Event& event);
-	private:
-		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
-		bool OnMouseMovedEvent(MouseMovedEvent& e);
-		bool OnKeyPressedEvent(KeyPressedEvent& e);
-		bool OnKeyTypedEvent(KeyTypedEvent& e);
-		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		bool OnWindowResizedEvent(WindowResizeEvent& e);
+		void Begin();
+		void End();
 	private:
 		float m_Time = 0.0f;
 	};

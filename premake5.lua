@@ -17,7 +17,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "ODVM/libs/GLFW/include"
 IncludeDir["Glad"] = "ODVM/libs/Glad/include"
 IncludeDir["ImGui"] = "ODVM/libs/ImGui"
-IncludeDir["glm"] = "ODVM/libs/glm/glm"
+IncludeDir["glm"] = "ODVM/libs/glm"
 
 startproject "Sandbox"
 
@@ -25,8 +25,10 @@ startproject "Sandbox"
 	
 project "ODVM"
 	location "ODVM"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -37,7 +39,14 @@ project "ODVM"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{IncludeDir.glm}/glm/**.hpp",
+		"%{IncludeDir.glm}/glm/**.inl"
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 	
 	includedirs
@@ -59,7 +68,6 @@ project "ODVM"
 	}
 	
 	filter "system:windows"
-		cppdialect "C++17"
 		staticruntime "Off"
 		systemversion "latest"
 		
@@ -69,11 +77,6 @@ project "ODVM"
 			"_WINDLL",
 			"ODVM_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
-		}
-		
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 		
 	filter "configurations:Debug"
@@ -95,6 +98,8 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -108,7 +113,9 @@ project "Sandbox"
 	includedirs
 	{
 		"ODVM/libs/spdlog/include",
-		"ODVM/src"
+		"ODVM/src",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
@@ -117,7 +124,6 @@ project "Sandbox"
 	}
 	
 	filter "system:windows"
-		cppdialect "C++17"
 		staticruntime "Off"
 		systemversion "latest"
 		
