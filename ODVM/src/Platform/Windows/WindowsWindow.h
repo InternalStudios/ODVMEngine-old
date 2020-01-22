@@ -1,8 +1,10 @@
 #pragma once
 
-#include "ODVM\Window.h"
-#include "ODVM\Log.h"
-#include <GLFW\glfw3.h>
+#include "ODVM/Window.h"
+
+#include "ODVM/Renderer/GraphicsContext.h"
+
+#include "GLFW/glfw3.h"
 
 namespace ODVM
 {
@@ -39,6 +41,7 @@ namespace ODVM
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

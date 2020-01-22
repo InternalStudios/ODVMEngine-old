@@ -14,6 +14,8 @@ int main(int argc, char** argv)
 	auto app = ODVM::CreateApplication();
 	app->run();
 	delete app;
+
+	return 1;
 }
 #else
 #error Doesn't support platform

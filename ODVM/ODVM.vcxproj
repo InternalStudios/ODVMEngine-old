@@ -80,7 +80,7 @@
       <AdditionalIncludeDirectories>src;libs\spdlog\include;libs\GLFW\include;libs\Glad\include;libs\ImGui;libs\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -508,6 +508,8 @@
     <ClInclude Include="libs\glm\glm\vec3.hpp" />
     <ClInclude Include="libs\glm\glm\vec4.hpp" />
     <ClInclude Include="libs\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\ODVM\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLShader.h" />
     <ClInclude Include="src\ODVM.h" />
     <ClInclude Include="src\ODVM\Application.h" />
     <ClInclude Include="src\ODVM\Core.h" />
@@ -523,18 +525,30 @@
     <ClInclude Include="src\ODVM\LayerStack.h" />
     <ClInclude Include="src\ODVM\Log.h" />
     <ClInclude Include="src\ODVM\MouseButtonCodes.h" />
+    <ClInclude Include="src\ODVM\Renderer\Buffer.h" />
+    <ClInclude Include="src\ODVM\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\ODVM\Renderer\Renderer.h" />
+    <ClInclude Include="src\ODVM\Renderer\Shader.h" />
     <ClInclude Include="src\ODVM\Window.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLBuffer.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\odvmpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGl\OpenGLShader.cpp" />
     <ClCompile Include="src\ODVM\Application.cpp" />
     <ClCompile Include="src\ODVM\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\ODVM\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\ODVM\Layer.cpp" />
     <ClCompile Include="src\ODVM\LayerStack.cpp" />
     <ClCompile Include="src\ODVM\Log.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\odvmpch.cpp">

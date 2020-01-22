@@ -43,12 +43,12 @@ project "ODVM"
 		"%{IncludeDir.glm}/glm/**.hpp",
 		"%{IncludeDir.glm}/glm/**.inl"
 	}
-
+	
 	defines
 	{
 		"_CRT_SECURE_NO_WARNINGS"
 	}
-	
+
 	includedirs
 	{
 		"%{prj.name}/src",
@@ -68,7 +68,6 @@ project "ODVM"
 	}
 	
 	filter "system:windows"
-		staticruntime "Off"
 		systemversion "latest"
 		
 		defines
@@ -124,28 +123,27 @@ project "Sandbox"
 	}
 	
 	filter "system:windows"
-		staticruntime "Off"
 		systemversion "latest"
 		
 		defines
 		{
-			"ODVM_PLATFORM_WINDOWS",
+			"ODVM_PLATFORM_WINDOWS"
 		}
 		
 	filter "configurations:Debug"
 		defines "ODVM_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "ODVM_RELEASE"
 		runtime "Release"		
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "ODVM_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 group "Dependencies"
 	include "ODVM/libs/GLFW"

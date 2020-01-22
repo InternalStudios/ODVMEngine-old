@@ -1,13 +1,7 @@
-﻿  odvmpch.cpp
-  Application.cpp
-  ImGuiBuild.cpp
-  ImGuiLayer.cpp
-D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\ImGui\ImGuiLayer.cpp(6,1): warning C4005:  'IMGUI_IMPL_API': macro redefinition
-  Layer.cpp
-  LayerStack.cpp
-  Log.cpp
-  WindowsInput.cpp
+﻿  Application.cpp
+  Buffer.cpp
+  Renderer.cpp
+  Shader.cpp
   WindowsWindow.cpp
   Generating Code...
-D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\imgui.h(63): message :  see previous definition of 'IMGUI_IMPL_API'
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib

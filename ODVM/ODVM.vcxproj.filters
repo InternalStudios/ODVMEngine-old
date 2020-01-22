@@ -1203,6 +1203,13 @@
     <ClInclude Include="src\odvmpch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLContext.h" />
+    <ClInclude Include="src\ODVM\Renderer\Shader.h" />
+    <ClInclude Include="src\ODVM\Renderer\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLBuffer.h" />
+    <ClInclude Include="src\ODVM\Renderer\Renderer.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ODVM\Application.cpp">
@@ -1232,5 +1239,11 @@
     <ClCompile Include="src\odvmpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGl\OpenGLContext.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Shader.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>

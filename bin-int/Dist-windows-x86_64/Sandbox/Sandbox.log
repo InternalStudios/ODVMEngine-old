@@ -1,0 +1,56 @@
+﻿  Application.cpp
+ODVM.lib(Log.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(Layer.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(Application.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(WindowsInput.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(odvmpch.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(WindowsWindow.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(LayerStack.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(ImGuiLayer.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+ODVM.lib(ImGuiBuild.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "public: __cdecl std::_Locinfo::~_Locinfo(void)" (??1_Locinfo@std@@QEAA@XZ) already defined in ODVM.lib(Log.obj)
+msvcprt.lib(MSVCP140.dll) : error LNK2005: "protected: virtual __cdecl std::locale::facet::~facet(void)" (??1facet@locale@std@@MEAA@XZ) already defined in ODVM.lib(Log.obj)
+libcpmt.lib(locale0.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(locale0.obj) : error LNK2005: "protected: __cdecl std::locale::facet::facet(unsigned __int64)" (??0facet@locale@std@@IEAA@_K@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "void __cdecl std::_Facet_Register(class std::_Facet_base *)" (?_Facet_Register@std@@YAXPEAV_Facet_base@1@@Z) already defined in msvcprt.lib(locale0_implib.obj)
+libcpmt.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Init(bool)" (?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_ctor(class std::_Locinfo *,char const *)" (?_Locinfo_ctor@_Locinfo@std@@SAXPEAV12@PEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_dtor(class std::_Locinfo *)" (?_Locinfo_dtor@_Locinfo@std@@SAXPEAV12@@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(locale.obj) : error LNK2005: "public: __cdecl std::_Locinfo::_Locinfo(char const *)" (??0_Locinfo@std@@QEAA@PEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "protected: __cdecl std::locale::facet::facet(unsigned __int64)" (??0facet@locale@std@@IEAA@_K@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: struct _Cvtvec __cdecl std::_Locinfo::_Getcvt(void)const " (?_Getcvt@_Locinfo@std@@QEBA?AU_Cvtvec@@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getfalse(void)const " (?_Getfalse@_Locinfo@std@@QEBAPEBDXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(locale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Gettrue(void)const " (?_Gettrue@_Locinfo@std@@QEBAPEBDXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(iosptrs.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(wlocale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: __cdecl std::_Locinfo::_Locinfo(char const *)" (??0_Locinfo@std@@QEAA@PEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "protected: __cdecl std::locale::facet::facet(unsigned __int64)" (??0facet@locale@std@@IEAA@_K@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: struct _Cvtvec __cdecl std::_Locinfo::_Getcvt(void)const " (?_Getcvt@_Locinfo@std@@QEBA?AU_Cvtvec@@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getfalse(void)const " (?_Getfalse@_Locinfo@std@@QEBAPEBDXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Gettrue(void)const " (?_Gettrue@_Locinfo@std@@QEBAPEBDXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getdays(void)const " (?_W_Getdays@_Locinfo@std@@QEBAPEBGXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(wlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getmonths(void)const " (?_W_Getmonths@_Locinfo@std@@QEBAPEBGXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: __cdecl std::_Locinfo::_Locinfo(char const *)" (??0_Locinfo@std@@QEAA@PEBD@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "protected: __cdecl std::locale::facet::facet(unsigned __int64)" (??0facet@locale@std@@IEAA@_K@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: struct _Cvtvec __cdecl std::_Locinfo::_Getcvt(void)const " (?_Getcvt@_Locinfo@std@@QEBA?AU_Cvtvec@@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getdays(void)const " (?_W_Getdays@_Locinfo@std@@QEBAPEBGXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getmonths(void)const " (?_W_Getmonths@_Locinfo@std@@QEBAPEBGXZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlock.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::_Lockit(int)" (??0_Lockit@std@@QEAA@H@Z) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QEAA@XZ) already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(xdateord.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(xwctomb.obj) : error LNK2005: _Getcvt already defined in msvcprt.lib(MSVCP140.dll)
+libcpmt.lib(StlCompareStringA.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(winapinls.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(StlCompareStringW.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(StlLCMapStringW.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(StlLCMapStringA.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+libcpmt.lib(winapisupp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MD_DynamicRelease' in Application.obj
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+..\bin\Dist-windows-x86_64\Sandbox\Sandbox.exe : fatal error LNK1169: one or more multiply defined symbols found
