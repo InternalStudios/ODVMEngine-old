@@ -10,8 +10,8 @@ namespace ODVM
 	{
 		switch (Renderer::GetAPI())
 		{
-		case ODVM::RendererAPI::None: ODVM_CORE_ERROR("RendererAPI::None is not supported"); return nullptr;
-		case ODVM::RendererAPI::OpenGL: return new OpenGLShader(vertexSrc, pixelSrc);
+		case RendererAPI::API::None: ODVM_CORE_ASSERT(false, "RendererAPI::API::None is not supported"); return nullptr;
+		case RendererAPI::API::OpenGL: return new OpenGLShader(vertexSrc, pixelSrc);
 		}
 
 		ODVM_CORE_ERROR("Unknown API");

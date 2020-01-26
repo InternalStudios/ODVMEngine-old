@@ -508,7 +508,10 @@
     <ClInclude Include="libs\glm\glm\vec3.hpp" />
     <ClInclude Include="libs\glm\glm\vec4.hpp" />
     <ClInclude Include="libs\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\ODVM\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\ODVM\Renderer\RendererAPI.h" />
     <ClInclude Include="src\ODVM\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Platform\OpenGl\OpenGLShader.h" />
     <ClInclude Include="src\ODVM.h" />
     <ClInclude Include="src\ODVM\Application.h" />
@@ -532,11 +535,16 @@
     <ClInclude Include="src\ODVM\Window.h" />
     <ClInclude Include="src\Platform\OpenGl\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGl\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\odvmpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ODVM\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Platform\OpenGl\OpenGLShader.cpp" />
     <ClCompile Include="src\ODVM\Application.cpp" />
     <ClCompile Include="src\ODVM\ImGui\ImGuiBuild.cpp" />
@@ -549,6 +557,7 @@
     <ClCompile Include="src\ODVM\Renderer\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGl\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGl\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\odvmpch.cpp">

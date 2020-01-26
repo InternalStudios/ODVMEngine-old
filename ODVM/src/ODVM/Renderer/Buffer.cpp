@@ -13,9 +13,9 @@ namespace ODVM
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:	ODVM_CORE_ERROR("RendererAPI::None is not supported"); return nullptr;
+		case RendererAPI::API::None: ODVM_CORE_ASSERT(false, "RendererAPI::API::None is not supported"); return nullptr;
 
-		case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+		case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		ODVM_CORE_ERROR("Unknown API");		
@@ -27,9 +27,9 @@ namespace ODVM
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:	ODVM_CORE_ERROR("RendererAPI::None is not supported"); return nullptr;
+			case RendererAPI::API::None:	ODVM_CORE_ERROR("RendererAPI::None is not supported"); return nullptr;
 
-		case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
 		}
 
 		ODVM_CORE_ERROR(false, "Unknown API");

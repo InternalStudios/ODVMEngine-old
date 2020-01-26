@@ -4,25 +4,21 @@
 #include "VertexArray.h"
 #include "Shader.h"
 
+#include "RendererAPI.h"
+
 namespace ODVM
 {
-	enum class RendererAPI
-	{
-		None = 0, OpenGL = 1
-	};
 
 	class Renderer
 	{
 	public:
-		inline static RendererAPI GetAPI() { return s_RendererAPI; }
+		static void BeginScene();
+		static void EndScene();
 
-		inline static Shader* CreateShader(std::string vertexSrc, std::string pixelSrc) { return Shader::Create(vertexSrc, pixelSrc); }
-		inline static VertexBuffer* CreateVertexBuffer(float* vertices, uint32_t size) { return VertexBuffer::Create(vertices, size); }
-		inline static IndexBuffer* CreateIndexBuffer(uint32_t* indices, uint32_t count) { return IndexBuffer::Create(indices, count); }
-	private:
+		static void Submit(const std::shared_ptr<VertexArray>& vertexArray);
 
-		static RendererAPI s_RendererAPI;
 
+		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 	};
 
 }

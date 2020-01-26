@@ -11,5 +11,9 @@
 
 #include "ODVM/ImGui/ImGuiLayer.h"
 
+#include "ODVM/Renderer/Renderer.h"
+#include "ODVM/Renderer/RendererAPI.h"
+#include "ODVM/Renderer/RenderCommand.h"
+
 //Entry Point
 #include "ODVM/EntryPoint.h"

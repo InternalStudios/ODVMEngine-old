@@ -13,9 +13,11 @@ public:
 
 	void OnUpdate() override
 	{
-		//ODVM_INFO("ExampleLayer::Update");
 		if (ODVM::Input::IsKeyPressed(ODVM_KEY_TAB))
 			ODVM_TRACE("Tab was pressed");
+
+
+
 	}
 
 	virtual void OnImGuiRender()

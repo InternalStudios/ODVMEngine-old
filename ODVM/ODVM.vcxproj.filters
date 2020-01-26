@@ -1210,6 +1210,11 @@
     <ClInclude Include="src\Platform\OpenGl\OpenGLBuffer.h" />
     <ClInclude Include="src\ODVM\Renderer\Renderer.h" />
     <ClInclude Include="src\Platform\OpenGl\OpenGLShader.h" />
+    <ClInclude Include="src\ODVM\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLVertexArray.h" />
+    <ClInclude Include="src\ODVM\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\ODVM\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Platform\OpenGl\OpenGLRendererAPI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ODVM\Application.cpp">
@@ -1245,5 +1250,10 @@
     <ClCompile Include="src\Platform\OpenGl\OpenGLBuffer.cpp" />
     <ClCompile Include="src\ODVM\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Platform\OpenGl\OpenGLShader.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Platform\OpenGl\OpenGLRendererAPI.cpp" />
   </ItemGroup>
 </Project>

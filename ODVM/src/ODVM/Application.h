@@ -1,17 +1,18 @@
 #pragma once
 
-#include "Platform/Windows/WindowsInput.h"
 #include "Core.h"
-#include "Events/Event.h"
+
 #include "Window.h"
-#include "ODVM/Events/ApplicationEvent.h"
-#include "ODVM/LayerStack.h"
+#include "LayerStack.h"
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
 
-#include "ODVM/ImGui/ImGuiLayer.h"
+#include "ImGui/ImGuiLayer.h"
 
-#include "ODVM/Renderer/Shader.h"
-
+#include "Renderer/VertexArray.h"
+#include "Renderer/Shader.h"
 #include "Renderer/Buffer.h"
+#include "Renderer/Renderer.h"
 
 
 namespace ODVM
@@ -40,10 +41,11 @@ namespace ODVM
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		unsigned int m_VertexArray;
-		std::unique_ptr<Shader> m_Shader;
-		std::unique_ptr<VertexBuffer> m_VertexBuffer;
-		std::unique_ptr<IndexBuffer> m_IndexBuffer;
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+
+		std::shared_ptr<Shader> m_Shader2;
+		std::shared_ptr<VertexArray> m_SquareVA;
 	private:
 		static Application* s_Instance;
 	};

@@ -1,18 +1,20 @@
 #include <odvmpch.h>
-#include <GLFW/glfw3.h>
-#include <glad/glad.h>
-
 #include "Application.h"
 
 #include "ODVM/Log.h"
 
-#include "ODVM/Renderer/Buffer.h"
-#include "ODVM/Renderer/Renderer.h"
+#include "Input.h"
+
+#include <glm/glm.hpp>
+
+#include "ODVM/Renderer/RenderCommand.h"
 
 namespace ODVM
 {
 
 	Application* Application::s_Instance = nullptr;
+
+
 
 	Application::Application()
 	{
@@ -25,33 +27,69 @@ namespace ODVM
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
-		glGenVertexArrays(1, &m_VertexArray);
-		glBindVertexArray(m_VertexArray);
+		m_VertexArray.reset(VertexArray::Create());
 
-		float vertices[3 * 3] = {
-			-0.5f, -0.5f, 0.0f,
-			0.5f, -0.5f, 0.0f,
-			0.0f, 0.5f, 0.0f
+		float vertices[4 * 7] = {
+			-0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
+			-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
+			0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
+			0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f
+		};
+		std::shared_ptr<VertexBuffer> vertexBuffer;
+		vertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
+
+		BufferLayout layout = {
+			{ShaderDataType::Float3, "a_Position"},
+			{ShaderDataType::Float4, "a_Color"}
 		};
 
-		m_VertexBuffer.reset(Renderer::CreateVertexBuffer(vertices, sizeof(vertices)));
+		vertexBuffer->SetLayout(layout);
+		m_VertexArray->AddVertexBuffer(vertexBuffer);
+		
+		uint32_t indices[4] = { 0, 1, 2, 3 };
+		std::shared_ptr<IndexBuffer> indexBuffer;
+		indexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		m_VertexArray->SetIndexBuffer(indexBuffer);
 
-		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
-	
 
-		uint32_t indices[3] = { 0, 1, 2 };
-		m_IndexBuffer.reset(Renderer::CreateIndexBuffer(indices, sizeof(indices) / sizeof(uint32_t)));
+
+		m_SquareVA.reset(VertexArray::Create());
+		float squareVertices[4 * 3] = {
+			0.0f, 1.0f, 0.0f,
+			0.0f, 0.0f, 0.0f,
+			1.0f, 0.0f, 0.0f,
+			1.0f, 1.0, 0.0f
+		};
+
+
+		std::shared_ptr<VertexBuffer> squareVB;
+		squareVB.reset(VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+
+
+		BufferLayout squareLayout = {
+			{ShaderDataType::Float3, "a_Position"}
+		};
+		squareVB->SetLayout(squareLayout);
+		m_SquareVA->AddVertexBuffer(squareVB);
+
+		uint32_t squareIndices[4] = { 0, 1, 2, 3 };
+		std::shared_ptr<IndexBuffer> squareIB;
+		squareIB.reset(IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		m_SquareVA->SetIndexBuffer(squareIB);
+
 
 		std::string vertexSrc = R"(
 			#version 330 core
 
 			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec4 a_Color;
 
 			out vec3 v_Position;
+			out vec4 v_Color;
 	
 			void main()
 			{
+				v_Color = a_Color;
 				v_Position = a_Position;
 				gl_Position = vec4(a_Position, 1.0);
 			}
@@ -63,14 +101,46 @@ namespace ODVM
 			layout(location = 0) out vec4 color;
 
 			in vec3 v_Position;
+			in vec4 v_Color;
 
 			void main()
 			{
-				color = vec4(v_Position * 0.5 + 0.5, 0.5);
+				color = v_Color;
 			}
 )";
 
-		m_Shader.reset(Renderer::CreateShader(vertexSrc, fragmentSrc));
+		m_Shader.reset(Shader::Create(vertexSrc, fragmentSrc));
+
+		std::string vertexSrc2 = R"(
+			#version 330 core
+
+			layout(location = 0) in vec3 a_Position;
+
+			out vec3 v_Position;
+			out vec4 v_Color;
+	
+			void main()
+			{
+				v_Color = vec4(1.0, 0.0, 1.0, 1.0);
+				v_Position = a_Position;
+				gl_Position = vec4(a_Position, 1.0);
+			}
+		)";
+
+		std::string fragmentSrc2 = R"(
+			#version 330 core
+
+			layout(location = 0) out vec4 color;
+
+
+			void main()
+			{
+				color = vec4(1.0, 0.0, 1.0, 1.0);
+			}
+)";
+
+		m_Shader2.reset(Shader::Create(vertexSrc2, fragmentSrc2));
+
 	}
 
 	Application::~Application()
@@ -106,13 +176,21 @@ namespace ODVM
 	void Application::run()
 	{
 		while (m_Running)
-		{
-			glClearColor(0.2f, 0.2f, 0.2f, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
+		{	
+			RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
+			RenderCommand::Clear();
 
-			m_Shader->Bind();
-			glBindVertexArray(m_VertexArray);
-			glDrawElements(GL_TRIANGLES, m_IndexBuffer->GetCount(), GL_UNSIGNED_INT, nullptr);
+			{
+				Renderer::BeginScene();
+
+				m_Shader2->Bind();
+				Renderer::Submit(m_SquareVA);
+
+				m_Shader->Bind();
+				Renderer::Submit(m_VertexArray);
+
+				Renderer::EndScene();
+			}
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
