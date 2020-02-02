@@ -1149,15 +1149,6 @@
     <ClInclude Include="src\ODVM.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\ODVM\Application.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\Core.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\EntryPoint.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
     <ClInclude Include="src\ODVM\Events\ApplicationEvent.h">
       <Filter>src\ODVM\Events</Filter>
     </ClInclude>
@@ -1172,27 +1163,6 @@
     </ClInclude>
     <ClInclude Include="src\ODVM\ImGui\ImGuiLayer.h">
       <Filter>src\ODVM\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\Input.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\KeyCodes.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\Layer.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\LayerStack.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\Log.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\MouseButtonCodes.h">
-      <Filter>src\ODVM</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ODVM\Window.h">
-      <Filter>src\ODVM</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>src\Platform\Windows</Filter>
@@ -1215,25 +1185,47 @@
     <ClInclude Include="src\ODVM\Renderer\RendererAPI.h" />
     <ClInclude Include="src\ODVM\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGl\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\ODVM\Renderer\Cameras.h" />
+    <ClInclude Include="src\ODVM\Core\Application.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Core.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\EntryPoint.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Input.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\KeyCodes.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Layer.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\LayerStack.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Log.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\MouseButtonCodes.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Window.h">
+      <Filter>src\ODVM</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Core\Timesteps.h" />
+    <ClInclude Include="src\Platform\Windows\Windows.h" />
+    <ClInclude Include="src\ODVM\Core\Platform.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ODVM\Application.cpp">
-      <Filter>src\ODVM</Filter>
-    </ClCompile>
     <ClCompile Include="src\ODVM\ImGui\ImGuiBuild.cpp">
       <Filter>src\ODVM\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\ODVM\ImGui\ImGuiLayer.cpp">
       <Filter>src\ODVM\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ODVM\Layer.cpp">
-      <Filter>src\ODVM</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ODVM\LayerStack.cpp">
-      <Filter>src\ODVM</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ODVM\Log.cpp">
-      <Filter>src\ODVM</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>
@@ -1255,5 +1247,20 @@
     <ClCompile Include="src\ODVM\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\ODVM\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Platform\OpenGl\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\ODVM\Renderer\Cameras.cpp" />
+    <ClCompile Include="src\ODVM\Core\Application.cpp">
+      <Filter>src\ODVM</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\Core\Layer.cpp">
+      <Filter>src\ODVM</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\Core\LayerStack.cpp">
+      <Filter>src\ODVM</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\Core\Log.cpp">
+      <Filter>src\ODVM</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\Core\Platform.cpp" />
+    <ClCompile Include="src\Platform\Windows\Windows.cpp" />
   </ItemGroup>
 </Project>

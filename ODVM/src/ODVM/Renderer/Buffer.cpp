@@ -1,7 +1,7 @@
 #include "odvmpch.h"
 #include "Buffer.h"
 
-#include "ODVM/Core.h"
+#include "ODVM/Core/Core.h"
 
 #include "Platform/OpenGl/OpenGLBuffer.h"
 #include "Renderer.h"

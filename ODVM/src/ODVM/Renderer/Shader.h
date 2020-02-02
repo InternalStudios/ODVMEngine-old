@@ -2,6 +2,8 @@
 
 #include <string.h>
 
+#include <glm/glm.hpp>
+
 namespace ODVM
 {
 
@@ -14,6 +16,8 @@ namespace ODVM
 		virtual void Unbind() const = 0;
 
 		static Shader* Create(std::string vertexSrc, std::string pixelSrc);
+
+		virtual void UploadUniformMat4(const std::string& name, const glm::mat4& mat4) = 0;
 	};
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ODVM/Window.h"
+#include "ODVM/Core/Window.h"
 
 #include "ODVM/Renderer/GraphicsContext.h"
 
@@ -33,6 +33,12 @@ namespace ODVM
 			previousTime = currentTime;
 			return 1 / timePassed;
 		}
+
+
+		void SetTitle(const char* title) override;
+
+
+		std::string GetTitle() const override;
 
 	private:
 		inline static double previousTime = glfwGetTime();

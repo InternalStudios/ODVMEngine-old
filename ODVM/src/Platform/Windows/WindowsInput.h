@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ODVM/Input.h"
+#include "ODVM/Core/Input.h"
 
 namespace ODVM
 {

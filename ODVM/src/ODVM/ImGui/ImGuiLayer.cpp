@@ -6,7 +6,7 @@
 #include "examples/imgui_impl_glfw.h"
 #include "examples/imgui_impl_opengl3.h"
 
-#include "ODVM/Application.h"
+#include "ODVM/Core/Application.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
@@ -42,7 +42,7 @@ namespace ODVM
 		ImGui::StyleColorsDark();
 		//ImGui::StyleColorsClassic();
 
-		// When Viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to
+		// Viewport stuff
 		ImGuiStyle& style = ImGui::GetStyle();
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{
@@ -95,8 +95,6 @@ namespace ODVM
 
 	void ImGuiLayer::OnImGuiRender()
 	{
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
 	}
 
 }

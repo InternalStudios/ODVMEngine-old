@@ -156,10 +156,6 @@ namespace ODVM
 	{
 		glfwPollEvents();
 		m_Context->SwapBuffers();
-		WindowData& data = *(WindowData*)glfwGetWindowUserPointer(m_Window);
-		std::stringstream ss;
-		ss << data.Title << " FPS: " << (int)getFPS();
-		glfwSetWindowTitle(m_Window, ss.str().c_str());
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)
@@ -179,6 +175,16 @@ namespace ODVM
 	bool WindowsWindow::IsVSync() const
 	{
 		return m_Data.VSync;
+	}
+
+	void WindowsWindow::SetTitle(const char* title)
+	{
+		glfwSetWindowTitle(m_Window, title);
+	}
+
+	std::string WindowsWindow::GetTitle() const
+	{
+		return m_Data.Title;
 	}
 
 }

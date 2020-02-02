@@ -1,7 +1,7 @@
 #pragma once
 
 #include <odvmpch.h>
-#include "ODVM/Core.h"
+#include "ODVM/Core/Core.h"
 
 namespace ODVM
 {
