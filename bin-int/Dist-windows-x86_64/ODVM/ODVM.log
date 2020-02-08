@@ -1,17 +1,27 @@
 ﻿  odvmpch.cpp
   Application.cpp
-  ImGuiBuild.cpp
-D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(155,45): warning C4996:  'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message :  see declaration of 'strcpy'
-D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(156,37): warning C4996:  'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(90): message :  see declaration of 'strcat'
-D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(458,1): warning C4996:  'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  ImGuiLayer.cpp
   Layer.cpp
   LayerStack.cpp
   Log.cpp
+  Platform.cpp
+  ImGuiBuild.cpp
+  ImGuiLayer.cpp
+  Buffer.cpp
+  Cameras.cpp
+  RenderCommand.cpp
+  Renderer.cpp
+  RendererAPI.cpp
+  Shader.cpp
+  VertexArray.cpp
+  OpenGLBuffer.cpp
+  OpenGLContext.cpp
+  OpenGLRendererAPI.cpp
+  OpenGLShader.cpp
+  OpenGLVertexArray.cpp
+  Windows.cpp
+  Generating Code...
+  Compiling...
   WindowsInput.cpp
   WindowsWindow.cpp
   Generating Code...
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(2263): message :  see declaration of 'sscanf'
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Dist-windows-x86_64\ODVM\ODVM.lib

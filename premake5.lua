@@ -139,6 +139,7 @@ project "Sandbox"
 		defines "ODVM_RELEASE"
 		runtime "Release"		
 		optimize "on"
+		
 
 	filter "configurations:Dist"
 		defines "ODVM_DIST"

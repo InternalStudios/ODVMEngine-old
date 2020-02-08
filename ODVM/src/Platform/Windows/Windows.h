@@ -9,7 +9,7 @@ namespace ODVM
 	class Windows : public Platform
 	{
 	private:
-		virtual float GetTimeImpl() override { return glfwGetTime(); }
+		virtual float GetTimeImpl() override { return (float)glfwGetTime(); }
 
 	};
 }

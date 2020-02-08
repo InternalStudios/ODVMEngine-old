@@ -1,6 +1,0 @@
-﻿  Application.cpp
-  ImGuiLayer.cpp
-  WindowsInput.cpp
-  WindowsWindow.cpp
-  Generating Code...
-  ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib

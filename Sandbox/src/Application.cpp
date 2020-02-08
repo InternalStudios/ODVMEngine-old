@@ -2,6 +2,8 @@
 
 #include <sstream>
 
+#include <glm/gtc/type_ptr.hpp>
+
 #include "imgui.h"
 
 class ExampleLayer : public ODVM::Layer
@@ -11,6 +13,8 @@ public:
 		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f), m_CameraRotation(0.0f)
 	{
 
+
+
 		m_VertexArray.reset(ODVM::VertexArray::Create());
 
 		float vertices[4 * 7] = {
@@ -19,7 +23,7 @@ public:
 			0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
 			0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f
 		};
-		std::shared_ptr<ODVM::VertexBuffer> vertexBuffer;
+		ODVM::Ref<ODVM::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(ODVM::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		ODVM::BufferLayout layout = {
@@ -31,7 +35,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[4] = { 0, 1, 2, 3 };
-		std::shared_ptr<ODVM::IndexBuffer> indexBuffer;
+		ODVM::Ref<ODVM::IndexBuffer> indexBuffer;
 		indexBuffer.reset(ODVM::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -46,7 +50,7 @@ public:
 		};
 
 
-		std::shared_ptr<ODVM::VertexBuffer> squareVB;
+		ODVM::Ref<ODVM::VertexBuffer> squareVB;
 		squareVB.reset(ODVM::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 
@@ -57,7 +61,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[4] = { 0, 1, 2, 3 };
-		std::shared_ptr<ODVM::IndexBuffer> squareIB;
+		ODVM::Ref<ODVM::IndexBuffer> squareIB;
 		squareIB.reset(ODVM::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -121,12 +125,14 @@ public:
 			#version 330 core
 
 			layout(location = 0) out vec4 color;
-			
+
+			uniform vec3 u_Color;			
+
 			in vec4 v_Color;
 
 			void main()
 			{
-				color = v_Color;
+				color = vec4(u_Color, 1.0);
 			}
 )";
 
@@ -180,25 +186,65 @@ public:
 		ODVM::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
 		ODVM::RenderCommand::Clear();
 
-
-
+		glm::vec3 redColor(0.8f, 0.1f, 0.1f);
+		glm::vec3 magentaColor(1.0f, 0.0f, 1.0f);
 		m_Camera.SetPosition(m_CameraPosition);
 		m_Camera.SetRotation(m_CameraRotation);
 
-
 		ODVM::Renderer::BeginScene(m_Camera);
 
-		glm::vec4 redColor(0.8f, 0.3f, 0.2f, 1.0f);
-		glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
+		for (int y = 0; y < 20; y++)
+		{
+			for (int x = 0; x < 20; x++)
+			{
+				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+				
+				
+				if ((x + y) % 2 == 0)
+				{
+					m_Shader2->UploadUniformFloat3("u_Color", magentaColor);
+				}
+				else
+				{
+					m_Shader2->UploadUniformFloat3("u_Color", color);
+				}
+				
 
-		ODVM::Renderer::Submit(m_SquareVA, m_Shader2);
+				
+				
+				
+				ODVM::Renderer::Submit(m_SquareVA, m_Shader2, transform);
+
+			}
+
+		}
+		
 		ODVM::Renderer::Submit(m_VertexArray, m_Shader);
+
 		ODVM::Renderer::EndScene();
 
 	}
 
 	virtual void OnImGuiRender()
 	{
+		ImGui::Begin("Open/Close");
+		ImGui::SetWindowSize(ImVec2(100, 100));
+		ImGui::Checkbox("Color", &ImGuiOpen);
+		ImGui::End();
+
+		if(ImGuiOpen == true)
+		{
+			ImGui::Begin("Color", &ImGuiOpen, 0);
+			ImGui::SetWindowSize(ImVec2(500, 500));
+			ImGui::ColorEdit3("Color", glm::value_ptr(color));
+			ImGui::End();
+		}
+		else
+		{
+			color.r = 0.0f, color.g = 0.0f, color.b = 0.0f;
+		}
+
 
 
 	}
@@ -210,18 +256,20 @@ public:
 
 
 private:
-	std::shared_ptr<ODVM::Shader> m_Shader;
-	std::shared_ptr<ODVM::VertexArray> m_VertexArray;
+	ODVM::Ref<ODVM::Shader> m_Shader;
+	ODVM::Ref<ODVM::VertexArray> m_VertexArray;
 
-	std::shared_ptr<ODVM::Shader> m_Shader2;
-	std::shared_ptr<ODVM::VertexArray> m_SquareVA;
+	ODVM::Ref<ODVM::Shader> m_Shader2;
+	ODVM::Ref<ODVM::VertexArray> m_SquareVA;
 
 	ODVM::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
 	glm::vec3 m_CameraRotation;
 	float m_CameraSpeed = 2.0f;
 	float m_CameraRotationSpeed = 180.0f;
+	glm::vec3 color;
 
+	bool ImGuiOpen = true;
 
 
 };
