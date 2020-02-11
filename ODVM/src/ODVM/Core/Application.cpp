@@ -26,6 +26,9 @@ namespace ODVM
 		m_Window = Scope<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
 
+		Renderer::Init();
+
+
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
@@ -88,4 +91,5 @@ namespace ODVM
 		m_Running = false;
 		return true;
 	}
+
 }

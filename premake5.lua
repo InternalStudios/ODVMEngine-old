@@ -18,6 +18,7 @@ IncludeDir["GLFW"] = "ODVM/libs/GLFW/include"
 IncludeDir["Glad"] = "ODVM/libs/Glad/include"
 IncludeDir["ImGui"] = "ODVM/libs/ImGui"
 IncludeDir["glm"] = "ODVM/libs/glm"
+IncludeDir["stb"] = "ODVM/libs/stb"
 
 startproject "Sandbox"
 
@@ -40,6 +41,8 @@ project "ODVM"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/libs/stb/**.cpp",
+		"%{prj.name}/libs/stb/**.h",
 		"%{IncludeDir.glm}/glm/**.hpp",
 		"%{IncludeDir.glm}/glm/**.inl"
 	}
@@ -56,7 +59,8 @@ project "ODVM"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb}"
 	}
 
 	links

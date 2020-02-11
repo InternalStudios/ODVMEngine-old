@@ -13,7 +13,7 @@ public:
 		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f), m_CameraRotation(0.0f)
 	{
 
-
+		color.r = 0.0f, color.g = 0.5f, color.b = 1.0f, color.a = 1.0f;
 
 		m_VertexArray.reset(ODVM::VertexArray::Create());
 
@@ -42,11 +42,11 @@ public:
 
 
 		m_SquareVA.reset(ODVM::VertexArray::Create());
-		float squareVertices[4 * 3] = {
-			0.0f, 1.0f, 0.0f,
-			0.0f, 0.0f, 0.0f,
-			1.0f, 0.0f, 0.0f,
-			1.0f, 1.0, 0.0f
+		float squareVertices[4 * 5] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f, 0.5f, 0.0f, 0.0f, 1.0f
 		};
 
 
@@ -55,7 +55,8 @@ public:
 
 
 		ODVM::BufferLayout squareLayout = {
-			{ODVM::ShaderDataType::Float3, "a_Position"}
+			{ODVM::ShaderDataType::Float3, "a_Position"},
+			{ODVM::ShaderDataType::Float2, "a_TextureCoords"}
 		};
 		squareVB->SetLayout(squareLayout);
 		m_SquareVA->AddVertexBuffer(squareVB);
@@ -65,79 +66,14 @@ public:
 		squareIB.reset(ODVM::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
+		m_FlatColorShader = ODVM::Shader::Create("assets/shaders/FlatColor.glsl");
 
-		std::string vertexSrc = R"(
-			#version 330 core
+		m_TextureShader = ODVM::Shader::Create("assets/shaders/Texture.glsl");
 
-			layout(location = 0) in vec3 a_Position;
-			layout(location = 1) in vec4 a_Color;
-
-			uniform mat4 u_ViewProjection;
-			uniform mat4 u_Transform;
-
-
-			out vec3 v_Position;
-			out vec4 v_Color;
-	
-			void main()
-			{
-				v_Color = a_Color;
-				v_Position = a_Position;
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
-			}
-		)";
-
-		std::string fragmentSrc = R"(
-			#version 330 core
-
-			layout(location = 0) out vec4 color;
-
-			in vec3 v_Position;
-			in vec4 v_Color;
-
-			void main()
-			{
-				color = v_Color;
-			}
-)";
-
-		m_Shader.reset(ODVM::Shader::Create(vertexSrc, fragmentSrc));
-
-		std::string vertexSrc2 = R"(
-			#version 330 core
-
-			layout(location = 0) in vec3 a_Position;
-
-			uniform mat4 u_ViewProjection;
-			uniform mat4 u_Transform;
-
-			out vec3 v_Position;
-			out vec4 v_Color;
-	
-			void main()
-			{
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
-				v_Color = vec4(1.0, 0.0, 1.0, 0.5);
-			}
-		)";
-
-		std::string fragmentSrc2 = R"(
-			#version 330 core
-
-			layout(location = 0) out vec4 color;
-
-			uniform vec3 u_Color;			
-
-			in vec4 v_Color;
-
-			void main()
-			{
-				color = vec4(u_Color, 1.0);
-			}
-)";
-
-		m_Shader2.reset(ODVM::Shader::Create(vertexSrc2, fragmentSrc2));
-
+		m_Checkerboard = ODVM::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_Logo = ODVM::Texture2D::Create("assets/textures/ChernoLogo.png");
+		m_TextureShader->Bind();
+		m_TextureShader->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(ODVM::Timestep ts) override
@@ -186,8 +122,8 @@ public:
 		ODVM::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
 		ODVM::RenderCommand::Clear();
 
-		glm::vec3 redColor(0.8f, 0.1f, 0.1f);
-		glm::vec3 magentaColor(1.0f, 0.0f, 1.0f);
+		glm::vec4 redColor(0.8f, 0.1f, 0.1f, 1.0f);
+		glm::vec4 magentaColor(1.0f, 0.0f, 1.0f, 1.0f);
 		m_Camera.SetPosition(m_CameraPosition);
 		m_Camera.SetRotation(m_CameraRotation);
 
@@ -197,30 +133,29 @@ public:
 		{
 			for (int x = 0; x < 20; x++)
 			{
-				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+				glm::vec3 pos(x * 0.11f , y * 0.11f, 0.0f);
 				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 				
 				
 				if ((x + y) % 2 == 0)
 				{
-					m_Shader2->UploadUniformFloat3("u_Color", magentaColor);
+					m_FlatColorShader->UploadUniformFloat4("u_Color", magentaColor);
 				}
 				else
 				{
-					m_Shader2->UploadUniformFloat3("u_Color", color);
+					m_FlatColorShader->UploadUniformFloat4("u_Color", color);
 				}
 				
-
-				
-				
-				
-				ODVM::Renderer::Submit(m_SquareVA, m_Shader2, transform);
+				ODVM::Renderer::Submit(m_SquareVA, m_FlatColorShader, transform);
 
 			}
 
 		}
 		
-		ODVM::Renderer::Submit(m_VertexArray, m_Shader);
+		m_Checkerboard->Bind();
+		ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		m_Logo->Bind();
+		ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		ODVM::Renderer::EndScene();
 
@@ -228,21 +163,30 @@ public:
 
 	virtual void OnImGuiRender()
 	{
-		ImGui::Begin("Open/Close");
-		ImGui::SetWindowSize(ImVec2(100, 100));
-		ImGui::Checkbox("Color", &ImGuiOpen);
+		ImGui::Begin("Settings", (bool*)1, (ImGuiWindowFlags)ImGuiWindowFlags_MenuBar);
+		if (ImGui::BeginMenuBar())
+		{
+			if (ImGui::BeginMenu("Windows"))
+			{
+				ImGui::MenuItem("Color", NULL, &ImGuiOpen);
+				ImGui::EndMenu();
+			}
+
+			ImGui::EndMenuBar();
+		}
 		ImGui::End();
 
 		if(ImGuiOpen == true)
 		{
-			ImGui::Begin("Color", &ImGuiOpen, 0);
-			ImGui::SetWindowSize(ImVec2(500, 500));
-			ImGui::ColorEdit3("Color", glm::value_ptr(color));
+			ImGuiWindowFlags window_flags = 0;
+			window_flags |= ImGuiWindowFlags_MenuBar;
+			ImGui::Begin("Color", &ImGuiOpen, window_flags);
+			ImGui::ColorEdit4("Color", glm::value_ptr(color));
 			ImGui::End();
 		}
 		else
 		{
-			color.r = 0.0f, color.g = 0.0f, color.b = 0.0f;
+			color.r = 0.0f, color.g = 0.5f, color.b = 1.0f, color.a = 1.0f;
 		}
 
 
@@ -256,10 +200,12 @@ public:
 
 
 private:
-	ODVM::Ref<ODVM::Shader> m_Shader;
+
+	ODVM::Ref<ODVM::Shader> m_FlatColorShader;
+	ODVM::Ref<ODVM::Shader> m_TextureShader;
+
 	ODVM::Ref<ODVM::VertexArray> m_VertexArray;
 
-	ODVM::Ref<ODVM::Shader> m_Shader2;
 	ODVM::Ref<ODVM::VertexArray> m_SquareVA;
 
 	ODVM::OrthographicCamera m_Camera;
@@ -267,9 +213,13 @@ private:
 	glm::vec3 m_CameraRotation;
 	float m_CameraSpeed = 2.0f;
 	float m_CameraRotationSpeed = 180.0f;
-	glm::vec3 color;
+	glm::vec4 color;
 
 	bool ImGuiOpen = true;
+
+	bool selected = false;
+
+	ODVM::Ref<ODVM::Texture2D> m_Checkerboard, m_Logo;
 
 
 };
@@ -280,6 +230,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		Application::Get().GetWindow().SetVSync(false);
 	}
 
 	~Sandbox()

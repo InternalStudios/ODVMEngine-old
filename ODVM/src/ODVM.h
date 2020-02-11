@@ -19,6 +19,7 @@
 #include "ODVM/Renderer/Cameras.h"
 #include "ODVM/Renderer/GraphicsContext.h"
 #include "ODVM/Renderer/Shader.h"
+#include "ODVM/Renderer/Texture.h"
 
 #include "ODVM/Events/Event.h"
 #include "ODVM/Events/ApplicationEvent.h"
