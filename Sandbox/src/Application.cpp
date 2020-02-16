@@ -10,9 +10,9 @@ class ExampleLayer : public ODVM::Layer
 {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f), m_CameraRotation(0.0f)
+		: Layer("Example"), m_CameraController((float)ODVM::Application::Get().GetWindow().GetWidth() / (float)ODVM::Application::Get().GetWindow().GetHeight())
 	{
-
+		
 		color.r = 0.0f, color.g = 0.5f, color.b = 1.0f, color.a = 1.0f;
 
 		m_VertexArray.reset(ODVM::VertexArray::Create());
@@ -84,50 +84,18 @@ public:
 		
 
 		std::stringstream ss;
-		ss << ODVM::Application::Get().GetWindow().GetTitle() << " FPS: " << (int)fps << " Camera Coords: X:" << m_CameraPosition.x << ", Y: " << m_CameraPosition.y << ", Z: " << m_CameraPosition.z;
+		ss << ODVM::Application::Get().GetWindow().GetTitle() << " FPS: " << (int)fps << " Camera Coords: X:" << m_CameraController.GetPosition().x << ", Y: " << m_CameraController.GetPosition().y << ", Z: " << m_CameraController.GetPosition().z;
 		ODVM::Application::Get().GetWindow().SetTitle(ss.str().c_str());
 
-
-
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_W))
-		{
-			m_CameraPosition.y += m_CameraSpeed * ts;
-		}
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_S))
-		{
-			m_CameraPosition.y -= m_CameraSpeed * ts;
-		}
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_A))
-			m_CameraPosition.x -= m_CameraSpeed * ts;
-		
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_D))
-			m_CameraPosition.x += m_CameraSpeed * ts;
-
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_Q))
-		{
-			m_CameraRotation.z += m_CameraRotationSpeed * ts;
-			if (m_CameraRotation.z == 360.0f)
-				m_CameraRotation.z = 0.0f;
-
-			if (m_CameraRotation.z == 0.0f)
-				m_CameraRotation.z = 360.0f;
-		}
-		if (ODVM::Input::IsKeyPressed(ODVM_KEY_E))
-		{
-			m_CameraRotation.z -= m_CameraRotationSpeed * ts;
-
-		}
-
+		m_CameraController.OnUpdate(ts);
 
 		ODVM::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
 		ODVM::RenderCommand::Clear();
 
 		glm::vec4 redColor(0.8f, 0.1f, 0.1f, 1.0f);
 		glm::vec4 magentaColor(1.0f, 0.0f, 1.0f, 1.0f);
-		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(m_CameraRotation);
 
-		ODVM::Renderer::BeginScene(m_Camera);
+		ODVM::Renderer::BeginScene(m_CameraController.GetCamera());
 
 		for (int y = 0; y < 20; y++)
 		{
@@ -154,18 +122,25 @@ public:
 		
 		m_Checkerboard->Bind();
 		ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-		m_Logo->Bind();
-		ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-
+		if (texture)
+		{
+			m_Logo->Bind();
+			ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		}
 		ODVM::Renderer::EndScene();
 
 	}
 
 	virtual void OnImGuiRender()
 	{
-		ImGui::Begin("Settings", (bool*)1, (ImGuiWindowFlags)ImGuiWindowFlags_MenuBar);
+		ImGui::Begin("Settings", nullptr, (ImGuiWindowFlags)ImGuiWindowFlags_MenuBar);
 		if (ImGui::BeginMenuBar())
 		{
+			if (ImGui::BeginMenu("File"))
+			{
+				ImGui::MenuItem("Logo", NULL, &texture);
+				ImGui::EndMenu();
+			}
 			if (ImGui::BeginMenu("Windows"))
 			{
 				ImGui::MenuItem("Color", NULL, &ImGuiOpen);
@@ -193,8 +168,10 @@ public:
 
 	}
 
-	void OnEvent(ODVM::Event& event) override
+	void OnEvent(ODVM::Event& e) override
 	{
+		m_CameraController.OnEvent(e);
+
 
 	}
 
@@ -208,20 +185,17 @@ private:
 
 	ODVM::Ref<ODVM::VertexArray> m_SquareVA;
 
-	ODVM::OrthographicCamera m_Camera;
-	glm::vec3 m_CameraPosition;
-	glm::vec3 m_CameraRotation;
-	float m_CameraSpeed = 2.0f;
-	float m_CameraRotationSpeed = 180.0f;
 	glm::vec4 color;
 
 	bool ImGuiOpen = true;
+
+	bool texture;
 
 	bool selected = false;
 
 	ODVM::Ref<ODVM::Texture2D> m_Checkerboard, m_Logo;
 
-
+	ODVM::OrthographicCameraController m_CameraController;
 };
 
 class Sandbox : public ODVM::Application
@@ -230,7 +204,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		Application::Get().GetWindow().SetVSync(false);
 	}
 
 	~Sandbox()

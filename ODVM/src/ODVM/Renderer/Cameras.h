@@ -15,6 +15,8 @@ namespace ODVM
 		virtual const glm::vec3& GetRotation() const = 0;
 		virtual void SetRotation(const glm::vec3& rotation) = 0;
 
+		virtual void SetProjection(float left, float right, float bottom, float top) = 0;
+
 		virtual const glm::mat4& GetProjectionMatrix() const = 0;
 		virtual const glm::mat4& GetViewMatrix() const = 0;
 		virtual const glm::mat4& GetViewProjectionMatrix() const = 0;
@@ -33,9 +35,12 @@ namespace ODVM
 		virtual const glm::vec3& GetRotation() const override { return m_Rotation; }
 		virtual void SetRotation(const glm::vec3& rotation) override { m_Rotation.z = rotation.z; }
 
+		virtual void SetProjection(float left, float right, float bottom, float top);
+
 		virtual const glm::mat4& GetProjectionMatrix() const override { return m_ProjectionMatrix; }
 		virtual const glm::mat4& GetViewMatrix() const override { return m_ViewMatrix; }
 		virtual const glm::mat4& GetViewProjectionMatrix() const override { return m_ViewProjectionMatrix; }
+
 
 		virtual void OnUpdate();
 

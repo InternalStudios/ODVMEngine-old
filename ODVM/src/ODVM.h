@@ -17,6 +17,7 @@
 #include "ODVM/Renderer/VertexArray.h"
 #include "ODVM/Renderer/Buffer.h"
 #include "ODVM/Renderer/Cameras.h"
+#include "ODVM/Core/CameraControllers.h"
 #include "ODVM/Renderer/GraphicsContext.h"
 #include "ODVM/Renderer/Shader.h"
 #include "ODVM/Renderer/Texture.h"

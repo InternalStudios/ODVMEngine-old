@@ -40,12 +40,14 @@ namespace ODVM
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+		bool OnWindowResize(WindowResizeEvent& e);
 
 		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
+		bool m_Minimized = false;
 
 	private:
 		static Application* s_Instance;

@@ -55,6 +55,7 @@ namespace ODVM
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(Application::OnWindowResize));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
@@ -68,21 +69,20 @@ namespace ODVM
 	{
 		while (m_Running)
 		{
-			
-
 			Timestep timestep;
+			if (!m_Minimized)
+			{
 
+				for (Layer* layer : m_LayerStack)
+					layer->OnUpdate(timestep);
+			}
 
+				m_ImGuiLayer->Begin();
+				for (Layer* layer : m_LayerStack)
+					layer->OnImGuiRender();
+				m_ImGuiLayer->End();
 
-			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate(timestep);
-
-			m_ImGuiLayer->Begin();
-			for (Layer* layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
-
-			m_Window->OnUpdate();
+				m_Window->OnUpdate();
 		}
 	}
 
@@ -92,4 +92,18 @@ namespace ODVM
 		return true;
 	}
 
+	bool Application::OnWindowResize(WindowResizeEvent& e)
+	{
+		if (e.GetHeight() == 0 || e.GetWidth() == 0)
+		{
+			m_Minimized = true;
+			return false;
+		}
+
+		m_Minimized = false;
+
+		Renderer::OnWindowResize(e.GetWidth(), e.GetHeight());
+
+		return false;
+	}
 }

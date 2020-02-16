@@ -511,6 +511,7 @@
     <ClInclude Include="libs\stb\stb_image.h" />
     <ClInclude Include="src\ODVM.h" />
     <ClInclude Include="src\ODVM\Core\Application.h" />
+    <ClInclude Include="src\ODVM\Core\CameraControllers.h" />
     <ClInclude Include="src\ODVM\Core\Core.h" />
     <ClInclude Include="src\ODVM\Core\EntryPoint.h" />
     <ClInclude Include="src\ODVM\Core\Input.h" />
@@ -550,6 +551,7 @@
   <ItemGroup>
     <ClCompile Include="libs\stb\stb_image.cpp" />
     <ClCompile Include="src\ODVM\Core\Application.cpp" />
+    <ClCompile Include="src\ODVM\Core\CameraControllers.cpp" />
     <ClCompile Include="src\ODVM\Core\Layer.cpp" />
     <ClCompile Include="src\ODVM\Core\LayerStack.cpp" />
     <ClCompile Include="src\ODVM\Core\Log.cpp" />

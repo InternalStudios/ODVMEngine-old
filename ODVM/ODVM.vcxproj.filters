@@ -1272,6 +1272,7 @@
     <ClInclude Include="src\odvmpch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\Core\CameraControllers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libs\stb\stb_image.cpp">
@@ -1352,5 +1353,6 @@
     <ClCompile Include="src\odvmpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\ODVM\Core\CameraControllers.cpp" />
   </ItemGroup>
 </Project>
