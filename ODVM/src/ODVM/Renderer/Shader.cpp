@@ -6,7 +6,7 @@
 
 namespace ODVM
 {
-	Ref<Shader> Shader::Create(std::string name, std::string vertexSrc, std::string pixelSrc)
+	Ref<Shader> Shader::Create(const std::string& name, const std::string& vertexSrc, const std::string& pixelSrc)
 	{
 		switch (Renderer::GetAPI())
 		{
@@ -18,7 +18,7 @@ namespace ODVM
 		return nullptr;
 	}
 
-	Ref<Shader> Shader::Create(std::string path)
+	Ref<Shader> Shader::Create(const std::string& path)
 	{
 		switch (Renderer::GetAPI())
 		{
@@ -37,8 +37,9 @@ namespace ODVM
 
 	void ShaderLibrary::AddShader(const std::string& name, const Ref<Shader>& shader)
 	{
-		ODVM_CORE_ASSERT(m_Shaders->find(shader->GetName()) != m_Shaders.end(), "Shader already exists!");
-		m_Shaders[shader->GetName()] = shader;
+		auto duplicate = m_Shaders.find(name) != m_Shaders.end();
+		ODVM_CORE_ASSERT(!duplicate, "Shader already exists!");
+		m_Shaders[name] = shader;
 	}
 
 	Ref<Shader> ShaderLibrary::Load(const std::string& path)

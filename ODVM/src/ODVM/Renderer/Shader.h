@@ -21,8 +21,8 @@ namespace ODVM
 
 		virtual std::string& GetName() = 0;
 
-		static Ref<Shader> Create(const std::string name, const std::string vertexSrc, const std::string pixelSrc);
-		static Ref<Shader> Create(const std::string path);
+		static Ref<Shader> Create(const std::string& name, const std::string& vertexSrc, const std::string& pixelSrc);
+		static Ref<Shader> Create(const std::string& path);
 
 		virtual void UploadUniformInt(const std::string& name, int value) = 0;
 

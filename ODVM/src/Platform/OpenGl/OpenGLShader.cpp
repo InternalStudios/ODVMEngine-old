@@ -77,8 +77,9 @@ namespace ODVM
 			ODVM_CORE_ASSERT(ShaderTypeFromString(type), "Invalid shader type!");
 
 			size_t nextLinePos = src.find_first_not_of("\r\n", eol);
+			ODVM_CORE_ASSERT(nextLinePos != std::string::npos, "Syntax error");
 			pos = src.find(typeToken, nextLinePos);
-			shaderSrcs[ShaderTypeFromString(type)] = src.substr(nextLinePos, pos - (nextLinePos == std::string::npos ? src.size() - 1 : nextLinePos));
+			shaderSrcs[ShaderTypeFromString(type)] = (pos == std::string::npos) ? src.substr(nextLinePos) : src.substr(nextLinePos, pos - nextLinePos);
 		}
 		return shaderSrcs;
 	}
@@ -160,7 +161,9 @@ namespace ODVM
 		for (auto shader : glShaderIDs)
 		{
 			glDetachShader(m_RendererID, shader);
+			glDeleteShader(shader);
 		}
+
 	}
 
 	OpenGLShader::~OpenGLShader()

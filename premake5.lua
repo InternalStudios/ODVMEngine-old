@@ -76,7 +76,6 @@ project "ODVM"
 		
 		defines
 		{
-			"ODVM_PLATFORM_WINDOWS",
 			"_WINDLL",
 			"ODVM_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
@@ -128,11 +127,6 @@ project "Sandbox"
 	
 	filter "system:windows"
 		systemversion "latest"
-		
-		defines
-		{
-			"ODVM_PLATFORM_WINDOWS"
-		}
 		
 	filter "configurations:Debug"
 		defines "ODVM_DEBUG"

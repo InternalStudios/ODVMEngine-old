@@ -31,6 +31,9 @@
     <Filter Include="src\ODVM">
       <UniqueIdentifier>{92AD22CF-7E7A-7DDA-A793-6B8293BFB268}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\ODVM\CameraControllers">
+      <UniqueIdentifier>{21712D3C-0D81-D90C-763A-3E2B6269C8A5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\ODVM\Core">
       <UniqueIdentifier>{2A1DE178-96DD-5CAF-5F18-A62CCB97A18B}</UniqueIdentifier>
     </Filter>
@@ -1164,6 +1167,9 @@
     <ClInclude Include="src\ODVM.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\CameraControllers\CameraControllers.h">
+      <Filter>src\ODVM\CameraControllers</Filter>
+    </ClInclude>
     <ClInclude Include="src\ODVM\Core\Application.h">
       <Filter>src\ODVM\Core</Filter>
     </ClInclude>
@@ -1272,11 +1278,13 @@
     <ClInclude Include="src\odvmpch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\ODVM\Core\CameraControllers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libs\stb\stb_image.cpp">
       <Filter>libs\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\CameraControllers\CameraControllers.cpp">
+      <Filter>src\ODVM\CameraControllers</Filter>
     </ClCompile>
     <ClCompile Include="src\ODVM\Core\Application.cpp">
       <Filter>src\ODVM\Core</Filter>
@@ -1353,6 +1361,5 @@
     <ClCompile Include="src\odvmpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ODVM\Core\CameraControllers.cpp" />
   </ItemGroup>
 </Project>

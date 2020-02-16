@@ -25,16 +25,6 @@ namespace ODVM
 
 		inline virtual void* GetNativeWindow() const { return m_Window; }
 
-		static double getFPS()
-		{
-			double currentTime = glfwGetTime();
-			double timePassed = currentTime - previousTime;
-
-			previousTime = currentTime;
-			return 1 / timePassed;
-		}
-
-
 		void SetTitle(const char* title) override;
 
 
@@ -47,7 +37,7 @@ namespace ODVM
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
-		GraphicsContext* m_Context;
+		Scope<GraphicsContext> m_Context;
 
 		struct WindowData
 		{

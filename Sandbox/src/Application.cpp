@@ -10,7 +10,7 @@ class ExampleLayer : public ODVM::Layer
 {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_CameraController((float)ODVM::Application::Get().GetWindow().GetWidth() / (float)ODVM::Application::Get().GetWindow().GetHeight())
+		: Layer("Example"), m_CameraController((float)ODVM::Application::Get().GetWindow().GetWidth() / (float)ODVM::Application::Get().GetWindow().GetHeight(), true)
 	{
 		
 		color.r = 0.0f, color.g = 0.5f, color.b = 1.0f, color.a = 1.0f;
@@ -66,14 +66,14 @@ public:
 		squareIB.reset(ODVM::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
-		m_FlatColorShader = ODVM::Shader::Create("assets/shaders/FlatColor.glsl");
+		m_Library.Load("assets/shaders/FlatColor.glsl");
 
-		m_TextureShader = ODVM::Shader::Create("assets/shaders/Texture.glsl");
+		m_Library.Load("assets/shaders/Texture.glsl");
 
 		m_Checkerboard = ODVM::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_Logo = ODVM::Texture2D::Create("assets/textures/ChernoLogo.png");
-		m_TextureShader->Bind();
-		m_TextureShader->UploadUniformInt("u_Texture", 0);
+		m_Library.GetShader("Texture")->Bind();
+		m_Library.GetShader("Texture")->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(ODVM::Timestep ts) override
@@ -107,25 +107,25 @@ public:
 				
 				if ((x + y) % 2 == 0)
 				{
-					m_FlatColorShader->UploadUniformFloat4("u_Color", magentaColor);
+					m_Library.GetShader("FlatColor")->UploadUniformFloat4("u_Color", magentaColor);
 				}
 				else
 				{
-					m_FlatColorShader->UploadUniformFloat4("u_Color", color);
+					m_Library.GetShader("FlatColor")->UploadUniformFloat4("u_Color", color);
 				}
 				
-				ODVM::Renderer::Submit(m_SquareVA, m_FlatColorShader, transform);
+				ODVM::Renderer::Submit(m_SquareVA, m_Library.GetShader("FlatColor"), transform);
 
 			}
 
 		}
 		
 		m_Checkerboard->Bind();
-		ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		ODVM::Renderer::Submit(m_SquareVA, m_Library.GetShader("Texture"), glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		if (texture)
 		{
 			m_Logo->Bind();
-			ODVM::Renderer::Submit(m_SquareVA, m_TextureShader, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+			ODVM::Renderer::Submit(m_SquareVA, m_Library.GetShader("Texture"), glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		}
 		ODVM::Renderer::EndScene();
 
@@ -178,8 +178,7 @@ public:
 
 private:
 
-	ODVM::Ref<ODVM::Shader> m_FlatColorShader;
-	ODVM::Ref<ODVM::Shader> m_TextureShader;
+	ODVM::ShaderLibrary m_Library;
 
 	ODVM::Ref<ODVM::VertexArray> m_VertexArray;
 

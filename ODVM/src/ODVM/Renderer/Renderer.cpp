@@ -6,6 +6,8 @@
 namespace ODVM
 {
 
+	Scope<Renderer::SceneData> Renderer::m_SceneData = CreateScope<Renderer::SceneData>();
+
 	void Renderer::Init()
 	{
 		RenderCommand::Init();
@@ -16,7 +18,6 @@ namespace ODVM
 		RenderCommand::SetViewport(0, 0, width, height);
 	}
 
-	Renderer::SceneData* Renderer::m_SceneData = new Renderer::SceneData;
 
 	void Renderer::BeginScene(Camera& camera)
 	{

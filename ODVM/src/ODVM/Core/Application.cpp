@@ -20,6 +20,9 @@ namespace ODVM
 
 	Application::Application()
 	{
+		#ifdef ODVM_PLATFORM_WINDOWS
+		ODVM_CORE_INFO("Platform: Windows (x64)");
+		#endif
 		ODVM_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
@@ -31,6 +34,7 @@ namespace ODVM
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
+
 
 	}
 

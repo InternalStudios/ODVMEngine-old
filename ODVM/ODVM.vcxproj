@@ -76,7 +76,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>odvmpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ODVM_PLATFORM_WINDOWS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;libs\spdlog\include;libs\GLFW\include;libs\Glad\include;libs\ImGui;libs\glm;libs\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -96,7 +96,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>odvmpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ODVM_PLATFORM_WINDOWS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;libs\spdlog\include;libs\GLFW\include;libs\Glad\include;libs\ImGui;libs\glm;libs\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -120,7 +120,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>odvmpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ODVM_PLATFORM_WINDOWS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDLL;ODVM_BUILD_DLL;GLFW_INCLUDE_NONE;ODVM_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;libs\spdlog\include;libs\GLFW\include;libs\Glad\include;libs\ImGui;libs\glm;libs\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -510,8 +510,8 @@
     <ClInclude Include="libs\glm\glm\vector_relational.hpp" />
     <ClInclude Include="libs\stb\stb_image.h" />
     <ClInclude Include="src\ODVM.h" />
+    <ClInclude Include="src\ODVM\CameraControllers\CameraControllers.h" />
     <ClInclude Include="src\ODVM\Core\Application.h" />
-    <ClInclude Include="src\ODVM\Core\CameraControllers.h" />
     <ClInclude Include="src\ODVM\Core\Core.h" />
     <ClInclude Include="src\ODVM\Core\EntryPoint.h" />
     <ClInclude Include="src\ODVM\Core\Input.h" />
@@ -550,8 +550,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libs\stb\stb_image.cpp" />
+    <ClCompile Include="src\ODVM\CameraControllers\CameraControllers.cpp" />
     <ClCompile Include="src\ODVM\Core\Application.cpp" />
-    <ClCompile Include="src\ODVM\Core\CameraControllers.cpp" />
     <ClCompile Include="src\ODVM\Core\Layer.cpp" />
     <ClCompile Include="src\ODVM\Core\LayerStack.cpp" />
     <ClCompile Include="src\ODVM\Core\Log.cpp" />

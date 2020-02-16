@@ -1,0 +1,31 @@
+﻿  odvmpch.cpp
+  stb_image.cpp
+  CameraControllers.cpp
+  Application.cpp
+  Layer.cpp
+  LayerStack.cpp
+  Log.cpp
+  Platform.cpp
+  ImGuiBuild.cpp
+  ImGuiLayer.cpp
+  Buffer.cpp
+  Cameras.cpp
+  RenderCommand.cpp
+  Renderer.cpp
+  RendererAPI.cpp
+  Shader.cpp
+  Texture.cpp
+  VertexArray.cpp
+  OpenGLBuffer.cpp
+  OpenGLContext.cpp
+  OpenGLRendererAPI.cpp
+  Generating Code...
+  Compiling...
+  OpenGLShader.cpp
+  OpenGLTexture.cpp
+  OpenGLVertexArray.cpp
+  Windows.cpp
+  WindowsInput.cpp
+  WindowsWindow.cpp
+  Generating Code...
+  ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Release-windows-x86_64\ODVM\ODVM.lib
