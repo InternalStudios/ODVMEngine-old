@@ -7,12 +7,12 @@
 
 namespace ODVM
 {
-	VertexArray* VertexArray::Create()
+	Ref<VertexArray> VertexArray::Create()
 	{
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None: ODVM_CORE_ASSERT(false, "RendererAPI::API::None is not supported"); return nullptr;
-			case RendererAPI::API::OpenGL: return new OpenGLVertexArray();
+			case RendererAPI::API::OpenGL: return std::make_shared<OpenGLVertexArray>();
 		}
 
 		ODVM_CORE_ERROR("Unknown API");

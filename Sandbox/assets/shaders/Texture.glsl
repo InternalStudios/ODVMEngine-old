@@ -19,13 +19,13 @@ void main()
 #version 330 core
 
 layout(location = 0) out vec4 color;
-
-uniform sampler2D u_Texture;	
-
 in vec2 v_TextureCoords;
 
+uniform sampler2D u_Texture;	
+uniform float u_Size;	
+uniform vec4 u_Color;
 
 void main()
 {
-	color = texture(u_Texture, v_TextureCoords);
+	color = texture(u_Texture, v_TextureCoords * u_Size) * u_Color;
 }

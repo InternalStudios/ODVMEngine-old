@@ -1,2 +1,34 @@
-﻿  Application.cpp
+﻿  odvmpch.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.h(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  stb_image.cpp
+  CameraControllers.cpp
+  Application.cpp
+  Layer.cpp
+  LayerStack.cpp
+  Log.cpp
+  Platform.cpp
+  ImGuiBuild.cpp
+  ImGuiLayer.cpp
+  Buffer.cpp
+  Cameras.cpp
+  RenderCommand.cpp
+  Renderer.cpp
+  Renderer2D.cpp
+  RendererAPI.cpp
+  Shader.cpp
+  Texture.cpp
+  VertexArray.cpp
+  OpenGLBuffer.cpp
+  OpenGLContext.cpp
+  Generating Code...
+  Compiling...
+  OpenGLRendererAPI.cpp
+  OpenGLShader.cpp
+  OpenGLTexture.cpp
+  OpenGLVertexArray.cpp
+  VulkanContext.cpp
+  Windows.cpp
+  WindowsInput.cpp
+  WindowsWindow.cpp
+  Generating Code...
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib

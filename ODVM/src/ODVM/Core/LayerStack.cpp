@@ -12,7 +12,7 @@ namespace ODVM
 	{
 		for (Layer* layer : m_Layers)
 		{
-			layer->OnDetach()
+			layer->OnDetach();
 			delete layer;
 		}
 	}

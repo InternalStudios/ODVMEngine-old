@@ -25,6 +25,17 @@ namespace ODVM
 
 		std::string& GetName() override { return m_Name; };
 
+
+		void SetInt(const std::string& name, int value) override;
+
+		void SetFloat(const std::string& name, float value) override;
+		void SetFloat2(const std::string& name, const glm::vec2& vec2) override;
+		void SetFloat3(const std::string& name, const glm::vec3& vec3) override;
+		void SetFloat4(const std::string& name, const glm::vec4& vec4) override;
+
+		void SetMat3(const std::string& name, const glm::mat3& mat3) override;
+		void SetMat4(const std::string& name, const glm::mat4& mat4) override;
+
 	private:
 		std::string ReadFile(const std::string& path);
 		std::unordered_map<GLenum, std::string> PreProcess(const std::string& src);

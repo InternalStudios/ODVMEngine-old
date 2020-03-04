@@ -19,6 +19,7 @@ IncludeDir["Glad"] = "ODVM/libs/Glad/include"
 IncludeDir["ImGui"] = "ODVM/libs/ImGui"
 IncludeDir["glm"] = "ODVM/libs/glm"
 IncludeDir["stb"] = "ODVM/libs/stb"
+IncludeDir["vulkan"] = "ODVM/libs/Vulkan/1.1.130.0"
 
 startproject "Sandbox"
 
@@ -60,7 +61,9 @@ project "ODVM"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb}"
+		"%{IncludeDir.stb}",
+		"%{IncludeDir.vulkan}/Include"
+		
 	}
 
 	links
@@ -69,6 +72,11 @@ project "ODVM"
 		"Glad",
 		"ImGui",
 		"opengl32.lib"
+	}
+	
+	libdirs
+	{
+		"%{IncludeDir.vulkan}/Lib"
 	}
 	
 	filter "system:windows"
@@ -123,6 +131,11 @@ project "Sandbox"
 	links
 	{
 		"ODVM"
+	}
+	
+	libdirs
+	{
+		"%{IncludeDir.vulkan}/Lib"
 	}
 	
 	filter "system:windows"

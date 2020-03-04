@@ -9,6 +9,7 @@ namespace ODVM
 	public:
 		inline static void Init()
 		{
+
 			s_RendererAPI->Init();
 		}
 
@@ -29,6 +30,8 @@ namespace ODVM
 		inline static void DrawIndexed(const Ref<VertexArray>& vertexArray)
 		{
 			s_RendererAPI->DrawIndexed(vertexArray);
+
+
 		}
 
 	private:

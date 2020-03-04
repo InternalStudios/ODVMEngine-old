@@ -15,6 +15,8 @@ namespace ODVM
 
 	void OpenGLContext::Init()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		ODVM_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -36,6 +38,7 @@ namespace ODVM
 
 	void OpenGLContext::SwapBuffers()
 	{
+		ODVM_PROFILE_FUNCTION();
 		glfwSwapBuffers(m_WindowHandle);
 	}
 

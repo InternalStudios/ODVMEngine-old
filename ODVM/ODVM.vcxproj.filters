@@ -37,6 +37,9 @@
     <Filter Include="src\ODVM\Core">
       <UniqueIdentifier>{2A1DE178-96DD-5CAF-5F18-A62CCB97A18B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\ODVM\Debug">
+      <UniqueIdentifier>{881D1195-74EB-049B-5D7F-75C149ECE0FF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\ODVM\Events">
       <UniqueIdentifier>{3621BF3A-A2AC-2CFF-ABBD-AFF317C888FF}</UniqueIdentifier>
     </Filter>
@@ -51,6 +54,9 @@
     </Filter>
     <Filter Include="src\Platform\OpenGl">
       <UniqueIdentifier>{55A49437-C105-7245-4A73-B8F7B6D3A804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Vulkan">
+      <UniqueIdentifier>{81084748-ED69-2456-76D7-6A08E2375B15}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform\Windows">
       <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
@@ -1206,6 +1212,9 @@
     <ClInclude Include="src\ODVM\Core\Window.h">
       <Filter>src\ODVM\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\Debug\Instrumentor.h">
+      <Filter>src\ODVM\Debug</Filter>
+    </ClInclude>
     <ClInclude Include="src\ODVM\Events\ApplicationEvent.h">
       <Filter>src\ODVM\Events</Filter>
     </ClInclude>
@@ -1234,6 +1243,9 @@
       <Filter>src\ODVM\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\ODVM\Renderer\Renderer.h">
+      <Filter>src\ODVM\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ODVM\Renderer\Renderer2D.h">
       <Filter>src\ODVM\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\ODVM\Renderer\RendererAPI.h">
@@ -1265,6 +1277,9 @@
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGl\OpenGLVertexArray.h">
       <Filter>src\Platform\OpenGl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Vulkan\VulkanContext.h">
+      <Filter>src\Platform\Vulkan</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\Windows.h">
       <Filter>src\Platform\Windows</Filter>
@@ -1319,6 +1334,9 @@
     <ClCompile Include="src\ODVM\Renderer\Renderer.cpp">
       <Filter>src\ODVM\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\ODVM\Renderer\Renderer2D.cpp">
+      <Filter>src\ODVM\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\ODVM\Renderer\RendererAPI.cpp">
       <Filter>src\ODVM\Renderer</Filter>
     </ClCompile>
@@ -1348,6 +1366,9 @@
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGl\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Vulkan\VulkanContext.cpp">
+      <Filter>src\Platform\Vulkan</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\Windows.cpp">
       <Filter>src\Platform\Windows</Filter>

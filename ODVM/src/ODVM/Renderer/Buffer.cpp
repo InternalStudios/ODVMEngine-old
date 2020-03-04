@@ -9,13 +9,13 @@
 namespace ODVM
 {
 
-	VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size)
+	Ref<VertexBuffer> VertexBuffer::Create(float* vertices, uint32_t size)
 	{
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None: ODVM_CORE_ASSERT(false, "RendererAPI::API::None is not supported"); return nullptr;
 
-		case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+		case RendererAPI::API::OpenGL: return std::make_shared<OpenGLVertexBuffer>(vertices, size);
 		}
 
 		ODVM_CORE_ERROR("Unknown API");		
@@ -23,13 +23,13 @@ namespace ODVM
 
 	}
 
-	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t size)
+	Ref<IndexBuffer> IndexBuffer::Create(uint32_t* indices, uint32_t size)
 	{
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:	ODVM_CORE_ERROR("RendererAPI::None is not supported"); return nullptr;
 
-			case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::API::OpenGL: return std::make_shared<OpenGLIndexBuffer>(indices, size);
 		}
 
 		ODVM_CORE_ERROR(false, "Unknown API");

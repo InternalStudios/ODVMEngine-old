@@ -1,1 +1,14 @@
-﻿  Sandbox.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
+﻿  VulkanLayer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.h(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.h(5,1): error C2504: 'Layer': base class undefined
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.h(12,33): error C2061: syntax error: identifier 'Timestep'
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.h(14,28): error C2061: syntax error: identifier 'Event'
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(4,4): error C2614: 'VulkanLayer': illegal member initialization: 'Layer' is not a base or member
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(16,28): error C2065: 'Timestep': undeclared identifier
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(16,37): error C2146: syntax error: missing ')' before identifier 'ts'
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(17,1): error C2143: syntax error: missing ';' before '{'
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(17,1): error C2447: '{': missing function header (old-style formal list?)
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(24,27): error C2065: 'Event': undeclared identifier
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(24,34): error C2065: 'event': undeclared identifier
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(24,39): error C2761: 'void VulkanLayer::OnEvent(void)': redeclaration of member is not allowed
+D:\Dev\Game-Engine\ODVMEngine\Sandbox\src\VulkanLayer.cpp(25,1): error C2448: 'VulkanLayer::OnEvent': function-style initializer appears to be a function definition

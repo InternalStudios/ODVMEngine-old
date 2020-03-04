@@ -12,6 +12,7 @@
 #include "ODVM/ImGui/ImGuiLayer.h"
 
 #include "ODVM/Renderer/Renderer.h"
+#include "ODVM/Renderer/Renderer2D.h"
 #include "ODVM/Renderer/RendererAPI.h"
 #include "ODVM/Renderer/RenderCommand.h"
 #include "ODVM/Renderer/VertexArray.h"
@@ -32,6 +33,4 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-
-//Entry Point
-#include "ODVM/Core/EntryPoint.h"
+#include <vulkan/vulkan.h>
