@@ -17,8 +17,8 @@
 		#error "IOS is not supported"
 	#elif TARGET_OS_MAC == 1
 		#define ODVM_PLATFORM_MACOS
-		#error "MacOS is not supported"
-	#else
+        #define _GLFW_COCOA
+#else
 		#error "Unknown Apple platform"
 	#endif
 #elif defined(__ANDROID__)

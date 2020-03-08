@@ -34,7 +34,7 @@ project "ODVM"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "odvmpch.h"
+	pchheader "src/odvmpch.h"
 	pchsource "ODVM/src/odvmpch.cpp"
 	
 	files
@@ -70,6 +70,8 @@ project "ODVM"
 		"ImGui",
 		"opengl32.lib"
 	}
+	filter "system:windows"
+		
 	
 	filter "system:windows"
 		systemversion "latest"

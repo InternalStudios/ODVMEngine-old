@@ -12,7 +12,7 @@ project "Glad"
 
 	includedirs
 	{
-		"include"
+		"include/"
 	}
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")

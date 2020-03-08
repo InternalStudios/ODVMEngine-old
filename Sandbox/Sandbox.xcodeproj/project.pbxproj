@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2C86E3296342FE4D4D7D472 /* Application.cpp */; };
+		BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C8D426268FBF466399382 /* libODVM.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FEC7AF17612AAA3DD19A131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DD868AB9C7EBC9DF5C016EB;
+			remoteInfo = libODVM.a;
+		};
+		FDB2085823D8380A8ADF2E98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E322A965E6937B9768001FA5;
+			remoteInfo = libODVM.a;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2C86E3296342FE4D4D7D472 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = src/Application.cpp; sourceTree = "<group>"; };
+		D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ODVM.xcodeproj; path = ../ODVM/ODVM.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9B9A80849CD3CBACC4B6E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6849586FFB54B1614389A6AF /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				D2C86E3296342FE4D4D7D472 /* Application.cpp */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+				9D968EAA920D05DCE0E0A4EA /* Projects */,
+			);
+			name = Sandbox;
+			sourceTree = "<group>";
+		};
+		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8CF3E989D21DC4AAF5A24D8 /* Sandbox */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD75EA98F6DBEC0AEA7748D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				479C8D426268FBF466399382 /* libODVM.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2DDA37EEF9A52F06484C1BE /* Sandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F4F06738088519BA86B6A7 /* Build configuration list for PBXNativeTarget "Sandbox" */;
+			buildPhases = (
+				69A128A8B9B4BD5A3C32EEE8 /* Resources */,
+				D34E41FF2361D6B1A5E0083F /* Sources */,
+				F9B9A80849CD3CBACC4B6E48 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB2E27A1E4942913D82F85E1 /* PBXTargetDependency */,
+			);
+			name = Sandbox;
+			productInstallPath = "$(HOME)/bin";
+			productName = Sandbox;
+			productReference = F8CF3E989D21DC4AAF5A24D8 /* Sandbox */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Sandbox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6849586FFB54B1614389A6AF /* Sandbox */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FD75EA98F6DBEC0AEA7748D8 /* Products */;
+					ProjectRef = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E2DDA37EEF9A52F06484C1BE /* Sandbox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		479C8D426268FBF466399382 /* libODVM.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libODVM.a;
+			remoteRef = FDB2085823D8380A8ADF2E98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69A128A8B9B4BD5A3C32EEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D34E41FF2361D6B1A5E0083F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB2E27A1E4942913D82F85E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libODVM.a;
+			targetProxy = 4FEC7AF17612AAA3DD19A131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04F5F75AFE5BF8CCF1F7559A /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-x86_64/Sandbox";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = Sandbox;
+			};
+			name = Dist;
+		};
+		52C1E94BA548143D778C778B /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ODVM_DIST;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../bin-int/Dist-macosx-x86_64/Sandbox";
+				ONLY_ACTIVE_ARCH = NO;
+				SYMROOT = "../bin/Dist-macosx-x86_64/Sandbox";
+				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+			};
+			name = Dist;
+		};
+		C5DDD7ADEC04075F530AFDED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-x86_64/Sandbox";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = Sandbox;
+			};
+			name = Debug;
+		};
+		D2EB7F98773E1D4A897665D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ODVM_RELEASE;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../bin-int/Release-macosx-x86_64/Sandbox";
+				ONLY_ACTIVE_ARCH = NO;
+				SYMROOT = "../bin/Release-macosx-x86_64/Sandbox";
+				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+			};
+			name = Release;
+		};
+		E3FEB5DE874A3F10A21B0C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ODVM_DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OBJROOT = "../bin-int/Debug-macosx-x86_64/Sandbox";
+				ONLY_ACTIVE_ARCH = YES;
+				SYMROOT = "../bin/Debug-macosx-x86_64/Sandbox";
+				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+			};
+			name = Debug;
+		};
+		FB7591E743E6761988854827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-x86_64/Sandbox";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = Sandbox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Sandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3FEB5DE874A3F10A21B0C1E /* Debug */,
+				D2EB7F98773E1D4A897665D8 /* Release */,
+				52C1E94BA548143D778C778B /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E7F4F06738088519BA86B6A7 /* Build configuration list for PBXNativeTarget "Sandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5DDD7ADEC04075F530AFDED /* Debug */,
+				FB7591E743E6761988854827 /* Release */,
+				04F5F75AFE5BF8CCF1F7559A /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
