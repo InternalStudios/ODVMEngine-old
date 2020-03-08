@@ -1,9 +1,9 @@
 #include "odvmpch.h"
-#include "VertexArray.h"
+#include "VertexArray.hpp"
 
-#include "Platform/OpenGl/OpenGLVertexArray.h"
+#include "Platform/OpenGl/OpenGLVertexArray.hpp"
 
-#include "Renderer.h"
+#include "Renderer.hpp"
 
 namespace ODVM
 {

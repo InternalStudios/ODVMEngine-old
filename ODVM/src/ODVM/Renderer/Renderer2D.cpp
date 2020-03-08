@@ -1,11 +1,11 @@
 #include "odvmpch.h"
-#include "Renderer2D.h"
+#include "Renderer2D.hpp"
 
-#include "ODVM/Renderer/Buffer.h"
-#include "ODVM/Renderer/VertexArray.h"
-#include "ODVM/Renderer/Shader.h"
+#include "ODVM/Renderer/Buffer.hpp"
+#include "ODVM/Renderer/VertexArray.hpp"
+#include "ODVM/Renderer/Shader.hpp"
 
-#include "ODVM/Renderer/RenderCommand.h"
+#include "ODVM/Renderer/RenderCommand.hpp"
 
 #include <glm/gtc/matrix_transform.hpp>
 

@@ -1,5 +1,5 @@
 #include "odvmpch.h"
-#include "OpenGLShader.h"
+#include "OpenGLShader.hpp"
 
 #include <fstream>
 

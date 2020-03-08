@@ -1,8 +1,8 @@
 #include "odvmpch.h"
-#include "Shader.h"
+#include "Shader.hpp"
 
-#include "Renderer.h"
-#include "Platform/OpenGl/OpenGLShader.h"
+#include "Renderer.hpp"
+#include "Platform/OpenGl/OpenGLShader.hpp"
 
 namespace ODVM
 {

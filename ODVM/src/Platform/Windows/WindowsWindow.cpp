@@ -1,13 +1,13 @@
 #include "odvmpch.h"
-#include "WindowsWindow.h"
+#include "WindowsWindow.hpp"
 
-#include "ODVM/Events/ApplicationEvent.h"
-#include "ODVM/Events/KeyEvent.h"
-#include "ODVM/Events/MouseEvent.h"
+#include "ODVM/Events/ApplicationEvent.hpp"
+#include "ODVM/Events/KeyEvent.hpp"
+#include "ODVM/Events/MouseEvent.hpp"
 
-#include "ODVM/Renderer/RendererAPI.h"
+#include "ODVM/Renderer/RendererAPI.hpp"
 
-#include "Platform/OpenGl/OpenGLContext.h"
+#include "Platform/OpenGl/OpenGLContext.hpp"
 
 namespace ODVM
 {

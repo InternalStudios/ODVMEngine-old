@@ -1,5 +1,5 @@
 #include "odvmpch.h"
-#include "OpenGLContext.h"
+#include "OpenGLContext.hpp"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

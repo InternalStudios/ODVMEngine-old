@@ -1,10 +1,10 @@
 #include "odvmpch.h"
 
-#include "ODVM/Renderer/Renderer.h"
+#include "ODVM/Renderer/Renderer.hpp"
 
-#include "RenderCommand.h"
+#include "RenderCommand.hpp"
 
-#include "Platform/OpenGl/OpenGLRendererAPI.h"
+#include "Platform/OpenGl/OpenGLRendererAPI.hpp"
 
 namespace ODVM
 {

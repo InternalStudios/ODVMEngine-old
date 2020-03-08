@@ -6,523 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		1137C178B3215D6AAA486FB8 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C047E406A27D1F2F1362480 /* Buffer.cpp */; };
-		17CFC306DA90237837C50146 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5662EEEF9D6B20738A992E /* Texture.cpp */; };
-		18BB255E185E089052B2BB9E /* ImGuiBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 761B4406CD80B6F87F8ED246 /* ImGuiBuild.cpp */; };
-		21012E61C876CA13713BD4A1 /* libImGui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F40569C496A0DB7978A3A9 /* libImGui.a */; };
-		23F27FADBA1B919F7B81EDED /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE89F522F493A77416F035 /* OpenGLRendererAPI.cpp */; };
-		2C5356BE2052A030A53DB4FE /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6243B460A380C78FE099186 /* Application.cpp */; };
-		2FEC8F92D1D62B84C8FD3DD2 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 240467BAF227BB6C79360DFA /* Shader.cpp */; };
-		3D708F6D4F27CF5FC495BDAD /* OpenGLTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01529B553FDA167764B4FF5 /* OpenGLTexture.cpp */; };
-		3EB28C552C1A1F07C9141295 /* libGlad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7848B3BD84D3662FFFB831FD /* libGlad.a */; };
-		419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */; };
-		4CD9CFC5E302E1B7A4693E05 /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB8AC8DADAEB63FFED112CD /* OpenGLVertexArray.cpp */; };
-		53D390F85376742A8DCB2738 /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EC62900862B9BF23839B740 /* ImGuiLayer.cpp */; };
-		5699F6D5685136C7DDBF2515 /* OpenGLContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEB7269D529F9E4F74ED4CDD /* OpenGLContext.cpp */; };
-		5986C3BBCAA964AD807011FB /* odvmpch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A8B1A39AE36A55827EF7E3 /* odvmpch.cpp */; };
-		65B208A0079BA492FEC2B6E0 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BBB08285F0EBAAF6D6148 /* Platform.cpp */; };
-		67D1B15F46744CD1FB564F9F /* OpenGLBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86F33087869613B9C0EAC6C7 /* OpenGLBuffer.cpp */; };
-		6E4EE692E2A92B84608CB4D2 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74FE0BAB979BD6CED6AA6FA /* Renderer.cpp */; };
-		70CEB27CE528F76E630C80BC /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F467724417053D675613D64 /* LayerStack.cpp */; };
-		9786835ADBD528CC1DFC619A /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A68F1822C85AC554050FEE62 /* Log.cpp */; };
-		A32673B5908E06672D87F9F5 /* libGLFW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AE781D24392A8F9F1DF65D /* libGLFW.a */; };
-		A86754BDA80A37EFE25EEAFD /* Windows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9259D665E9BF49579BCD64A5 /* Windows.cpp */; };
-		B8BE8C79976127EB4C432AB9 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AC087012A636A3364B81D41 /* OpenGLShader.cpp */; };
-		C3CD0F1030F51D8232880D50 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930A3F78E06D35AA568C35B8 /* Layer.cpp */; };
-		C3FBF2CD6763207F7E98D90D /* CameraControllers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8564ACD51DDC9A4749C38B15 /* CameraControllers.cpp */; };
-		C4C24762A364E2D45846E5A2 /* RenderCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8371098A8313ECBCBD689FCA /* RenderCommand.cpp */; };
-		D142CD46DDCD7FB858B24B86 /* RendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D047D2E2C219760082AF36E /* RendererAPI.cpp */; };
-		D160515EDDEB03D058CFCF9E /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC8A53C68BA76DF867B0CA06 /* VertexArray.cpp */; };
-		D2E68BDC95A6EC4EF2DBCA1C /* Cameras.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B53364E6FC3B966AE969A4 /* Cameras.cpp */; };
-		E693CF692AA7A09B1E7925A9 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CC86B110DEB0C03C3B1B951 /* stb_image.cpp */; };
-		FDA631FDB09C3BAF01BE983D /* WindowsInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 981A62A58C19AC171104C0E5 /* WindowsInput.cpp */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		01D9077A27FF372C8F062DBA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3E398A4741AA5C79C3170087;
-			remoteInfo = libGlad.a;
-		};
-		54137A137A39A9C5E140A053 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B45B54D49EC093FA32D638D;
-			remoteInfo = libGlad.a;
-		};
-		588D649D43798A8F8B5F52DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B27392EA23FEAB5CD2FFD12A;
-			remoteInfo = libImGui.a;
-		};
-		7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FB2B399FFE9C0BD18008AFDF;
-			remoteInfo = libGLFW.a;
-		};
-		AAC7D73695B3FD28DD99C576 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F03FB590F3B087C2751D2BD0;
-			remoteInfo = libImGui.a;
-		};
-		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E92D9A59D392D97F67A87E5;
-			remoteInfo = libGLFW.a;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		004603EB1B12729D1EE30A2B /* type_mat2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x2.hpp; path = libs/glm/glm/detail/type_mat2x2.hpp; sourceTree = "<group>"; };
-		014412C7A32DAEB99A54C107 /* vector_int1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int1.hpp; path = libs/glm/glm/ext/vector_int1.hpp; sourceTree = "<group>"; };
-		02B53364E6FC3B966AE969A4 /* Cameras.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Cameras.cpp; path = src/ODVM/Renderer/Cameras.cpp; sourceTree = "<group>"; };
-		0322D08B0FAD82FD8A924ECB /* number_precision.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = number_precision.inl; path = libs/glm/glm/gtx/number_precision.inl; sourceTree = "<group>"; };
-		05B51333A00EFC25DC476173 /* scalar_multiplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_multiplication.hpp; path = libs/glm/glm/gtx/scalar_multiplication.hpp; sourceTree = "<group>"; };
-		05EC7F3BA010746D5036557B /* func_matrix_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_matrix_simd.inl; path = libs/glm/glm/detail/func_matrix_simd.inl; sourceTree = "<group>"; };
-		06493E0512D3F0778DB8BC45 /* matrix_double2x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x4.hpp; path = libs/glm/glm/ext/matrix_double2x4.hpp; sourceTree = "<group>"; };
-		06A7B920CD35B0923B37D760 /* reciprocal.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = reciprocal.hpp; path = libs/glm/glm/gtc/reciprocal.hpp; sourceTree = "<group>"; };
-		070E59BDF805C7AF640947FD /* matrix_float3x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x4.hpp; path = libs/glm/glm/ext/matrix_float3x4.hpp; sourceTree = "<group>"; };
-		07CBAF925F312284113F3DD2 /* constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = constants.hpp; path = libs/glm/glm/gtc/constants.hpp; sourceTree = "<group>"; };
-		07F5735F5F5AE6511169019F /* functions.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = functions.hpp; path = libs/glm/glm/gtx/functions.hpp; sourceTree = "<group>"; };
-		09201A4551BF587774EB1085 /* func_trigonometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_trigonometric.inl; path = libs/glm/glm/detail/func_trigonometric.inl; sourceTree = "<group>"; };
-		0990B763161B69D5910035A3 /* matrix_double3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x2.hpp; path = libs/glm/glm/ext/matrix_double3x2.hpp; sourceTree = "<group>"; };
-		0A376BBF7E91B0B1FC7539FF /* perpendicular.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = perpendicular.inl; path = libs/glm/glm/gtx/perpendicular.inl; sourceTree = "<group>"; };
-		0AA61A117F005F03FCE3E851 /* mixed_product.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = mixed_product.inl; path = libs/glm/glm/gtx/mixed_product.inl; sourceTree = "<group>"; };
-		0B5662EEEF9D6B20738A992E /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = src/ODVM/Renderer/Texture.cpp; sourceTree = "<group>"; };
-		0BCF80C1185A3333933EFF01 /* matrix_transform.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.inl; path = libs/glm/glm/ext/matrix_transform.inl; sourceTree = "<group>"; };
-		0DEAAB5B51FE7C8D45D0019B /* _swizzle.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _swizzle.hpp; path = libs/glm/glm/detail/_swizzle.hpp; sourceTree = "<group>"; };
-		0EA6E6CD68A7FDBF2FEEF50D /* matrix_projection.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_projection.hpp; path = libs/glm/glm/ext/matrix_projection.hpp; sourceTree = "<group>"; };
-		0EFC3ACB6A3D8E3D3D97D90B /* vec2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec2.hpp; path = libs/glm/glm/vec2.hpp; sourceTree = "<group>"; };
-		0F890CA1406D049353853AE1 /* bit.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = bit.inl; path = libs/glm/glm/gtx/bit.inl; sourceTree = "<group>"; };
-		10067A91D76B3583622308D1 /* matrix_float4x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x2_precision.hpp; path = libs/glm/glm/ext/matrix_float4x2_precision.hpp; sourceTree = "<group>"; };
-		10E9C49F6AEADB913231D2DF /* matrix_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_relational.inl; path = libs/glm/glm/ext/matrix_relational.inl; sourceTree = "<group>"; };
-		11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLFW.xcodeproj; path = libs/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
-		11CE328BF0EB4CBDCCF4A8CB /* OpenGLShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLShader.h; path = src/Platform/OpenGl/OpenGLShader.h; sourceTree = "<group>"; };
-		139A419DD65AA20F338F7FDD /* vector_query.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_query.hpp; path = libs/glm/glm/gtx/vector_query.hpp; sourceTree = "<group>"; };
-		140E97BF080DE1318CF8F5FF /* gradient_paint.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = gradient_paint.hpp; path = libs/glm/glm/gtx/gradient_paint.hpp; sourceTree = "<group>"; };
-		14D411DF715B1651F9FDD01F /* CameraControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraControllers.h; path = src/ODVM/CameraControllers/CameraControllers.h; sourceTree = "<group>"; };
-		1565C149ADB2A6FBDBF9A789 /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _features.hpp; path = libs/glm/glm/detail/_features.hpp; sourceTree = "<group>"; };
-		15C7A7F725ACD42912205E37 /* func_geometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_geometric.inl; path = libs/glm/glm/detail/func_geometric.inl; sourceTree = "<group>"; };
-		15EF723F5A3E17B19C65507F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = common.hpp; path = libs/glm/glm/gtx/common.hpp; sourceTree = "<group>"; };
-		16F08B7FAF6878F1DB4F69BF /* vector_bool1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool1_precision.hpp; path = libs/glm/glm/ext/vector_bool1_precision.hpp; sourceTree = "<group>"; };
-		17E22BB908D999AB74DD19F9 /* matrix_float3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x2.hpp; path = libs/glm/glm/ext/matrix_float3x2.hpp; sourceTree = "<group>"; };
-		1961040725EBB679A0D08247 /* exterior_product.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = exterior_product.inl; path = libs/glm/glm/gtx/exterior_product.inl; sourceTree = "<group>"; };
-		1A9A03C1DF4F5A3393BE0201 /* quaternion_trigonometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_trigonometric.hpp; path = libs/glm/glm/ext/quaternion_trigonometric.hpp; sourceTree = "<group>"; };
-		1AC6E8A974C7FF9B3C0EF6E9 /* color_space_YCoCg.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space_YCoCg.hpp; path = libs/glm/glm/gtx/color_space_YCoCg.hpp; sourceTree = "<group>"; };
-		1ACED4505F1D79C2A144B290 /* random.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = random.inl; path = libs/glm/glm/gtc/random.inl; sourceTree = "<group>"; };
-		1CE5D6CD2970893FA455550D /* matrix_operation.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_operation.inl; path = libs/glm/glm/gtx/matrix_operation.inl; sourceTree = "<group>"; };
-		1D2564DFC49B00916D600B1F /* func_exponential_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_exponential_simd.inl; path = libs/glm/glm/detail/func_exponential_simd.inl; sourceTree = "<group>"; };
-		1D553E2391AF83150F930C63 /* vector_float4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float4.hpp; path = libs/glm/glm/ext/vector_float4.hpp; sourceTree = "<group>"; };
-		1D870B6B1748C7DD5147C9AB /* mat3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat3x3.hpp; path = libs/glm/glm/mat3x3.hpp; sourceTree = "<group>"; };
-		1DA51591387184433C421BD1 /* type_mat4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x3.hpp; path = libs/glm/glm/detail/type_mat4x3.hpp; sourceTree = "<group>"; };
-		1EB92D6D78BA445F40013BAD /* fast_trigonometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_trigonometry.hpp; path = libs/glm/glm/gtx/fast_trigonometry.hpp; sourceTree = "<group>"; };
-		1EBA2D85B7071337E54E13C5 /* type_quat.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_quat.hpp; path = libs/glm/glm/detail/type_quat.hpp; sourceTree = "<group>"; };
-		1ED353B7525293296A4C71F7 /* matrix_double2x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x2_precision.hpp; path = libs/glm/glm/ext/matrix_double2x2_precision.hpp; sourceTree = "<group>"; };
-		20626BD8E3CE2D8A2271D218 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/ODVM/Events/Event.h; sourceTree = "<group>"; };
-		2159626DC342FE5FBA6A10AD /* optimum_pow.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = optimum_pow.hpp; path = libs/glm/glm/gtx/optimum_pow.hpp; sourceTree = "<group>"; };
-		22DAF0E17F61F5530804AF21 /* matrix_factorisation.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_factorisation.hpp; path = libs/glm/glm/gtx/matrix_factorisation.hpp; sourceTree = "<group>"; };
-		236357D9B98C69CB7AF2C619 /* handed_coordinate_space.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = handed_coordinate_space.hpp; path = libs/glm/glm/gtx/handed_coordinate_space.hpp; sourceTree = "<group>"; };
-		2363FE69176347DB9C4E5CA9 /* vector_double2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double2.hpp; path = libs/glm/glm/ext/vector_double2.hpp; sourceTree = "<group>"; };
-		23D1918A55CADC3CCFAA17CA /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Buffer.h; path = src/ODVM/Renderer/Buffer.h; sourceTree = "<group>"; };
-		23D503D56823A947AA4AE215 /* normal.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = normal.inl; path = libs/glm/glm/gtx/normal.inl; sourceTree = "<group>"; };
-		240467BAF227BB6C79360DFA /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = src/ODVM/Renderer/Shader.cpp; sourceTree = "<group>"; };
-		2417327C913F40EE92D230BC /* type_ptr.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_ptr.inl; path = libs/glm/glm/gtc/type_ptr.inl; sourceTree = "<group>"; };
-		241D5149C606ED3BBD2DFF89 /* vector_int2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int2.hpp; path = libs/glm/glm/ext/vector_int2.hpp; sourceTree = "<group>"; };
-		247C02753106B4E7ABEB80B5 /* extended_min_max.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = extended_min_max.inl; path = libs/glm/glm/gtx/extended_min_max.inl; sourceTree = "<group>"; };
-		25CF76B16A1E1C23AC4554F1 /* easing.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = easing.inl; path = libs/glm/glm/gtx/easing.inl; sourceTree = "<group>"; };
-		267EDA72177648648379C8B2 /* quaternion_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_simd.inl; path = libs/glm/glm/gtc/quaternion_simd.inl; sourceTree = "<group>"; };
-		26CA3C899B24817B19080AC9 /* perpendicular.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = perpendicular.hpp; path = libs/glm/glm/gtx/perpendicular.hpp; sourceTree = "<group>"; };
-		26CB8DDA4F06468C36A1D41A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Core.h; path = src/ODVM/Core/Core.h; sourceTree = "<group>"; };
-		2738EADB9B932FCD1976B91B /* mixed_product.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mixed_product.hpp; path = libs/glm/glm/gtx/mixed_product.hpp; sourceTree = "<group>"; };
-		27776A995AF6AA0B72F088D9 /* matrix_double2x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x3_precision.hpp; path = libs/glm/glm/ext/matrix_double2x3_precision.hpp; sourceTree = "<group>"; };
-		27BE2145428A8FF7465B2785 /* type_mat4x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x2.inl; path = libs/glm/glm/detail/type_mat4x2.inl; sourceTree = "<group>"; };
-		2868D7997FCE4A8B31DC65D9 /* exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exponential.hpp; path = libs/glm/glm/exponential.hpp; sourceTree = "<group>"; };
-		293E100DEFCC077F5DCE2E4D /* type_trait.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_trait.inl; path = libs/glm/glm/gtx/type_trait.inl; sourceTree = "<group>"; };
-		29A536D19D8DAE83BFDB5D11 /* _swizzle_func.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _swizzle_func.hpp; path = libs/glm/glm/detail/_swizzle_func.hpp; sourceTree = "<group>"; };
-		2AC087012A636A3364B81D41 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLShader.cpp; path = src/Platform/OpenGl/OpenGLShader.cpp; sourceTree = "<group>"; };
-		2AD156A5C3494417EF3034E5 /* vector_bool4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool4_precision.hpp; path = libs/glm/glm/ext/vector_bool4_precision.hpp; sourceTree = "<group>"; };
-		2B1E621D851F790F4C66705D /* polar_coordinates.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = polar_coordinates.hpp; path = libs/glm/glm/gtx/polar_coordinates.hpp; sourceTree = "<group>"; };
-		2B7E66E338091955B2EDE523 /* matrix_double2x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x3.hpp; path = libs/glm/glm/ext/matrix_double2x3.hpp; sourceTree = "<group>"; };
-		2BB8DC371FB825A9A4A33A77 /* component_wise.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = component_wise.inl; path = libs/glm/glm/gtx/component_wise.inl; sourceTree = "<group>"; };
-		2DDDB327C655A099F23C9167 /* vector_uint1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint1_precision.hpp; path = libs/glm/glm/ext/vector_uint1_precision.hpp; sourceTree = "<group>"; };
-		2EC62900862B9BF23839B740 /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiLayer.cpp; path = src/ODVM/ImGui/ImGuiLayer.cpp; sourceTree = "<group>"; };
-		2F467724417053D675613D64 /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LayerStack.cpp; path = src/ODVM/Core/LayerStack.cpp; sourceTree = "<group>"; };
-		301B817B639AC0ED7B949FBB /* matrix_double2x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x4_precision.hpp; path = libs/glm/glm/ext/matrix_double2x4_precision.hpp; sourceTree = "<group>"; };
-		3083346DF34394DF507872AD /* type_aligned.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_aligned.inl; path = libs/glm/glm/gtx/type_aligned.inl; sourceTree = "<group>"; };
-		31DD02CFF941BDC183F9910F /* matrix_float2x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x3_precision.hpp; path = libs/glm/glm/ext/matrix_float2x3_precision.hpp; sourceTree = "<group>"; };
-		31F9FA2F4CC668E15097006F /* type_mat3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x3.hpp; path = libs/glm/glm/detail/type_mat3x3.hpp; sourceTree = "<group>"; };
-		36843CECD86DD8DECF94EB2C /* color_space.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space.hpp; path = libs/glm/glm/gtc/color_space.hpp; sourceTree = "<group>"; };
-		36E28A7067C682627ADEB8B0 /* ulp.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = ulp.inl; path = libs/glm/glm/gtc/ulp.inl; sourceTree = "<group>"; };
-		38A09427FF2E8B996D30B267 /* projection.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = projection.hpp; path = libs/glm/glm/gtx/projection.hpp; sourceTree = "<group>"; };
-		38A31C7FFF3113F16D333ABF /* transform2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = transform2.inl; path = libs/glm/glm/gtx/transform2.inl; sourceTree = "<group>"; };
-		39D9C8D3013E83C58BF65713 /* matrix_float3x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x4_precision.hpp; path = libs/glm/glm/ext/matrix_float3x4_precision.hpp; sourceTree = "<group>"; };
-		39E622134670D485C155A053 /* matrix_decompose.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_decompose.hpp; path = libs/glm/glm/gtx/matrix_decompose.hpp; sourceTree = "<group>"; };
-		39EB2A33D0143C25917A9873 /* vector_float1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float1_precision.hpp; path = libs/glm/glm/ext/vector_float1_precision.hpp; sourceTree = "<group>"; };
-		3C1305E356DF74955AB00C23 /* type_mat3x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x2.inl; path = libs/glm/glm/detail/type_mat3x2.inl; sourceTree = "<group>"; };
-		3CC0EB9D3682A80F7081A9DD /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = common.hpp; path = libs/glm/glm/common.hpp; sourceTree = "<group>"; };
-		3CF55F4FFFB5BFC15CEA9D8F /* euler_angles.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = euler_angles.inl; path = libs/glm/glm/gtx/euler_angles.inl; sourceTree = "<group>"; };
-		3DBE4FEF044C4761724E6E2F /* quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.inl; path = libs/glm/glm/gtx/quaternion.inl; sourceTree = "<group>"; };
-		3E182B454AA2DDB7C587A985 /* scalar_constants.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_constants.inl; path = libs/glm/glm/ext/scalar_constants.inl; sourceTree = "<group>"; };
-		3E88532B6F6C4B1D8284816B /* bit.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = bit.hpp; path = libs/glm/glm/gtx/bit.hpp; sourceTree = "<group>"; };
-		3E95D144708F1BF6EA6E5784 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = src/ODVM/Renderer/Shader.h; sourceTree = "<group>"; };
-		3E9DE6AB989EFD9D5FE5F4EB /* quaternion_double.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_double.hpp; path = libs/glm/glm/ext/quaternion_double.hpp; sourceTree = "<group>"; };
-		3EC13CE3D7392A5503201B23 /* quaternion_exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_exponential.hpp; path = libs/glm/glm/ext/quaternion_exponential.hpp; sourceTree = "<group>"; };
-		3F763FC54C00F237C6E5BE05 /* fast_square_root.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_square_root.inl; path = libs/glm/glm/gtx/fast_square_root.inl; sourceTree = "<group>"; };
-		3FA46347D9C8587989EE3987 /* func_exponential.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_exponential.inl; path = libs/glm/glm/detail/func_exponential.inl; sourceTree = "<group>"; };
-		41BE7E4DDA366BBF061D5C8D /* vector_uint4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint4_precision.hpp; path = libs/glm/glm/ext/vector_uint4_precision.hpp; sourceTree = "<group>"; };
-		42F537354F7FE9A7CA64B575 /* number_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = number_precision.hpp; path = libs/glm/glm/gtx/number_precision.hpp; sourceTree = "<group>"; };
-		43EB2D4D3DACE9BF77ABEB8D /* mat4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat4x3.hpp; path = libs/glm/glm/mat4x3.hpp; sourceTree = "<group>"; };
-		44024CA7284954D9AC3682E7 /* _noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _noise.hpp; path = libs/glm/glm/detail/_noise.hpp; sourceTree = "<group>"; };
-		4436496AD6C4135C3F9CB7AA /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImGuiLayer.h; path = src/ODVM/ImGui/ImGuiLayer.h; sourceTree = "<group>"; };
-		44F0223D35E7902FA1EB107D /* matrix_float4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x3.hpp; path = libs/glm/glm/ext/matrix_float4x3.hpp; sourceTree = "<group>"; };
-		464EDECD611B4D7F64EBE50D /* type_mat2x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x3.hpp; path = libs/glm/glm/detail/type_mat2x3.hpp; sourceTree = "<group>"; };
-		46596E6FA05A856167A17CAF /* matrix_clip_space.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_clip_space.inl; path = libs/glm/glm/ext/matrix_clip_space.inl; sourceTree = "<group>"; };
-		46F68FCBE8E02BBDE0073E0B /* vector_int3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int3.hpp; path = libs/glm/glm/ext/vector_int3.hpp; sourceTree = "<group>"; };
-		489500E59FFA73D752088F25 /* transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = transform.hpp; path = libs/glm/glm/gtx/transform.hpp; sourceTree = "<group>"; };
-		4B83BD13A6C510857A1F5B53 /* io.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = io.inl; path = libs/glm/glm/gtx/io.inl; sourceTree = "<group>"; };
-		4BA1E76B582C99DDD31165AB /* matrix_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.hpp; path = libs/glm/glm/ext/matrix_transform.hpp; sourceTree = "<group>"; };
-		4BFA2FE9A5FB46DB6D423E29 /* matrix_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_relational.hpp; path = libs/glm/glm/ext/matrix_relational.hpp; sourceTree = "<group>"; };
-		4D047D2E2C219760082AF36E /* RendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RendererAPI.cpp; path = src/ODVM/Renderer/RendererAPI.cpp; sourceTree = "<group>"; };
-		4E17BEDFAA9EC35133417D1F /* matrix_cross_product.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_cross_product.inl; path = libs/glm/glm/gtx/matrix_cross_product.inl; sourceTree = "<group>"; };
-		4F779484E4EE53B6538AAAC4 /* Timesteps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timesteps.h; path = src/ODVM/Core/Timesteps.h; sourceTree = "<group>"; };
-		4F8CDC31161AD3A3841CFA71 /* vector_ulp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_ulp.hpp; path = libs/glm/glm/ext/vector_ulp.hpp; sourceTree = "<group>"; };
-		4FDBB67143DAFFE3C8C614B1 /* scalar_integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_integer.hpp; path = libs/glm/glm/ext/scalar_integer.hpp; sourceTree = "<group>"; };
-		503305AD7FC4D49F5AD213ED /* ext.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = ext.hpp; path = libs/glm/glm/ext.hpp; sourceTree = "<group>"; };
-		506150971321B10970568ED7 /* type_aligned.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_aligned.hpp; path = libs/glm/glm/gtx/type_aligned.hpp; sourceTree = "<group>"; };
-		5067EA816B3459336F04F0C1 /* type_mat2x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x2.inl; path = libs/glm/glm/detail/type_mat2x2.inl; sourceTree = "<group>"; };
-		50B38FC15D3E4233D8230E01 /* matrix_double2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x2.hpp; path = libs/glm/glm/ext/matrix_double2x2.hpp; sourceTree = "<group>"; };
-		5134515FEB8E3A5127C69F9F /* vector_int2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int2_precision.hpp; path = libs/glm/glm/ext/vector_int2_precision.hpp; sourceTree = "<group>"; };
-		51967A3B428DE82DAE91687B /* matrix_float2x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x4.hpp; path = libs/glm/glm/ext/matrix_float2x4.hpp; sourceTree = "<group>"; };
-		525272B7F0337369C7B1B8F7 /* OpenGLVertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLVertexArray.h; path = src/Platform/OpenGl/OpenGLVertexArray.h; sourceTree = "<group>"; };
-		52BBEB99970A910BD931C9D9 /* spline.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = spline.inl; path = libs/glm/glm/gtx/spline.inl; sourceTree = "<group>"; };
-		5649E0739A9885E5DCBFBEB3 /* extend.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = extend.inl; path = libs/glm/glm/gtx/extend.inl; sourceTree = "<group>"; };
-		572121D24B206B44D00B8012 /* type_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_precision.hpp; path = libs/glm/glm/gtc/type_precision.hpp; sourceTree = "<group>"; };
-		5731DE9F1BE73511D055DCDF /* vector_double2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double2_precision.hpp; path = libs/glm/glm/ext/vector_double2_precision.hpp; sourceTree = "<group>"; };
-		57E3491FF5C449D1CD428F5F /* OpenGLRendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLRendererAPI.h; path = src/Platform/OpenGl/OpenGLRendererAPI.h; sourceTree = "<group>"; };
-		5835041FFB9C31D112D1EA5F /* compute_vector_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = compute_vector_relational.hpp; path = libs/glm/glm/detail/compute_vector_relational.hpp; sourceTree = "<group>"; };
-		59213DC058C420F29318D400 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApplicationEvent.h; path = src/ODVM/Events/ApplicationEvent.h; sourceTree = "<group>"; };
-		59336AB165BE1D23E0A2E8F1 /* exterior_product.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exterior_product.hpp; path = libs/glm/glm/gtx/exterior_product.hpp; sourceTree = "<group>"; };
-		599333303DDA3B62C1C76970 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Application.h; path = src/ODVM/Core/Application.h; sourceTree = "<group>"; };
-		5A0D3948B172AC3A6380C788 /* constants.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = constants.inl; path = libs/glm/glm/gtc/constants.inl; sourceTree = "<group>"; };
-		5A36FD15B19C700763AA8B55 /* functions.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = functions.inl; path = libs/glm/glm/gtx/functions.inl; sourceTree = "<group>"; };
-		5A3BBB08285F0EBAAF6D6148 /* Platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = src/ODVM/Core/Platform.cpp; sourceTree = "<group>"; };
-		5CAE8E8B8C405D7D674D9CCB /* glm.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = glm.hpp; path = libs/glm/glm/glm.hpp; sourceTree = "<group>"; };
-		5CB83D776942EFE9E427BBB7 /* matrix_operation.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_operation.hpp; path = libs/glm/glm/gtx/matrix_operation.hpp; sourceTree = "<group>"; };
-		5CD37B791F93DBEB7CC8B9B9 /* euler_angles.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = euler_angles.hpp; path = libs/glm/glm/gtx/euler_angles.hpp; sourceTree = "<group>"; };
-		5E09A7842C2CFB36B33B4DC4 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = src/ODVM/Renderer/Renderer.h; sourceTree = "<group>"; };
-		5EAE79B77065B9A9E5D3A7F7 /* matrix_transform_2d.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform_2d.hpp; path = libs/glm/glm/gtx/matrix_transform_2d.hpp; sourceTree = "<group>"; };
-		5F380723B9391E1580801563 /* scalar_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_relational.inl; path = libs/glm/glm/gtx/scalar_relational.inl; sourceTree = "<group>"; };
-		5FBCD8802DE02C32B4EE7EC0 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EntryPoint.h; path = src/ODVM/Core/EntryPoint.h; sourceTree = "<group>"; };
-		61578D98F6CE4CCA656AA3D8 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = src/ODVM/Renderer/Texture.h; sourceTree = "<group>"; };
-		626A4C375361BA29BF653A77 /* matrix_float2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x2.hpp; path = libs/glm/glm/ext/matrix_float2x2.hpp; sourceTree = "<group>"; };
-		63ADF0737E7A5F25824AF6B3 /* type_mat4x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x4.hpp; path = libs/glm/glm/detail/type_mat4x4.hpp; sourceTree = "<group>"; };
-		64307E55582FC7C7DD1ADC95 /* gradient_paint.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = gradient_paint.inl; path = libs/glm/glm/gtx/gradient_paint.inl; sourceTree = "<group>"; };
-		644E691F70D91B91EBBDE75F /* extended_min_max.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = extended_min_max.hpp; path = libs/glm/glm/gtx/extended_min_max.hpp; sourceTree = "<group>"; };
-		65E1D0FA96C5C8ECA9DDFF3A /* ulp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = ulp.hpp; path = libs/glm/glm/gtc/ulp.hpp; sourceTree = "<group>"; };
-		66D1A85BFF4995CD2B30869B /* rotate_normalized_axis.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotate_normalized_axis.hpp; path = libs/glm/glm/gtx/rotate_normalized_axis.hpp; sourceTree = "<group>"; };
-		68263ECB5C25883DE1109D0B /* vector_integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_integer.hpp; path = libs/glm/glm/ext/vector_integer.hpp; sourceTree = "<group>"; };
-		6855A50FC396F88196F1434F /* vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec4.hpp; path = libs/glm/glm/vec4.hpp; sourceTree = "<group>"; };
-		696CD94B5D6C22BDE257378B /* vector_double3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double3.hpp; path = libs/glm/glm/ext/vector_double3.hpp; sourceTree = "<group>"; };
-		69C1364D1CB73FFF6DD99C8D /* func_integer_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_integer_simd.inl; path = libs/glm/glm/detail/func_integer_simd.inl; sourceTree = "<group>"; };
-		69CFCE4D0BB96A3F02E07C8D /* vector_int4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int4.hpp; path = libs/glm/glm/ext/vector_int4.hpp; sourceTree = "<group>"; };
-		6BF008B72EB069298BE546F7 /* matrix_query.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_query.inl; path = libs/glm/glm/gtx/matrix_query.inl; sourceTree = "<group>"; };
-		6DC6FC2788936AD98C640267 /* type_mat4x3.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x3.inl; path = libs/glm/glm/detail/type_mat4x3.inl; sourceTree = "<group>"; };
-		6DF9BB4F355E7641C016498F /* matrix_float3x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x2_precision.hpp; path = libs/glm/glm/ext/matrix_float3x2_precision.hpp; sourceTree = "<group>"; };
-		6EE701D5075EEF473345E015 /* quaternion_common_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common_simd.inl; path = libs/glm/glm/ext/quaternion_common_simd.inl; sourceTree = "<group>"; };
-		6F41255BCBC829CD546AE39B /* matrix_interpolation.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_interpolation.inl; path = libs/glm/glm/gtx/matrix_interpolation.inl; sourceTree = "<group>"; };
-		6F8BD0A1C98CE79390D3DEE1 /* scalar_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_relational.inl; path = libs/glm/glm/ext/scalar_relational.inl; sourceTree = "<group>"; };
-		6F904097E3EA858961CE0ED7 /* compatibility.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = compatibility.inl; path = libs/glm/glm/gtx/compatibility.inl; sourceTree = "<group>"; };
-		6FFE89F522F493A77416F035 /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLRendererAPI.cpp; path = src/Platform/OpenGl/OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
-		70F12AEB6AB2E75DA4B1E92B /* mat2x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat2x4.hpp; path = libs/glm/glm/mat2x4.hpp; sourceTree = "<group>"; };
-		71710D6909BDF31B3804F3A9 /* type_vec4.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec4.inl; path = libs/glm/glm/detail/type_vec4.inl; sourceTree = "<group>"; };
-		72A8B1A39AE36A55827EF7E3 /* odvmpch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = odvmpch.cpp; path = src/odvmpch.cpp; sourceTree = "<group>"; };
-		72DFD71B0B2CBCCD3973BD5B /* type_half.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_half.inl; path = libs/glm/glm/detail/type_half.inl; sourceTree = "<group>"; };
-		73C93E4D99EF6DFF00F6648D /* odvmpch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = odvmpch.h; path = src/odvmpch.h; sourceTree = "<group>"; };
-		749B2CCF0AC43EC1CC2A9B0F /* handed_coordinate_space.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = handed_coordinate_space.inl; path = libs/glm/glm/gtx/handed_coordinate_space.inl; sourceTree = "<group>"; };
-		74A8D253D12FD6C559D29093 /* quaternion_geometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_geometric.hpp; path = libs/glm/glm/ext/quaternion_geometric.hpp; sourceTree = "<group>"; };
-		74DF8697379FE70994D4C4D7 /* vector_uint4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint4.hpp; path = libs/glm/glm/ext/vector_uint4.hpp; sourceTree = "<group>"; };
-		7579FF9D541C9B0F08FE9DDD /* associated_min_max.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = associated_min_max.hpp; path = libs/glm/glm/gtx/associated_min_max.hpp; sourceTree = "<group>"; };
-		75D5964B826048BDFD45148B /* fast_exponential.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_exponential.inl; path = libs/glm/glm/gtx/fast_exponential.inl; sourceTree = "<group>"; };
-		75F681533D5B3C45C8130F93 /* matrix_float4x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x3_precision.hpp; path = libs/glm/glm/ext/matrix_float4x3_precision.hpp; sourceTree = "<group>"; };
-		761B4406CD80B6F87F8ED246 /* ImGuiBuild.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiBuild.cpp; path = src/ODVM/ImGui/ImGuiBuild.cpp; sourceTree = "<group>"; };
-		764CD3E33B022A55EF70D223 /* vector_double4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double4_precision.hpp; path = libs/glm/glm/ext/vector_double4_precision.hpp; sourceTree = "<group>"; };
-		7672D5C5D2F9DA375B9C9405 /* matrix_major_storage.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_major_storage.inl; path = libs/glm/glm/gtx/matrix_major_storage.inl; sourceTree = "<group>"; };
-		7697D01044BB23C2CBC97650 /* Glad.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Glad.xcodeproj; path = libs/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
-		77FF01B90E2813ABCF8E6FF9 /* vector_float4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float4_precision.hpp; path = libs/glm/glm/ext/vector_float4_precision.hpp; sourceTree = "<group>"; };
-		78019BC3D488A0355D2B5A03 /* quaternion_transform.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_transform.inl; path = libs/glm/glm/ext/quaternion_transform.inl; sourceTree = "<group>"; };
-		7802D51192CF43C3969FDB51 /* type_mat3x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x4.hpp; path = libs/glm/glm/detail/type_mat3x4.hpp; sourceTree = "<group>"; };
-		78038D49848E3FBBFF730B89 /* matrix_double4x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x4.hpp; path = libs/glm/glm/ext/matrix_double4x4.hpp; sourceTree = "<group>"; };
-		78AA2D91ED0472836AE7FBD1 /* normalize_dot.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = normalize_dot.inl; path = libs/glm/glm/gtx/normalize_dot.inl; sourceTree = "<group>"; };
-		7931A86D3FBF9FDFADC1C6AD /* scalar_ulp.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_ulp.inl; path = libs/glm/glm/ext/scalar_ulp.inl; sourceTree = "<group>"; };
-		7986684311FE55B53DE54683 /* vector_bool3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool3_precision.hpp; path = libs/glm/glm/ext/vector_bool3_precision.hpp; sourceTree = "<group>"; };
-		7AEB05D15A08200336117C11 /* OpenGLBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLBuffer.h; path = src/Platform/OpenGl/OpenGLBuffer.h; sourceTree = "<group>"; };
-		7C4A5DCDABDC2CBF86E96C0D /* fwd.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fwd.hpp; path = libs/glm/glm/fwd.hpp; sourceTree = "<group>"; };
-		7D54A82777166499B1156667 /* mat2x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat2x2.hpp; path = libs/glm/glm/mat2x2.hpp; sourceTree = "<group>"; };
-		7DEA91EF8A754461055A102F /* scalar_constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_constants.hpp; path = libs/glm/glm/ext/scalar_constants.hpp; sourceTree = "<group>"; };
-		7E5B501B781D0C8DB21C0E5B /* norm.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = norm.inl; path = libs/glm/glm/gtx/norm.inl; sourceTree = "<group>"; };
-		7E8781FA4515796CB317A03A /* quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.inl; path = libs/glm/glm/gtc/quaternion.inl; sourceTree = "<group>"; };
-		7F1DBD97F3780289715B8BD7 /* vector_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_common.inl; path = libs/glm/glm/ext/vector_common.inl; sourceTree = "<group>"; };
-		7F48A66F8BD358E106B824AF /* fast_square_root.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_square_root.hpp; path = libs/glm/glm/gtx/fast_square_root.hpp; sourceTree = "<group>"; };
-		8100F89722EA94891A11A6D7 /* trigonometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = trigonometric.hpp; path = libs/glm/glm/trigonometric.hpp; sourceTree = "<group>"; };
-		8169D9B9DB6AF0ABA2B1E7F9 /* matrix_clip_space.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_clip_space.hpp; path = libs/glm/glm/ext/matrix_clip_space.hpp; sourceTree = "<group>"; };
-		821BE0C59CE84F77A0B8E705 /* type_mat3x3.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x3.inl; path = libs/glm/glm/detail/type_mat3x3.inl; sourceTree = "<group>"; };
-		82E2066967290E9BEB163CA9 /* _fixes.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _fixes.hpp; path = libs/glm/glm/detail/_fixes.hpp; sourceTree = "<group>"; };
-		82FE1EC71B4B047949920507 /* type_vec3.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec3.inl; path = libs/glm/glm/detail/type_vec3.inl; sourceTree = "<group>"; };
-		833696FDDE77EA6FB1D2353D /* io.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = io.hpp; path = libs/glm/glm/gtx/io.hpp; sourceTree = "<group>"; };
-		8371098A8313ECBCBD689FCA /* RenderCommand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RenderCommand.cpp; path = src/ODVM/Renderer/RenderCommand.cpp; sourceTree = "<group>"; };
-		84F0E60F47B14681A4E6244F /* WindowsInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WindowsInput.h; path = src/Platform/Windows/WindowsInput.h; sourceTree = "<group>"; };
-		8564ACD51DDC9A4749C38B15 /* CameraControllers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CameraControllers.cpp; path = src/ODVM/CameraControllers/CameraControllers.cpp; sourceTree = "<group>"; };
-		866C97F5492CF867A661D635 /* vector_uint3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint3.hpp; path = libs/glm/glm/ext/vector_uint3.hpp; sourceTree = "<group>"; };
-		86F33087869613B9C0EAC6C7 /* OpenGLBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLBuffer.cpp; path = src/Platform/OpenGl/OpenGLBuffer.cpp; sourceTree = "<group>"; };
-		87100E791F87FBEB4B6EECB9 /* quaternion_exponential.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_exponential.inl; path = libs/glm/glm/ext/quaternion_exponential.inl; sourceTree = "<group>"; };
-		889BB4C795266739100B3307 /* scalar_int_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_int_sized.hpp; path = libs/glm/glm/ext/scalar_int_sized.hpp; sourceTree = "<group>"; };
-		89E534FDE54559AF2788FB3D /* func_trigonometric_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_trigonometric_simd.inl; path = libs/glm/glm/detail/func_trigonometric_simd.inl; sourceTree = "<group>"; };
-		8A9F6DD5CEEE134711154C15 /* common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = common.inl; path = libs/glm/glm/gtx/common.inl; sourceTree = "<group>"; };
-		8B20FC387F2045AA040B5A78 /* matrix_inverse.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_inverse.hpp; path = libs/glm/glm/gtc/matrix_inverse.hpp; sourceTree = "<group>"; };
-		8B34CDC37C2C3BB5E82FBC03 /* dual_quaternion.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = dual_quaternion.hpp; path = libs/glm/glm/gtx/dual_quaternion.hpp; sourceTree = "<group>"; };
-		8BCE24E14E8E8553ABC36321 /* matrix_query.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_query.hpp; path = libs/glm/glm/gtx/matrix_query.hpp; sourceTree = "<group>"; };
-		8C231161007D56537E60DFA1 /* compatibility.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = compatibility.hpp; path = libs/glm/glm/gtx/compatibility.hpp; sourceTree = "<group>"; };
-		8C57B9AFA7242861AAF4BFEF /* type_mat2x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x4.hpp; path = libs/glm/glm/detail/type_mat2x4.hpp; sourceTree = "<group>"; };
-		8E34974587F653B7C1F55585 /* norm.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = norm.hpp; path = libs/glm/glm/gtx/norm.hpp; sourceTree = "<group>"; };
-		8F69FE2A73B1065CF79E346A /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseEvent.h; path = src/ODVM/Events/MouseEvent.h; sourceTree = "<group>"; };
-		8F7842BB806FB0ADEC7330FB /* matrix_float3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x3.hpp; path = libs/glm/glm/ext/matrix_float3x3.hpp; sourceTree = "<group>"; };
-		8F7FF0DC837F3A4E086A4F1C /* matrix_integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_integer.hpp; path = libs/glm/glm/gtc/matrix_integer.hpp; sourceTree = "<group>"; };
-		8FA2359BE9A34C8DB0EA43DB /* vector_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_relational.inl; path = libs/glm/glm/ext/vector_relational.inl; sourceTree = "<group>"; };
-		8FA8DC922236A6848B0F4AD2 /* packing.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = packing.hpp; path = libs/glm/glm/gtc/packing.hpp; sourceTree = "<group>"; };
-		8FBC7EF7564A7669C44C9D37 /* type_trait.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_trait.hpp; path = libs/glm/glm/gtx/type_trait.hpp; sourceTree = "<group>"; };
-		8FEC27F0D3FFF922C7D17E30 /* VertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VertexArray.h; path = src/ODVM/Renderer/VertexArray.h; sourceTree = "<group>"; };
-		904BC8D78A0D8549C40C8717 /* wrap.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = wrap.inl; path = libs/glm/glm/gtx/wrap.inl; sourceTree = "<group>"; };
-		90738FEB28EB7D5D54D26E2B /* vector_uint3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint3_precision.hpp; path = libs/glm/glm/ext/vector_uint3_precision.hpp; sourceTree = "<group>"; };
-		914F2993299C0F4557E30FD3 /* type_vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec4.hpp; path = libs/glm/glm/detail/type_vec4.hpp; sourceTree = "<group>"; };
-		91D85EEEACA4CDA0B075652E /* MouseButtonCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MouseButtonCodes.h; path = src/ODVM/Core/MouseButtonCodes.h; sourceTree = "<group>"; };
-		91DB481756909E890AFF4657 /* quaternion_trigonometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_trigonometric.inl; path = libs/glm/glm/ext/quaternion_trigonometric.inl; sourceTree = "<group>"; };
-		9259D665E9BF49579BCD64A5 /* Windows.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Windows.cpp; path = src/Platform/Windows/Windows.cpp; sourceTree = "<group>"; };
-		92BDF3452B0AD8F75951D985 /* type_half.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_half.hpp; path = libs/glm/glm/detail/type_half.hpp; sourceTree = "<group>"; };
-		930A3F78E06D35AA568C35B8 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Layer.cpp; path = src/ODVM/Core/Layer.cpp; sourceTree = "<group>"; };
-		93E82DE32E4216D56A7A7C23 /* vector_int4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int4_precision.hpp; path = libs/glm/glm/ext/vector_int4_precision.hpp; sourceTree = "<group>"; };
-		948B30252CD815D75B1F1665 /* type_vec2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec2.inl; path = libs/glm/glm/detail/type_vec2.inl; sourceTree = "<group>"; };
-		953CFE5B0997434D877ACC9B /* normalize_dot.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = normalize_dot.hpp; path = libs/glm/glm/gtx/normalize_dot.hpp; sourceTree = "<group>"; };
-		958D55DD09E79ACF87CB241D /* vector_float1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float1.hpp; path = libs/glm/glm/ext/vector_float1.hpp; sourceTree = "<group>"; };
-		9670C563B13D3415B50DCBA3 /* type_mat2x3.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x3.inl; path = libs/glm/glm/detail/type_mat2x3.inl; sourceTree = "<group>"; };
-		96B73C4FEE1CAF41A02ACA8F /* intersect.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = intersect.hpp; path = libs/glm/glm/gtx/intersect.hpp; sourceTree = "<group>"; };
-		97554CCD9117093FCB160B0D /* mat3x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat3x4.hpp; path = libs/glm/glm/mat3x4.hpp; sourceTree = "<group>"; };
-		97CD09915F31C483E9E997D1 /* matrix_float2x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x4_precision.hpp; path = libs/glm/glm/ext/matrix_float2x4_precision.hpp; sourceTree = "<group>"; };
-		97F9A9535ABA09C5B7EEE793 /* vector_uint2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint2.hpp; path = libs/glm/glm/ext/vector_uint2.hpp; sourceTree = "<group>"; };
-		981A62A58C19AC171104C0E5 /* WindowsInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsInput.cpp; path = src/Platform/Windows/WindowsInput.cpp; sourceTree = "<group>"; };
-		99671B882BF4E57A94CD89C8 /* packing.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = packing.inl; path = libs/glm/glm/gtc/packing.inl; sourceTree = "<group>"; };
-		9A48726DF449895FBB9080AD /* scalar_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_relational.hpp; path = libs/glm/glm/gtx/scalar_relational.hpp; sourceTree = "<group>"; };
-		9A6B4A58DE7F1B8AD250A098 /* RendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RendererAPI.h; path = src/ODVM/Renderer/RendererAPI.h; sourceTree = "<group>"; };
-		9AD68A9BF23BFD8DA44A18DB /* transform.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = transform.inl; path = libs/glm/glm/gtx/transform.inl; sourceTree = "<group>"; };
-		9B5DAB8BB62A1A3DB9FAB1CB /* func_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_common.inl; path = libs/glm/glm/detail/func_common.inl; sourceTree = "<group>"; };
-		9BB08E61100AD3538DEE5CA1 /* vector_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_common.hpp; path = libs/glm/glm/ext/vector_common.hpp; sourceTree = "<group>"; };
-		9C047E406A27D1F2F1362480 /* Buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Buffer.cpp; path = src/ODVM/Renderer/Buffer.cpp; sourceTree = "<group>"; };
-		9CC86B110DEB0C03C3B1B951 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = libs/stb/stb_image.cpp; sourceTree = "<group>"; };
-		9D38B627A9C3689924A83467 /* matrix_double4x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x3.hpp; path = libs/glm/glm/ext/matrix_double4x3.hpp; sourceTree = "<group>"; };
-		9F218B6965AF82DBD3B1A9A9 /* transform2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = transform2.hpp; path = libs/glm/glm/gtx/transform2.hpp; sourceTree = "<group>"; };
-		9FEC096A3562C89CA3FF1FAA /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyEvent.h; path = src/ODVM/Events/KeyEvent.h; sourceTree = "<group>"; };
-		9FF46F4A1117103CC6DDBD8A /* noise.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = noise.inl; path = libs/glm/glm/gtc/noise.inl; sourceTree = "<group>"; };
-		9FFD9D0793FCE67918E7FB47 /* scalar_integer.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_integer.inl; path = libs/glm/glm/ext/scalar_integer.inl; sourceTree = "<group>"; };
-		A025100199E6CC73D3E5CE41 /* wrap.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = wrap.hpp; path = libs/glm/glm/gtx/wrap.hpp; sourceTree = "<group>"; };
-		A0294A3666B741A8D4B96876 /* reciprocal.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = reciprocal.inl; path = libs/glm/glm/gtc/reciprocal.inl; sourceTree = "<group>"; };
-		A059D31138A6B8C366EDB951 /* qualifier.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = qualifier.hpp; path = libs/glm/glm/detail/qualifier.hpp; sourceTree = "<group>"; };
-		A0D273BE0DFA82300F8D71FE /* bitfield.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = bitfield.hpp; path = libs/glm/glm/gtc/bitfield.hpp; sourceTree = "<group>"; };
-		A1110597A481D7C925EE7BD7 /* ODVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ODVM.h; path = src/ODVM.h; sourceTree = "<group>"; };
-		A1B159EF6471BA61C1A6982F /* vector_bool4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool4.hpp; path = libs/glm/glm/ext/vector_bool4.hpp; sourceTree = "<group>"; };
-		A1D53D4EAE5FEFC02944BB8E /* matrix_transform.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.inl; path = libs/glm/glm/gtc/matrix_transform.inl; sourceTree = "<group>"; };
-		A1FB8B61AE863DD3296B09A1 /* quaternion_float.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_float.hpp; path = libs/glm/glm/ext/quaternion_float.hpp; sourceTree = "<group>"; };
-		A227888CEA986CBE2F373ECC /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Log.h; path = src/ODVM/Core/Log.h; sourceTree = "<group>"; };
-		A2DC3AF13B2920A369702131 /* type_vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec3.hpp; path = libs/glm/glm/detail/type_vec3.hpp; sourceTree = "<group>"; };
-		A2DE027BD65D41EDEE5720BB /* matrix_double4x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x2_precision.hpp; path = libs/glm/glm/ext/matrix_double4x2_precision.hpp; sourceTree = "<group>"; };
-		A3B8CA099D7A867BD7798849 /* mat3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat3x2.hpp; path = libs/glm/glm/mat3x2.hpp; sourceTree = "<group>"; };
-		A43CBED96ACAB64BD8CCDD19 /* quaternion.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.hpp; path = libs/glm/glm/gtx/quaternion.hpp; sourceTree = "<group>"; };
-		A467F5E198673F531D525421 /* std_based_type.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = std_based_type.hpp; path = libs/glm/glm/gtx/std_based_type.hpp; sourceTree = "<group>"; };
-		A4F2FFB7017A04298A1CBDF7 /* matrix_factorisation.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_factorisation.inl; path = libs/glm/glm/gtx/matrix_factorisation.inl; sourceTree = "<group>"; };
-		A5574DF74740E9E93E67FC37 /* color_space.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space.inl; path = libs/glm/glm/gtx/color_space.inl; sourceTree = "<group>"; };
-		A5ED4C1D1A47910F982B1A5D /* scalar_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_common.inl; path = libs/glm/glm/ext/scalar_common.inl; sourceTree = "<group>"; };
-		A61841833E6527356CAC27C3 /* type_vec1.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec1.inl; path = libs/glm/glm/detail/type_vec1.inl; sourceTree = "<group>"; };
-		A61ED8BAEA6D7E2C2C94B6FA /* random.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = random.hpp; path = libs/glm/glm/gtc/random.hpp; sourceTree = "<group>"; };
-		A6672733B64C5365A2BFDD73 /* type_quat_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_quat_simd.inl; path = libs/glm/glm/detail/type_quat_simd.inl; sourceTree = "<group>"; };
-		A68F1822C85AC554050FEE62 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = src/ODVM/Core/Log.cpp; sourceTree = "<group>"; };
-		A6A1DB8F94096E41310361CF /* func_geometric_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_geometric_simd.inl; path = libs/glm/glm/detail/func_geometric_simd.inl; sourceTree = "<group>"; };
-		A74308689B4251DA202D66A8 /* type_precision.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_precision.inl; path = libs/glm/glm/gtc/type_precision.inl; sourceTree = "<group>"; };
-		A74FE0BAB979BD6CED6AA6FA /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = src/ODVM/Renderer/Renderer.cpp; sourceTree = "<group>"; };
-		A86449B43AF213A6A3CAB7F4 /* integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.hpp; path = libs/glm/glm/gtc/integer.hpp; sourceTree = "<group>"; };
-		A885DDB79C85272921703BF7 /* color_encoding.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_encoding.hpp; path = libs/glm/glm/gtx/color_encoding.hpp; sourceTree = "<group>"; };
-		A905530BE2D009BD982B594B /* func_vector_relational_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_vector_relational_simd.inl; path = libs/glm/glm/detail/func_vector_relational_simd.inl; sourceTree = "<group>"; };
-		A986BAB16C471B23C97BF8F1 /* vector_uint1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint1.hpp; path = libs/glm/glm/ext/vector_uint1.hpp; sourceTree = "<group>"; };
-		AA9C3BEB049D52DDCBE44A2B /* scalar_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_relational.hpp; path = libs/glm/glm/ext/scalar_relational.hpp; sourceTree = "<group>"; };
-		AB82195DDF0158CFF6FB379D /* matrix_double4x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x3_precision.hpp; path = libs/glm/glm/ext/matrix_double4x3_precision.hpp; sourceTree = "<group>"; };
-		ABE7CB141D0A6C06D2D11954 /* noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = noise.hpp; path = libs/glm/glm/gtc/noise.hpp; sourceTree = "<group>"; };
-		AC44865FC710F511CAE18C9F /* OpenGLTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLTexture.h; path = src/Platform/OpenGl/OpenGLTexture.h; sourceTree = "<group>"; };
-		AC796B3307C4BB65F5F6A173 /* func_vector_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_vector_relational.inl; path = libs/glm/glm/detail/func_vector_relational.inl; sourceTree = "<group>"; };
-		AC8A53C68BA76DF867B0CA06 /* VertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = src/ODVM/Renderer/VertexArray.cpp; sourceTree = "<group>"; };
-		ACF527451A1D35B71BB02585 /* log_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = log_base.hpp; path = libs/glm/glm/gtx/log_base.hpp; sourceTree = "<group>"; };
-		AEBCE5E7A2BC2F5927A74427 /* orthonormalize.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = orthonormalize.hpp; path = libs/glm/glm/gtx/orthonormalize.hpp; sourceTree = "<group>"; };
-		AF2079F147986763737F5831 /* rotate_normalized_axis.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotate_normalized_axis.inl; path = libs/glm/glm/gtx/rotate_normalized_axis.inl; sourceTree = "<group>"; };
-		AF25083FF373ADB1359AE67F /* normal.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = normal.hpp; path = libs/glm/glm/gtx/normal.hpp; sourceTree = "<group>"; };
-		AF654F73AF0832A5E95CE5B3 /* func_packing.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_packing.inl; path = libs/glm/glm/detail/func_packing.inl; sourceTree = "<group>"; };
-		AF75B42DA374FD9F2860126D /* vector_double4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double4.hpp; path = libs/glm/glm/ext/vector_double4.hpp; sourceTree = "<group>"; };
-		AF7621731C9E2FE51E311FB3 /* raw_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = raw_data.hpp; path = libs/glm/glm/gtx/raw_data.hpp; sourceTree = "<group>"; };
-		AFDA631D4A344C0F866CB15D /* vector_int1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int1_precision.hpp; path = libs/glm/glm/ext/vector_int1_precision.hpp; sourceTree = "<group>"; };
-		B0316ECF7E54C2810563150F /* setup.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = setup.hpp; path = libs/glm/glm/detail/setup.hpp; sourceTree = "<group>"; };
-		B0A7C1CE461E8100B4BAD80E /* Cameras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cameras.h; path = src/ODVM/Renderer/Cameras.h; sourceTree = "<group>"; };
-		B0EDFC9F25484191A32BCADF /* WindowsWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WindowsWindow.h; path = src/Platform/Windows/WindowsWindow.h; sourceTree = "<group>"; };
-		B11F7B1BF56E208D3795595B /* easing.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = easing.hpp; path = libs/glm/glm/gtx/easing.hpp; sourceTree = "<group>"; };
-		B22288AA44B0529CAD88F6EA /* integer.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.inl; path = libs/glm/glm/gtc/integer.inl; sourceTree = "<group>"; };
-		B329AD4C45B7773EAE901B8C /* epsilon.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = epsilon.hpp; path = libs/glm/glm/gtc/epsilon.hpp; sourceTree = "<group>"; };
-		B33E6B4D75FECBBFD333A98D /* vector_bool3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool3.hpp; path = libs/glm/glm/ext/vector_bool3.hpp; sourceTree = "<group>"; };
-		B3CFD709CE9C45BBD26CDD49 /* type_mat4x4.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x4.inl; path = libs/glm/glm/detail/type_mat4x4.inl; sourceTree = "<group>"; };
-		B426303FE7A56FB1FF9F4E7F /* matrix_double4x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x4_precision.hpp; path = libs/glm/glm/ext/matrix_double4x4_precision.hpp; sourceTree = "<group>"; };
-		B443D3C946D19DBBAFAA4209 /* integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.hpp; path = libs/glm/glm/gtx/integer.hpp; sourceTree = "<group>"; };
-		B4694C4F4CB632017AFD328F /* type_vec2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec2.hpp; path = libs/glm/glm/detail/type_vec2.hpp; sourceTree = "<group>"; };
-		B5A7FCF5C232AF673D177B35 /* fast_exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_exponential.hpp; path = libs/glm/glm/gtx/fast_exponential.hpp; sourceTree = "<group>"; };
-		B70CEC47D1D95AF9D5A9F287 /* OpenGLContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGLContext.h; path = src/Platform/OpenGl/OpenGLContext.h; sourceTree = "<group>"; };
-		B78E38175977D409509EE657 /* vec_swizzle.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec_swizzle.hpp; path = libs/glm/glm/gtx/vec_swizzle.hpp; sourceTree = "<group>"; };
-		B8482561AC476ED3313283A1 /* vector_integer.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_integer.inl; path = libs/glm/glm/ext/vector_integer.inl; sourceTree = "<group>"; };
-		B892C7F7C877F429B4EB7E37 /* compute_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = compute_common.hpp; path = libs/glm/glm/detail/compute_common.hpp; sourceTree = "<group>"; };
-		B8A30F374ECC212910327D77 /* vector_float3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float3_precision.hpp; path = libs/glm/glm/ext/vector_float3_precision.hpp; sourceTree = "<group>"; };
-		BBA8EFED16EA435FEA448E2D /* vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec3.hpp; path = libs/glm/glm/vec3.hpp; sourceTree = "<group>"; };
-		BC53BAD11654D1C3DD9BC911 /* scalar_uint_sized.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_uint_sized.hpp; path = libs/glm/glm/ext/scalar_uint_sized.hpp; sourceTree = "<group>"; };
-		BC86393FAD7DA7311981277F /* matrix_float4x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x4.hpp; path = libs/glm/glm/ext/matrix_float4x4.hpp; sourceTree = "<group>"; };
-		BCE7EC424F75B634B84E5A82 /* epsilon.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = epsilon.inl; path = libs/glm/glm/gtc/epsilon.inl; sourceTree = "<group>"; };
-		BD53AF072E764FF9E43CFD47 /* range.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = range.hpp; path = libs/glm/glm/gtx/range.hpp; sourceTree = "<group>"; };
-		BD8A11C52EACB2B7E4736005 /* packing.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = packing.hpp; path = libs/glm/glm/packing.hpp; sourceTree = "<group>"; };
-		BDB96EAFB77B2B21F17A2CEF /* mat4x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat4x4.hpp; path = libs/glm/glm/mat4x4.hpp; sourceTree = "<group>"; };
-		BE0212BF508FDCB1B96880FF /* integer.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.inl; path = libs/glm/glm/gtx/integer.inl; sourceTree = "<group>"; };
-		BE4C9FFD184DB6EFDF94AE3D /* quaternion_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common.inl; path = libs/glm/glm/ext/quaternion_common.inl; sourceTree = "<group>"; };
-		BE6047EF32BA8CE1B09E162F /* closest_point.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = closest_point.inl; path = libs/glm/glm/gtx/closest_point.inl; sourceTree = "<group>"; };
-		BEA05FE532FAA4D7B0DE2E25 /* rotate_vector.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotate_vector.inl; path = libs/glm/glm/gtx/rotate_vector.inl; sourceTree = "<group>"; };
-		BEA6FD815900E67395394BC1 /* quaternion_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_relational.inl; path = libs/glm/glm/ext/quaternion_relational.inl; sourceTree = "<group>"; };
-		BF2665A7CBB118194695E3E7 /* matrix_double3x4.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x4.hpp; path = libs/glm/glm/ext/matrix_double3x4.hpp; sourceTree = "<group>"; };
-		BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsWindow.cpp; path = src/Platform/Windows/WindowsWindow.cpp; sourceTree = "<group>"; };
-		BF41B19E30645290E62AFFDE /* round.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = round.inl; path = libs/glm/glm/gtc/round.inl; sourceTree = "<group>"; };
-		C0D91B57F4585AC90C523997 /* quaternion_float_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_float_precision.hpp; path = libs/glm/glm/ext/quaternion_float_precision.hpp; sourceTree = "<group>"; };
-		C130B974A04DD3A67C572FB4 /* RenderCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RenderCommand.h; path = src/ODVM/Renderer/RenderCommand.h; sourceTree = "<group>"; };
-		C245DE6733687F59E92F2CA7 /* integer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = integer.hpp; path = libs/glm/glm/integer.hpp; sourceTree = "<group>"; };
-		C26DDF05CEF8917749DD5D45 /* matrix_double4x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double4x2.hpp; path = libs/glm/glm/ext/matrix_double4x2.hpp; sourceTree = "<group>"; };
-		C2801CE736DA61D9B4BDEB27 /* scalar_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_common.hpp; path = libs/glm/glm/ext/scalar_common.hpp; sourceTree = "<group>"; };
-		C2CFF89F372A3D91B50DC6DF /* vector_float2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float2.hpp; path = libs/glm/glm/ext/vector_float2.hpp; sourceTree = "<group>"; };
-		C3409005B437FDF7203B7E45 /* vector_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_relational.hpp; path = libs/glm/glm/vector_relational.hpp; sourceTree = "<group>"; };
-		C3D4BD95C377A0C7FDCC53D5 /* func_integer.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_integer.inl; path = libs/glm/glm/detail/func_integer.inl; sourceTree = "<group>"; };
-		C4CB7CAB878BDD1DE4C0BAEB /* vector_bool2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool2.hpp; path = libs/glm/glm/ext/vector_bool2.hpp; sourceTree = "<group>"; };
-		C4E22021A3FF3A5380089661 /* _vectorize.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _vectorize.hpp; path = libs/glm/glm/detail/_vectorize.hpp; sourceTree = "<group>"; };
-		C56646C1D5B32AB3D39FF501 /* quaternion_double_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_double_precision.hpp; path = libs/glm/glm/ext/quaternion_double_precision.hpp; sourceTree = "<group>"; };
-		C5F65DAD5E43435F8C8A43ED /* type_vec1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec1.hpp; path = libs/glm/glm/detail/type_vec1.hpp; sourceTree = "<group>"; };
-		C6243B460A380C78FE099186 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = src/ODVM/Core/Application.cpp; sourceTree = "<group>"; };
-		C704D99B3B5F1E8DB942A7DB /* matrix_common.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_common.inl; path = libs/glm/glm/ext/matrix_common.inl; sourceTree = "<group>"; };
-		C7A463FD8C59BA6F40C8623D /* vector_double1_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double1_precision.hpp; path = libs/glm/glm/ext/vector_double1_precision.hpp; sourceTree = "<group>"; };
-		C7F0E2A569DA7E97610190E5 /* string_cast.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = string_cast.inl; path = libs/glm/glm/gtx/string_cast.inl; sourceTree = "<group>"; };
-		C824BBA7E2F12A59E6C1C1E7 /* type_mat3x4.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x4.inl; path = libs/glm/glm/detail/type_mat3x4.inl; sourceTree = "<group>"; };
-		C82C28F3B92396E525271733 /* float_notmalize.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = float_notmalize.inl; path = libs/glm/glm/gtx/float_notmalize.inl; sourceTree = "<group>"; };
-		C83B79E160B367538C9A5821 /* vector_bool2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool2_precision.hpp; path = libs/glm/glm/ext/vector_bool2_precision.hpp; sourceTree = "<group>"; };
-		C8E79728EAB3445A27686D68 /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Input.h; path = src/ODVM/Core/Input.h; sourceTree = "<group>"; };
-		CA1CEBEBC3DEA85DFDDDAA2B /* mat4x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat4x2.hpp; path = libs/glm/glm/mat4x2.hpp; sourceTree = "<group>"; };
-		CAB2A0E524B3B7D7EBFAAF25 /* vector_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_relational.hpp; path = libs/glm/glm/ext/vector_relational.hpp; sourceTree = "<group>"; };
-		CB350D683C57AE5AF21E5BA8 /* round.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = round.hpp; path = libs/glm/glm/gtc/round.hpp; sourceTree = "<group>"; };
-		CBECFC0D9351B6FF1E098A4D /* matrix_float2x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x2_precision.hpp; path = libs/glm/glm/ext/matrix_float2x2_precision.hpp; sourceTree = "<group>"; };
-		CBFFB0092886B47BB1296E49 /* matrix_cross_product.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_cross_product.hpp; path = libs/glm/glm/gtx/matrix_cross_product.hpp; sourceTree = "<group>"; };
-		CC7D1BF58F3D7C67EC725A35 /* vector_angle.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_angle.inl; path = libs/glm/glm/gtx/vector_angle.inl; sourceTree = "<group>"; };
-		CD28F0DA418335CCBF66BF1A /* matrix_access.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_access.inl; path = libs/glm/glm/gtc/matrix_access.inl; sourceTree = "<group>"; };
-		CD5A0B3BBE51792D2A54F97B /* matrix_float4x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x2.hpp; path = libs/glm/glm/ext/matrix_float4x2.hpp; sourceTree = "<group>"; };
-		D13A5F2E9F5DB2E0266C056E /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LayerStack.h; path = src/ODVM/Core/LayerStack.h; sourceTree = "<group>"; };
-		D222253D98B01CAF06B2437D /* projection.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = projection.inl; path = libs/glm/glm/gtx/projection.inl; sourceTree = "<group>"; };
-		D3967B832D979275F4DE89C3 /* matrix_projection.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_projection.inl; path = libs/glm/glm/ext/matrix_projection.inl; sourceTree = "<group>"; };
-		D3E9C2119B4E7D0326065051 /* matrix_float3x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float3x3_precision.hpp; path = libs/glm/glm/ext/matrix_float3x3_precision.hpp; sourceTree = "<group>"; };
-		D6588E099918EE7BF64DCC49 /* vector_bool1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_bool1.hpp; path = libs/glm/glm/ext/vector_bool1.hpp; sourceTree = "<group>"; };
-		D76AFBB3B60D97256AEF99F3 /* associated_min_max.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = associated_min_max.inl; path = libs/glm/glm/gtx/associated_min_max.inl; sourceTree = "<group>"; };
-		D79C3AAFF268A961F63940EF /* type_mat4x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x2.hpp; path = libs/glm/glm/detail/type_mat4x2.hpp; sourceTree = "<group>"; };
-		D8F4490173183E33233E1F41 /* type_mat4x4_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x4_simd.inl; path = libs/glm/glm/detail/type_mat4x4_simd.inl; sourceTree = "<group>"; };
-		DA006339CAF7D12B36FB5179 /* matrix_float2x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float2x3.hpp; path = libs/glm/glm/ext/matrix_float2x3.hpp; sourceTree = "<group>"; };
-		DAF318B94F4D5DABCD30E6F9 /* closest_point.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = closest_point.hpp; path = libs/glm/glm/gtx/closest_point.hpp; sourceTree = "<group>"; };
-		DB3330AF4F8D75A1CD70FEEF /* rotate_vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotate_vector.hpp; path = libs/glm/glm/gtx/rotate_vector.hpp; sourceTree = "<group>"; };
-		DB42E2CECF422C40542D410E /* matrix_inverse.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_inverse.inl; path = libs/glm/glm/gtc/matrix_inverse.inl; sourceTree = "<group>"; };
-		DB96F5A1CF963F13548153E1 /* component_wise.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = component_wise.hpp; path = libs/glm/glm/gtx/component_wise.hpp; sourceTree = "<group>"; };
-		DBE68815A34B43072E031655 /* matrix_float4x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x4_precision.hpp; path = libs/glm/glm/ext/matrix_float4x4_precision.hpp; sourceTree = "<group>"; };
-		DC64D4CF6EF29EC1D7CB430F /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = texture.hpp; path = libs/glm/glm/gtx/texture.hpp; sourceTree = "<group>"; };
-		DC79A045F7460EF7FB16A685 /* type_mat2x4.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat2x4.inl; path = libs/glm/glm/detail/type_mat2x4.inl; sourceTree = "<group>"; };
-		DC94C9817E7E657375A577C1 /* color_space.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space.hpp; path = libs/glm/glm/gtx/color_space.hpp; sourceTree = "<group>"; };
-		DD3186AF6FBF50A1D897F4EF /* Windows.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Windows.h; path = src/Platform/Windows/Windows.h; sourceTree = "<group>"; };
-		DD5B2387D15A6CF9564581C7 /* vector_double1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double1.hpp; path = libs/glm/glm/ext/vector_double1.hpp; sourceTree = "<group>"; };
-		DE0BF003225A95756481CE43 /* spline.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = spline.hpp; path = libs/glm/glm/gtx/spline.hpp; sourceTree = "<group>"; };
-		DEA257B9CF99C5AB3B9D45F9 /* dual_quaternion.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = dual_quaternion.inl; path = libs/glm/glm/gtx/dual_quaternion.inl; sourceTree = "<group>"; };
-		DEB7269D529F9E4F74ED4CDD /* OpenGLContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLContext.cpp; path = src/Platform/OpenGl/OpenGLContext.cpp; sourceTree = "<group>"; };
-		DEF294F5D8B4516712B35335 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix.hpp; path = libs/glm/glm/matrix.hpp; sourceTree = "<group>"; };
-		DF28A18977A08EFBA3877FC9 /* vector_uint2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_uint2_precision.hpp; path = libs/glm/glm/ext/vector_uint2_precision.hpp; sourceTree = "<group>"; };
-		DFB01757A63E0EC914403597 /* scalar_ulp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = scalar_ulp.hpp; path = libs/glm/glm/ext/scalar_ulp.hpp; sourceTree = "<group>"; };
-		DFB67D5F39B7945100FE8B9F /* color_space_YCoCg.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space_YCoCg.inl; path = libs/glm/glm/gtx/color_space_YCoCg.inl; sourceTree = "<group>"; };
-		E01529B553FDA167764B4FF5 /* OpenGLTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLTexture.cpp; path = src/Platform/OpenGl/OpenGLTexture.cpp; sourceTree = "<group>"; };
-		E0D890C2E07B73F41AD02702 /* GraphicsContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GraphicsContext.h; path = src/ODVM/Renderer/GraphicsContext.h; sourceTree = "<group>"; };
-		E0D8AB191457EA8B2C51C959 /* matrix_double3x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x2_precision.hpp; path = libs/glm/glm/ext/matrix_double3x2_precision.hpp; sourceTree = "<group>"; };
-		E14E64E2031A12143FCF3B22 /* Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Layer.h; path = src/ODVM/Core/Layer.h; sourceTree = "<group>"; };
-		E16762144E8F708650226054 /* bitfield.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = bitfield.inl; path = libs/glm/glm/gtc/bitfield.inl; sourceTree = "<group>"; };
-		E199E4DD25E88A4F680FC31D /* extend.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = extend.hpp; path = libs/glm/glm/gtx/extend.hpp; sourceTree = "<group>"; };
-		E1A7A3F8EE32566A69172238 /* matrix_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.hpp; path = libs/glm/glm/gtc/matrix_transform.hpp; sourceTree = "<group>"; };
-		E2E8C85214E213048EC14E92 /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = src/ODVM/Core/Platform.h; sourceTree = "<group>"; };
-		E322A965E6937B9768001FA5 /* libODVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libODVM.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E36B59B61564A4688F43DFF6 /* KeyCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyCodes.h; path = src/ODVM/Core/KeyCodes.h; sourceTree = "<group>"; };
-		E382442650AA5298523D4266 /* type_ptr.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_ptr.hpp; path = libs/glm/glm/gtc/type_ptr.hpp; sourceTree = "<group>"; };
-		E397AA6557F1EF57D5D578A5 /* matrix_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_common.hpp; path = libs/glm/glm/ext/matrix_common.hpp; sourceTree = "<group>"; };
-		E3A8C2233DA9D91504F0D063 /* fast_trigonometry.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_trigonometry.inl; path = libs/glm/glm/gtx/fast_trigonometry.inl; sourceTree = "<group>"; };
-		E45B8E85F0E640F76BCB0CC5 /* matrix_double3x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x3.hpp; path = libs/glm/glm/ext/matrix_double3x3.hpp; sourceTree = "<group>"; };
-		E505F0E4AB93E85619960F24 /* quaternion.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion.hpp; path = libs/glm/glm/gtc/quaternion.hpp; sourceTree = "<group>"; };
-		E62313C578B0DDB7E1898205 /* texture.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = texture.inl; path = libs/glm/glm/gtx/texture.inl; sourceTree = "<group>"; };
-		E6BF5941AB74AFB35FE35781 /* vector_double3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double3_precision.hpp; path = libs/glm/glm/ext/vector_double3_precision.hpp; sourceTree = "<group>"; };
-		E83F3162AAFF91D408346FA2 /* type_aligned.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_aligned.hpp; path = libs/glm/glm/gtc/type_aligned.hpp; sourceTree = "<group>"; };
-		E8F8C605405E38F7F26C5445 /* intersect.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = intersect.inl; path = libs/glm/glm/gtx/intersect.inl; sourceTree = "<group>"; };
-		E90E6D47AF9C64B91D9E8B87 /* vector_ulp.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_ulp.inl; path = libs/glm/glm/ext/vector_ulp.inl; sourceTree = "<group>"; };
-		E97CC1FB1CFC016D34F5E03B /* matrix_double3x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x3_precision.hpp; path = libs/glm/glm/ext/matrix_double3x3_precision.hpp; sourceTree = "<group>"; };
-		E9BBC1A45E160696DBF98FE4 /* matrix_access.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_access.hpp; path = libs/glm/glm/gtc/matrix_access.hpp; sourceTree = "<group>"; };
-		EA1BE6E38C0582D5832C9523 /* optimum_pow.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = optimum_pow.inl; path = libs/glm/glm/gtx/optimum_pow.inl; sourceTree = "<group>"; };
-		EAC75C4B9DBD65FDEEDFC28B /* func_packing_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_packing_simd.inl; path = libs/glm/glm/detail/func_packing_simd.inl; sourceTree = "<group>"; };
-		EBF11F4D06BD8DFF0A8E258D /* type_mat3x2.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat3x2.hpp; path = libs/glm/glm/detail/type_mat3x2.hpp; sourceTree = "<group>"; };
-		EC5B381FAF1B98910C50765F /* vector_angle.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_angle.hpp; path = libs/glm/glm/gtx/vector_angle.hpp; sourceTree = "<group>"; };
-		EC88D9ABE64A961D204997EB /* hash.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = hash.inl; path = libs/glm/glm/gtx/hash.inl; sourceTree = "<group>"; };
-		ED29168549B01AF7D252D4C5 /* matrix_interpolation.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_interpolation.hpp; path = libs/glm/glm/gtx/matrix_interpolation.hpp; sourceTree = "<group>"; };
-		ED8A159B5AB2240D5C4513DB /* log_base.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = log_base.inl; path = libs/glm/glm/gtx/log_base.inl; sourceTree = "<group>"; };
-		ED90461B1E743E0D318C745B /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = libs/stb/stb_image.h; sourceTree = "<group>"; };
-		EF34D05BCE51EA8DAA5B469B /* type_float.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_float.hpp; path = libs/glm/glm/detail/type_float.hpp; sourceTree = "<group>"; };
-		F00B0FC95D331E3B5EC60E09 /* raw_data.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = raw_data.inl; path = libs/glm/glm/gtx/raw_data.inl; sourceTree = "<group>"; };
-		F00DF6D34A0F0DC511560513 /* polar_coordinates.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = polar_coordinates.inl; path = libs/glm/glm/gtx/polar_coordinates.inl; sourceTree = "<group>"; };
-		F0129B61646CE053E25069A1 /* vector_float3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float3.hpp; path = libs/glm/glm/ext/vector_float3.hpp; sourceTree = "<group>"; };
-		F220D8DD25A0184F3D99F71D /* matrix_double3x4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double3x4_precision.hpp; path = libs/glm/glm/ext/matrix_double3x4_precision.hpp; sourceTree = "<group>"; };
-		F28E3FA18CE82893C9208DE1 /* vector_int3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_int3_precision.hpp; path = libs/glm/glm/ext/vector_int3_precision.hpp; sourceTree = "<group>"; };
-		F2A5F261028B1E93EEFEA8A1 /* type_vec4_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_vec4_simd.inl; path = libs/glm/glm/detail/type_vec4_simd.inl; sourceTree = "<group>"; };
-		F2F8E496ECBAA10826B9A2D6 /* vec1.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vec1.hpp; path = libs/glm/glm/gtc/vec1.hpp; sourceTree = "<group>"; };
-		F3BC2573B67C85E513B163B3 /* vector_query.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_query.inl; path = libs/glm/glm/gtx/vector_query.inl; sourceTree = "<group>"; };
-		F45AC6EF50E1CB61D984852F /* matrix_major_storage.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_major_storage.hpp; path = libs/glm/glm/gtx/matrix_major_storage.hpp; sourceTree = "<group>"; };
-		F489DC77E88925E96D743AB7 /* std_based_type.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = std_based_type.inl; path = libs/glm/glm/gtx/std_based_type.inl; sourceTree = "<group>"; };
-		F49019638EB40E953ED9EFA3 /* func_common_simd.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_common_simd.inl; path = libs/glm/glm/detail/func_common_simd.inl; sourceTree = "<group>"; };
-		F5E98CED5270915FDB134B2D /* quaternion_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_transform.hpp; path = libs/glm/glm/ext/quaternion_transform.hpp; sourceTree = "<group>"; };
-		F6C0E1295347E59BDBEA9F69 /* quaternion_geometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_geometric.inl; path = libs/glm/glm/ext/quaternion_geometric.inl; sourceTree = "<group>"; };
-		F6DB87C9896951BBF241F609 /* geometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = geometric.hpp; path = libs/glm/glm/geometric.hpp; sourceTree = "<group>"; };
-		F722E989F0E4A5FB2AE3A7C9 /* mat2x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat2x3.hpp; path = libs/glm/glm/mat2x3.hpp; sourceTree = "<group>"; };
-		F86085996588940B671B83D9 /* ImGui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImGui.xcodeproj; path = libs/ImGui/ImGui.xcodeproj; sourceTree = SOURCE_ROOT; };
-		F8A7C44DECA70DBF7192228D /* color_encoding.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_encoding.inl; path = libs/glm/glm/gtx/color_encoding.inl; sourceTree = "<group>"; };
-		F9471CB58F702EA750D68AF5 /* vector_float2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float2_precision.hpp; path = libs/glm/glm/ext/vector_float2_precision.hpp; sourceTree = "<group>"; };
-		F95D0B47535E22391AA51987 /* quaternion_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common.hpp; path = libs/glm/glm/ext/quaternion_common.hpp; sourceTree = "<group>"; };
-		FA13BB69069E6DDB818339A9 /* matrix_decompose.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_decompose.inl; path = libs/glm/glm/gtx/matrix_decompose.inl; sourceTree = "<group>"; };
-		FA7716E31543859519141D23 /* func_matrix.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = func_matrix.inl; path = libs/glm/glm/detail/func_matrix.inl; sourceTree = "<group>"; };
-		FA7E434B94D82C3DD110918B /* quaternion_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_relational.hpp; path = libs/glm/glm/ext/quaternion_relational.hpp; sourceTree = "<group>"; };
-		FAB8AC8DADAEB63FFED112CD /* OpenGLVertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLVertexArray.cpp; path = src/Platform/OpenGl/OpenGLVertexArray.cpp; sourceTree = "<group>"; };
-		FB236178BE8F232AFD32C7B8 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Window.h; path = src/ODVM/Core/Window.h; sourceTree = "<group>"; };
-		FC6220D5F623DD473022DF15 /* hash.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = hash.hpp; path = libs/glm/glm/gtx/hash.hpp; sourceTree = "<group>"; };
-		FDCDC92D0F85091F84F2F76D /* matrix_transform_2d.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform_2d.inl; path = libs/glm/glm/gtx/matrix_transform_2d.inl; sourceTree = "<group>"; };
-		FEDC115B9728F70DC56FF79B /* type_quat.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_quat.inl; path = libs/glm/glm/detail/type_quat.inl; sourceTree = "<group>"; };
-		FEDECC7DF2DE15EF77C92ABD /* orthonormalize.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = orthonormalize.inl; path = libs/glm/glm/gtx/orthonormalize.inl; sourceTree = "<group>"; };
-		FF2E5E2FA117FA21983F0C6F /* string_cast.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = string_cast.hpp; path = libs/glm/glm/gtx/string_cast.hpp; sourceTree = "<group>"; };
-		FF46C162A1305D5498576FA2 /* color_space.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_space.inl; path = libs/glm/glm/gtc/color_space.inl; sourceTree = "<group>"; };
+		E322A965E6937B9768001FA5 /* libODVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libODVM.a; path = libODVM.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -530,480 +15,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A32673B5908E06672D87F9F5 /* libGLFW.a in Frameworks */,
-				3EB28C552C1A1F07C9141295 /* libGlad.a in Frameworks */,
-				21012E61C876CA13713BD4A1 /* libImGui.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		014014D2FAA61644EE417312 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				17AE781D24392A8F9F1DF65D /* libGLFW.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1477FE5A152AFB4C890CCC9A /* ImGui */ = {
-			isa = PBXGroup;
-			children = (
-				761B4406CD80B6F87F8ED246 /* ImGuiBuild.cpp */,
-				2EC62900862B9BF23839B740 /* ImGuiLayer.cpp */,
-				4436496AD6C4135C3F9CB7AA /* ImGuiLayer.h */,
-			);
-			name = ImGui;
-			sourceTree = "<group>";
-		};
-		1CA5AE451D58AB37913A7C85 /* gtx */ = {
-			isa = PBXGroup;
-			children = (
-				7579FF9D541C9B0F08FE9DDD /* associated_min_max.hpp */,
-				D76AFBB3B60D97256AEF99F3 /* associated_min_max.inl */,
-				3E88532B6F6C4B1D8284816B /* bit.hpp */,
-				0F890CA1406D049353853AE1 /* bit.inl */,
-				DAF318B94F4D5DABCD30E6F9 /* closest_point.hpp */,
-				BE6047EF32BA8CE1B09E162F /* closest_point.inl */,
-				A885DDB79C85272921703BF7 /* color_encoding.hpp */,
-				F8A7C44DECA70DBF7192228D /* color_encoding.inl */,
-				DC94C9817E7E657375A577C1 /* color_space.hpp */,
-				A5574DF74740E9E93E67FC37 /* color_space.inl */,
-				1AC6E8A974C7FF9B3C0EF6E9 /* color_space_YCoCg.hpp */,
-				DFB67D5F39B7945100FE8B9F /* color_space_YCoCg.inl */,
-				15EF723F5A3E17B19C65507F /* common.hpp */,
-				8A9F6DD5CEEE134711154C15 /* common.inl */,
-				8C231161007D56537E60DFA1 /* compatibility.hpp */,
-				6F904097E3EA858961CE0ED7 /* compatibility.inl */,
-				DB96F5A1CF963F13548153E1 /* component_wise.hpp */,
-				2BB8DC371FB825A9A4A33A77 /* component_wise.inl */,
-				8B34CDC37C2C3BB5E82FBC03 /* dual_quaternion.hpp */,
-				DEA257B9CF99C5AB3B9D45F9 /* dual_quaternion.inl */,
-				B11F7B1BF56E208D3795595B /* easing.hpp */,
-				25CF76B16A1E1C23AC4554F1 /* easing.inl */,
-				5CD37B791F93DBEB7CC8B9B9 /* euler_angles.hpp */,
-				3CF55F4FFFB5BFC15CEA9D8F /* euler_angles.inl */,
-				E199E4DD25E88A4F680FC31D /* extend.hpp */,
-				5649E0739A9885E5DCBFBEB3 /* extend.inl */,
-				644E691F70D91B91EBBDE75F /* extended_min_max.hpp */,
-				247C02753106B4E7ABEB80B5 /* extended_min_max.inl */,
-				59336AB165BE1D23E0A2E8F1 /* exterior_product.hpp */,
-				1961040725EBB679A0D08247 /* exterior_product.inl */,
-				B5A7FCF5C232AF673D177B35 /* fast_exponential.hpp */,
-				75D5964B826048BDFD45148B /* fast_exponential.inl */,
-				7F48A66F8BD358E106B824AF /* fast_square_root.hpp */,
-				3F763FC54C00F237C6E5BE05 /* fast_square_root.inl */,
-				1EB92D6D78BA445F40013BAD /* fast_trigonometry.hpp */,
-				E3A8C2233DA9D91504F0D063 /* fast_trigonometry.inl */,
-				C82C28F3B92396E525271733 /* float_notmalize.inl */,
-				07F5735F5F5AE6511169019F /* functions.hpp */,
-				5A36FD15B19C700763AA8B55 /* functions.inl */,
-				140E97BF080DE1318CF8F5FF /* gradient_paint.hpp */,
-				64307E55582FC7C7DD1ADC95 /* gradient_paint.inl */,
-				236357D9B98C69CB7AF2C619 /* handed_coordinate_space.hpp */,
-				749B2CCF0AC43EC1CC2A9B0F /* handed_coordinate_space.inl */,
-				FC6220D5F623DD473022DF15 /* hash.hpp */,
-				EC88D9ABE64A961D204997EB /* hash.inl */,
-				B443D3C946D19DBBAFAA4209 /* integer.hpp */,
-				BE0212BF508FDCB1B96880FF /* integer.inl */,
-				96B73C4FEE1CAF41A02ACA8F /* intersect.hpp */,
-				E8F8C605405E38F7F26C5445 /* intersect.inl */,
-				833696FDDE77EA6FB1D2353D /* io.hpp */,
-				4B83BD13A6C510857A1F5B53 /* io.inl */,
-				ACF527451A1D35B71BB02585 /* log_base.hpp */,
-				ED8A159B5AB2240D5C4513DB /* log_base.inl */,
-				CBFFB0092886B47BB1296E49 /* matrix_cross_product.hpp */,
-				4E17BEDFAA9EC35133417D1F /* matrix_cross_product.inl */,
-				39E622134670D485C155A053 /* matrix_decompose.hpp */,
-				FA13BB69069E6DDB818339A9 /* matrix_decompose.inl */,
-				22DAF0E17F61F5530804AF21 /* matrix_factorisation.hpp */,
-				A4F2FFB7017A04298A1CBDF7 /* matrix_factorisation.inl */,
-				ED29168549B01AF7D252D4C5 /* matrix_interpolation.hpp */,
-				6F41255BCBC829CD546AE39B /* matrix_interpolation.inl */,
-				F45AC6EF50E1CB61D984852F /* matrix_major_storage.hpp */,
-				7672D5C5D2F9DA375B9C9405 /* matrix_major_storage.inl */,
-				5CB83D776942EFE9E427BBB7 /* matrix_operation.hpp */,
-				1CE5D6CD2970893FA455550D /* matrix_operation.inl */,
-				8BCE24E14E8E8553ABC36321 /* matrix_query.hpp */,
-				6BF008B72EB069298BE546F7 /* matrix_query.inl */,
-				5EAE79B77065B9A9E5D3A7F7 /* matrix_transform_2d.hpp */,
-				FDCDC92D0F85091F84F2F76D /* matrix_transform_2d.inl */,
-				2738EADB9B932FCD1976B91B /* mixed_product.hpp */,
-				0AA61A117F005F03FCE3E851 /* mixed_product.inl */,
-				8E34974587F653B7C1F55585 /* norm.hpp */,
-				7E5B501B781D0C8DB21C0E5B /* norm.inl */,
-				AF25083FF373ADB1359AE67F /* normal.hpp */,
-				23D503D56823A947AA4AE215 /* normal.inl */,
-				953CFE5B0997434D877ACC9B /* normalize_dot.hpp */,
-				78AA2D91ED0472836AE7FBD1 /* normalize_dot.inl */,
-				42F537354F7FE9A7CA64B575 /* number_precision.hpp */,
-				0322D08B0FAD82FD8A924ECB /* number_precision.inl */,
-				2159626DC342FE5FBA6A10AD /* optimum_pow.hpp */,
-				EA1BE6E38C0582D5832C9523 /* optimum_pow.inl */,
-				AEBCE5E7A2BC2F5927A74427 /* orthonormalize.hpp */,
-				FEDECC7DF2DE15EF77C92ABD /* orthonormalize.inl */,
-				26CA3C899B24817B19080AC9 /* perpendicular.hpp */,
-				0A376BBF7E91B0B1FC7539FF /* perpendicular.inl */,
-				2B1E621D851F790F4C66705D /* polar_coordinates.hpp */,
-				F00DF6D34A0F0DC511560513 /* polar_coordinates.inl */,
-				38A09427FF2E8B996D30B267 /* projection.hpp */,
-				D222253D98B01CAF06B2437D /* projection.inl */,
-				A43CBED96ACAB64BD8CCDD19 /* quaternion.hpp */,
-				3DBE4FEF044C4761724E6E2F /* quaternion.inl */,
-				BD53AF072E764FF9E43CFD47 /* range.hpp */,
-				AF7621731C9E2FE51E311FB3 /* raw_data.hpp */,
-				F00B0FC95D331E3B5EC60E09 /* raw_data.inl */,
-				66D1A85BFF4995CD2B30869B /* rotate_normalized_axis.hpp */,
-				AF2079F147986763737F5831 /* rotate_normalized_axis.inl */,
-				DB3330AF4F8D75A1CD70FEEF /* rotate_vector.hpp */,
-				BEA05FE532FAA4D7B0DE2E25 /* rotate_vector.inl */,
-				05B51333A00EFC25DC476173 /* scalar_multiplication.hpp */,
-				9A48726DF449895FBB9080AD /* scalar_relational.hpp */,
-				5F380723B9391E1580801563 /* scalar_relational.inl */,
-				DE0BF003225A95756481CE43 /* spline.hpp */,
-				52BBEB99970A910BD931C9D9 /* spline.inl */,
-				A467F5E198673F531D525421 /* std_based_type.hpp */,
-				F489DC77E88925E96D743AB7 /* std_based_type.inl */,
-				FF2E5E2FA117FA21983F0C6F /* string_cast.hpp */,
-				C7F0E2A569DA7E97610190E5 /* string_cast.inl */,
-				DC64D4CF6EF29EC1D7CB430F /* texture.hpp */,
-				E62313C578B0DDB7E1898205 /* texture.inl */,
-				489500E59FFA73D752088F25 /* transform.hpp */,
-				9AD68A9BF23BFD8DA44A18DB /* transform.inl */,
-				9F218B6965AF82DBD3B1A9A9 /* transform2.hpp */,
-				38A31C7FFF3113F16D333ABF /* transform2.inl */,
-				506150971321B10970568ED7 /* type_aligned.hpp */,
-				3083346DF34394DF507872AD /* type_aligned.inl */,
-				8FBC7EF7564A7669C44C9D37 /* type_trait.hpp */,
-				293E100DEFCC077F5DCE2E4D /* type_trait.inl */,
-				B78E38175977D409509EE657 /* vec_swizzle.hpp */,
-				EC5B381FAF1B98910C50765F /* vector_angle.hpp */,
-				CC7D1BF58F3D7C67EC725A35 /* vector_angle.inl */,
-				139A419DD65AA20F338F7FDD /* vector_query.hpp */,
-				F3BC2573B67C85E513B163B3 /* vector_query.inl */,
-				A025100199E6CC73D3E5CE41 /* wrap.hpp */,
-				904BC8D78A0D8549C40C8717 /* wrap.inl */,
-			);
-			name = gtx;
-			sourceTree = "<group>";
-		};
-		34B89C858B4606F763BF1AC5 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				1565C149ADB2A6FBDBF9A789 /* _features.hpp */,
-				82E2066967290E9BEB163CA9 /* _fixes.hpp */,
-				44024CA7284954D9AC3682E7 /* _noise.hpp */,
-				0DEAAB5B51FE7C8D45D0019B /* _swizzle.hpp */,
-				29A536D19D8DAE83BFDB5D11 /* _swizzle_func.hpp */,
-				C4E22021A3FF3A5380089661 /* _vectorize.hpp */,
-				B892C7F7C877F429B4EB7E37 /* compute_common.hpp */,
-				5835041FFB9C31D112D1EA5F /* compute_vector_relational.hpp */,
-				9B5DAB8BB62A1A3DB9FAB1CB /* func_common.inl */,
-				F49019638EB40E953ED9EFA3 /* func_common_simd.inl */,
-				3FA46347D9C8587989EE3987 /* func_exponential.inl */,
-				1D2564DFC49B00916D600B1F /* func_exponential_simd.inl */,
-				15C7A7F725ACD42912205E37 /* func_geometric.inl */,
-				A6A1DB8F94096E41310361CF /* func_geometric_simd.inl */,
-				C3D4BD95C377A0C7FDCC53D5 /* func_integer.inl */,
-				69C1364D1CB73FFF6DD99C8D /* func_integer_simd.inl */,
-				FA7716E31543859519141D23 /* func_matrix.inl */,
-				05EC7F3BA010746D5036557B /* func_matrix_simd.inl */,
-				AF654F73AF0832A5E95CE5B3 /* func_packing.inl */,
-				EAC75C4B9DBD65FDEEDFC28B /* func_packing_simd.inl */,
-				09201A4551BF587774EB1085 /* func_trigonometric.inl */,
-				89E534FDE54559AF2788FB3D /* func_trigonometric_simd.inl */,
-				AC796B3307C4BB65F5F6A173 /* func_vector_relational.inl */,
-				A905530BE2D009BD982B594B /* func_vector_relational_simd.inl */,
-				A059D31138A6B8C366EDB951 /* qualifier.hpp */,
-				B0316ECF7E54C2810563150F /* setup.hpp */,
-				EF34D05BCE51EA8DAA5B469B /* type_float.hpp */,
-				92BDF3452B0AD8F75951D985 /* type_half.hpp */,
-				72DFD71B0B2CBCCD3973BD5B /* type_half.inl */,
-				004603EB1B12729D1EE30A2B /* type_mat2x2.hpp */,
-				5067EA816B3459336F04F0C1 /* type_mat2x2.inl */,
-				464EDECD611B4D7F64EBE50D /* type_mat2x3.hpp */,
-				9670C563B13D3415B50DCBA3 /* type_mat2x3.inl */,
-				8C57B9AFA7242861AAF4BFEF /* type_mat2x4.hpp */,
-				DC79A045F7460EF7FB16A685 /* type_mat2x4.inl */,
-				EBF11F4D06BD8DFF0A8E258D /* type_mat3x2.hpp */,
-				3C1305E356DF74955AB00C23 /* type_mat3x2.inl */,
-				31F9FA2F4CC668E15097006F /* type_mat3x3.hpp */,
-				821BE0C59CE84F77A0B8E705 /* type_mat3x3.inl */,
-				7802D51192CF43C3969FDB51 /* type_mat3x4.hpp */,
-				C824BBA7E2F12A59E6C1C1E7 /* type_mat3x4.inl */,
-				D79C3AAFF268A961F63940EF /* type_mat4x2.hpp */,
-				27BE2145428A8FF7465B2785 /* type_mat4x2.inl */,
-				1DA51591387184433C421BD1 /* type_mat4x3.hpp */,
-				6DC6FC2788936AD98C640267 /* type_mat4x3.inl */,
-				63ADF0737E7A5F25824AF6B3 /* type_mat4x4.hpp */,
-				B3CFD709CE9C45BBD26CDD49 /* type_mat4x4.inl */,
-				D8F4490173183E33233E1F41 /* type_mat4x4_simd.inl */,
-				1EBA2D85B7071337E54E13C5 /* type_quat.hpp */,
-				FEDC115B9728F70DC56FF79B /* type_quat.inl */,
-				A6672733B64C5365A2BFDD73 /* type_quat_simd.inl */,
-				C5F65DAD5E43435F8C8A43ED /* type_vec1.hpp */,
-				A61841833E6527356CAC27C3 /* type_vec1.inl */,
-				B4694C4F4CB632017AFD328F /* type_vec2.hpp */,
-				948B30252CD815D75B1F1665 /* type_vec2.inl */,
-				A2DC3AF13B2920A369702131 /* type_vec3.hpp */,
-				82FE1EC71B4B047949920507 /* type_vec3.inl */,
-				914F2993299C0F4557E30FD3 /* type_vec4.hpp */,
-				71710D6909BDF31B3804F3A9 /* type_vec4.inl */,
-				F2A5F261028B1E93EEFEA8A1 /* type_vec4_simd.inl */,
-			);
-			name = detail;
-			sourceTree = "<group>";
-		};
-		3684523D5CAA81EFC3B1787D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E5F40569C496A0DB7978A3A9 /* libImGui.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		44594656B5E45EC864E58496 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C6243B460A380C78FE099186 /* Application.cpp */,
-				599333303DDA3B62C1C76970 /* Application.h */,
-				26CB8DDA4F06468C36A1D41A /* Core.h */,
-				5FBCD8802DE02C32B4EE7EC0 /* EntryPoint.h */,
-				C8E79728EAB3445A27686D68 /* Input.h */,
-				E36B59B61564A4688F43DFF6 /* KeyCodes.h */,
-				930A3F78E06D35AA568C35B8 /* Layer.cpp */,
-				E14E64E2031A12143FCF3B22 /* Layer.h */,
-				2F467724417053D675613D64 /* LayerStack.cpp */,
-				D13A5F2E9F5DB2E0266C056E /* LayerStack.h */,
-				A68F1822C85AC554050FEE62 /* Log.cpp */,
-				A227888CEA986CBE2F373ECC /* Log.h */,
-				91D85EEEACA4CDA0B075652E /* MouseButtonCodes.h */,
-				5A3BBB08285F0EBAAF6D6148 /* Platform.cpp */,
-				E2E8C85214E213048EC14E92 /* Platform.h */,
-				4F779484E4EE53B6538AAAC4 /* Timesteps.h */,
-				FB236178BE8F232AFD32C7B8 /* Window.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		4E109732A49E01A47D171572 /* Renderer */ = {
-			isa = PBXGroup;
-			children = (
-				9C047E406A27D1F2F1362480 /* Buffer.cpp */,
-				23D1918A55CADC3CCFAA17CA /* Buffer.h */,
-				02B53364E6FC3B966AE969A4 /* Cameras.cpp */,
-				B0A7C1CE461E8100B4BAD80E /* Cameras.h */,
-				E0D890C2E07B73F41AD02702 /* GraphicsContext.h */,
-				8371098A8313ECBCBD689FCA /* RenderCommand.cpp */,
-				C130B974A04DD3A67C572FB4 /* RenderCommand.h */,
-				A74FE0BAB979BD6CED6AA6FA /* Renderer.cpp */,
-				5E09A7842C2CFB36B33B4DC4 /* Renderer.h */,
-				4D047D2E2C219760082AF36E /* RendererAPI.cpp */,
-				9A6B4A58DE7F1B8AD250A098 /* RendererAPI.h */,
-				240467BAF227BB6C79360DFA /* Shader.cpp */,
-				3E95D144708F1BF6EA6E5784 /* Shader.h */,
-				0B5662EEEF9D6B20738A992E /* Texture.cpp */,
-				61578D98F6CE4CCA656AA3D8 /* Texture.h */,
-				AC8A53C68BA76DF867B0CA06 /* VertexArray.cpp */,
-				8FEC27F0D3FFF922C7D17E30 /* VertexArray.h */,
-			);
-			name = Renderer;
-			sourceTree = "<group>";
-		};
-		5775D4184366DFCA959E7A58 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				9E074C2B4152D55D5C23A26B /* ODVM */,
-				A1110597A481D7C925EE7BD7 /* ODVM.h */,
-				A19930C9B8ABCBFBA8C7C709 /* Platform */,
-				72A8B1A39AE36A55827EF7E3 /* odvmpch.cpp */,
-				73C93E4D99EF6DFF00F6648D /* odvmpch.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		70F4C74171A7C433E5899581 /* ext */ = {
-			isa = PBXGroup;
-			children = (
-				8169D9B9DB6AF0ABA2B1E7F9 /* matrix_clip_space.hpp */,
-				46596E6FA05A856167A17CAF /* matrix_clip_space.inl */,
-				E397AA6557F1EF57D5D578A5 /* matrix_common.hpp */,
-				C704D99B3B5F1E8DB942A7DB /* matrix_common.inl */,
-				50B38FC15D3E4233D8230E01 /* matrix_double2x2.hpp */,
-				1ED353B7525293296A4C71F7 /* matrix_double2x2_precision.hpp */,
-				2B7E66E338091955B2EDE523 /* matrix_double2x3.hpp */,
-				27776A995AF6AA0B72F088D9 /* matrix_double2x3_precision.hpp */,
-				06493E0512D3F0778DB8BC45 /* matrix_double2x4.hpp */,
-				301B817B639AC0ED7B949FBB /* matrix_double2x4_precision.hpp */,
-				0990B763161B69D5910035A3 /* matrix_double3x2.hpp */,
-				E0D8AB191457EA8B2C51C959 /* matrix_double3x2_precision.hpp */,
-				E45B8E85F0E640F76BCB0CC5 /* matrix_double3x3.hpp */,
-				E97CC1FB1CFC016D34F5E03B /* matrix_double3x3_precision.hpp */,
-				BF2665A7CBB118194695E3E7 /* matrix_double3x4.hpp */,
-				F220D8DD25A0184F3D99F71D /* matrix_double3x4_precision.hpp */,
-				C26DDF05CEF8917749DD5D45 /* matrix_double4x2.hpp */,
-				A2DE027BD65D41EDEE5720BB /* matrix_double4x2_precision.hpp */,
-				9D38B627A9C3689924A83467 /* matrix_double4x3.hpp */,
-				AB82195DDF0158CFF6FB379D /* matrix_double4x3_precision.hpp */,
-				78038D49848E3FBBFF730B89 /* matrix_double4x4.hpp */,
-				B426303FE7A56FB1FF9F4E7F /* matrix_double4x4_precision.hpp */,
-				626A4C375361BA29BF653A77 /* matrix_float2x2.hpp */,
-				CBECFC0D9351B6FF1E098A4D /* matrix_float2x2_precision.hpp */,
-				DA006339CAF7D12B36FB5179 /* matrix_float2x3.hpp */,
-				31DD02CFF941BDC183F9910F /* matrix_float2x3_precision.hpp */,
-				51967A3B428DE82DAE91687B /* matrix_float2x4.hpp */,
-				97CD09915F31C483E9E997D1 /* matrix_float2x4_precision.hpp */,
-				17E22BB908D999AB74DD19F9 /* matrix_float3x2.hpp */,
-				6DF9BB4F355E7641C016498F /* matrix_float3x2_precision.hpp */,
-				8F7842BB806FB0ADEC7330FB /* matrix_float3x3.hpp */,
-				D3E9C2119B4E7D0326065051 /* matrix_float3x3_precision.hpp */,
-				070E59BDF805C7AF640947FD /* matrix_float3x4.hpp */,
-				39D9C8D3013E83C58BF65713 /* matrix_float3x4_precision.hpp */,
-				CD5A0B3BBE51792D2A54F97B /* matrix_float4x2.hpp */,
-				10067A91D76B3583622308D1 /* matrix_float4x2_precision.hpp */,
-				44F0223D35E7902FA1EB107D /* matrix_float4x3.hpp */,
-				75F681533D5B3C45C8130F93 /* matrix_float4x3_precision.hpp */,
-				BC86393FAD7DA7311981277F /* matrix_float4x4.hpp */,
-				DBE68815A34B43072E031655 /* matrix_float4x4_precision.hpp */,
-				0EA6E6CD68A7FDBF2FEEF50D /* matrix_projection.hpp */,
-				D3967B832D979275F4DE89C3 /* matrix_projection.inl */,
-				4BFA2FE9A5FB46DB6D423E29 /* matrix_relational.hpp */,
-				10E9C49F6AEADB913231D2DF /* matrix_relational.inl */,
-				4BA1E76B582C99DDD31165AB /* matrix_transform.hpp */,
-				0BCF80C1185A3333933EFF01 /* matrix_transform.inl */,
-				F95D0B47535E22391AA51987 /* quaternion_common.hpp */,
-				BE4C9FFD184DB6EFDF94AE3D /* quaternion_common.inl */,
-				6EE701D5075EEF473345E015 /* quaternion_common_simd.inl */,
-				3E9DE6AB989EFD9D5FE5F4EB /* quaternion_double.hpp */,
-				C56646C1D5B32AB3D39FF501 /* quaternion_double_precision.hpp */,
-				3EC13CE3D7392A5503201B23 /* quaternion_exponential.hpp */,
-				87100E791F87FBEB4B6EECB9 /* quaternion_exponential.inl */,
-				A1FB8B61AE863DD3296B09A1 /* quaternion_float.hpp */,
-				C0D91B57F4585AC90C523997 /* quaternion_float_precision.hpp */,
-				74A8D253D12FD6C559D29093 /* quaternion_geometric.hpp */,
-				F6C0E1295347E59BDBEA9F69 /* quaternion_geometric.inl */,
-				FA7E434B94D82C3DD110918B /* quaternion_relational.hpp */,
-				BEA6FD815900E67395394BC1 /* quaternion_relational.inl */,
-				F5E98CED5270915FDB134B2D /* quaternion_transform.hpp */,
-				78019BC3D488A0355D2B5A03 /* quaternion_transform.inl */,
-				1A9A03C1DF4F5A3393BE0201 /* quaternion_trigonometric.hpp */,
-				91DB481756909E890AFF4657 /* quaternion_trigonometric.inl */,
-				C2801CE736DA61D9B4BDEB27 /* scalar_common.hpp */,
-				A5ED4C1D1A47910F982B1A5D /* scalar_common.inl */,
-				7DEA91EF8A754461055A102F /* scalar_constants.hpp */,
-				3E182B454AA2DDB7C587A985 /* scalar_constants.inl */,
-				889BB4C795266739100B3307 /* scalar_int_sized.hpp */,
-				4FDBB67143DAFFE3C8C614B1 /* scalar_integer.hpp */,
-				9FFD9D0793FCE67918E7FB47 /* scalar_integer.inl */,
-				AA9C3BEB049D52DDCBE44A2B /* scalar_relational.hpp */,
-				6F8BD0A1C98CE79390D3DEE1 /* scalar_relational.inl */,
-				BC53BAD11654D1C3DD9BC911 /* scalar_uint_sized.hpp */,
-				DFB01757A63E0EC914403597 /* scalar_ulp.hpp */,
-				7931A86D3FBF9FDFADC1C6AD /* scalar_ulp.inl */,
-				D6588E099918EE7BF64DCC49 /* vector_bool1.hpp */,
-				16F08B7FAF6878F1DB4F69BF /* vector_bool1_precision.hpp */,
-				C4CB7CAB878BDD1DE4C0BAEB /* vector_bool2.hpp */,
-				C83B79E160B367538C9A5821 /* vector_bool2_precision.hpp */,
-				B33E6B4D75FECBBFD333A98D /* vector_bool3.hpp */,
-				7986684311FE55B53DE54683 /* vector_bool3_precision.hpp */,
-				A1B159EF6471BA61C1A6982F /* vector_bool4.hpp */,
-				2AD156A5C3494417EF3034E5 /* vector_bool4_precision.hpp */,
-				9BB08E61100AD3538DEE5CA1 /* vector_common.hpp */,
-				7F1DBD97F3780289715B8BD7 /* vector_common.inl */,
-				DD5B2387D15A6CF9564581C7 /* vector_double1.hpp */,
-				C7A463FD8C59BA6F40C8623D /* vector_double1_precision.hpp */,
-				2363FE69176347DB9C4E5CA9 /* vector_double2.hpp */,
-				5731DE9F1BE73511D055DCDF /* vector_double2_precision.hpp */,
-				696CD94B5D6C22BDE257378B /* vector_double3.hpp */,
-				E6BF5941AB74AFB35FE35781 /* vector_double3_precision.hpp */,
-				AF75B42DA374FD9F2860126D /* vector_double4.hpp */,
-				764CD3E33B022A55EF70D223 /* vector_double4_precision.hpp */,
-				958D55DD09E79ACF87CB241D /* vector_float1.hpp */,
-				39EB2A33D0143C25917A9873 /* vector_float1_precision.hpp */,
-				C2CFF89F372A3D91B50DC6DF /* vector_float2.hpp */,
-				F9471CB58F702EA750D68AF5 /* vector_float2_precision.hpp */,
-				F0129B61646CE053E25069A1 /* vector_float3.hpp */,
-				B8A30F374ECC212910327D77 /* vector_float3_precision.hpp */,
-				1D553E2391AF83150F930C63 /* vector_float4.hpp */,
-				77FF01B90E2813ABCF8E6FF9 /* vector_float4_precision.hpp */,
-				014412C7A32DAEB99A54C107 /* vector_int1.hpp */,
-				AFDA631D4A344C0F866CB15D /* vector_int1_precision.hpp */,
-				241D5149C606ED3BBD2DFF89 /* vector_int2.hpp */,
-				5134515FEB8E3A5127C69F9F /* vector_int2_precision.hpp */,
-				46F68FCBE8E02BBDE0073E0B /* vector_int3.hpp */,
-				F28E3FA18CE82893C9208DE1 /* vector_int3_precision.hpp */,
-				69CFCE4D0BB96A3F02E07C8D /* vector_int4.hpp */,
-				93E82DE32E4216D56A7A7C23 /* vector_int4_precision.hpp */,
-				68263ECB5C25883DE1109D0B /* vector_integer.hpp */,
-				B8482561AC476ED3313283A1 /* vector_integer.inl */,
-				CAB2A0E524B3B7D7EBFAAF25 /* vector_relational.hpp */,
-				8FA2359BE9A34C8DB0EA43DB /* vector_relational.inl */,
-				A986BAB16C471B23C97BF8F1 /* vector_uint1.hpp */,
-				2DDDB327C655A099F23C9167 /* vector_uint1_precision.hpp */,
-				97F9A9535ABA09C5B7EEE793 /* vector_uint2.hpp */,
-				DF28A18977A08EFBA3877FC9 /* vector_uint2_precision.hpp */,
-				866C97F5492CF867A661D635 /* vector_uint3.hpp */,
-				90738FEB28EB7D5D54D26E2B /* vector_uint3_precision.hpp */,
-				74DF8697379FE70994D4C4D7 /* vector_uint4.hpp */,
-				41BE7E4DDA366BBF061D5C8D /* vector_uint4_precision.hpp */,
-				4F8CDC31161AD3A3841CFA71 /* vector_ulp.hpp */,
-				E90E6D47AF9C64B91D9E8B87 /* vector_ulp.inl */,
-			);
-			name = ext;
-			sourceTree = "<group>";
-		};
-		74AF29AE6E152B2061B087EE /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				59213DC058C420F29318D400 /* ApplicationEvent.h */,
-				20626BD8E3CE2D8A2271D218 /* Event.h */,
-				9FEC096A3562C89CA3FF1FAA /* KeyEvent.h */,
-				8F69FE2A73B1065CF79E346A /* MouseEvent.h */,
-			);
-			name = Events;
-			sourceTree = "<group>";
-		};
 		7BF008F6ED36B7287B28FF36 /* ODVM */ = {
 			isa = PBXGroup;
 			children = (
-				F4BDECDCA120AD0E5FA9231C /* libs */,
-				5775D4184366DFCA959E7A58 /* src */,
 				A6C936B49B3FADE6EA134CF4 /* Products */,
-				9D968EAA920D05DCE0E0A4EA /* Projects */,
 			);
 			name = ODVM;
-			sourceTree = "<group>";
-		};
-		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
-			isa = PBXGroup;
-			children = (
-				11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */,
-				7697D01044BB23C2CBC97650 /* Glad.xcodeproj */,
-				F86085996588940B671B83D9 /* ImGui.xcodeproj */,
-			);
-			name = Projects;
-			sourceTree = "<group>";
-		};
-		9E074C2B4152D55D5C23A26B /* ODVM */ = {
-			isa = PBXGroup;
-			children = (
-				BBD53764133AAA56C548C5A4 /* CameraControllers */,
-				44594656B5E45EC864E58496 /* Core */,
-				74AF29AE6E152B2061B087EE /* Events */,
-				1477FE5A152AFB4C890CCC9A /* ImGui */,
-				4E109732A49E01A47D171572 /* Renderer */,
-			);
-			name = ODVM;
-			sourceTree = "<group>";
-		};
-		A19930C9B8ABCBFBA8C7C709 /* Platform */ = {
-			isa = PBXGroup;
-			children = (
-				CD35E3BD23C34E2FFC3C61FD /* OpenGl */,
-				EF7DAEC91F0F7DBBFA1CBD09 /* Windows */,
-			);
-			name = Platform;
 			sourceTree = "<group>";
 		};
 		A6C936B49B3FADE6EA134CF4 /* Products */ = {
@@ -1012,160 +35,6 @@
 				E322A965E6937B9768001FA5 /* libODVM.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A7296581F9AF9073CBF3F3C1 /* glm */ = {
-			isa = PBXGroup;
-			children = (
-				D42483D002CAD7C25C0C3210 /* glm */,
-			);
-			name = glm;
-			sourceTree = "<group>";
-		};
-		BBD53764133AAA56C548C5A4 /* CameraControllers */ = {
-			isa = PBXGroup;
-			children = (
-				8564ACD51DDC9A4749C38B15 /* CameraControllers.cpp */,
-				14D411DF715B1651F9FDD01F /* CameraControllers.h */,
-			);
-			name = CameraControllers;
-			sourceTree = "<group>";
-		};
-		C0579C1312DDC705E5222A53 /* stb */ = {
-			isa = PBXGroup;
-			children = (
-				9CC86B110DEB0C03C3B1B951 /* stb_image.cpp */,
-				ED90461B1E743E0D318C745B /* stb_image.h */,
-			);
-			name = stb;
-			sourceTree = "<group>";
-		};
-		C7488D7AC0AE8EECB449EBBA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7848B3BD84D3662FFFB831FD /* libGlad.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CD35E3BD23C34E2FFC3C61FD /* OpenGl */ = {
-			isa = PBXGroup;
-			children = (
-				86F33087869613B9C0EAC6C7 /* OpenGLBuffer.cpp */,
-				7AEB05D15A08200336117C11 /* OpenGLBuffer.h */,
-				DEB7269D529F9E4F74ED4CDD /* OpenGLContext.cpp */,
-				B70CEC47D1D95AF9D5A9F287 /* OpenGLContext.h */,
-				6FFE89F522F493A77416F035 /* OpenGLRendererAPI.cpp */,
-				57E3491FF5C449D1CD428F5F /* OpenGLRendererAPI.h */,
-				2AC087012A636A3364B81D41 /* OpenGLShader.cpp */,
-				11CE328BF0EB4CBDCCF4A8CB /* OpenGLShader.h */,
-				E01529B553FDA167764B4FF5 /* OpenGLTexture.cpp */,
-				AC44865FC710F511CAE18C9F /* OpenGLTexture.h */,
-				FAB8AC8DADAEB63FFED112CD /* OpenGLVertexArray.cpp */,
-				525272B7F0337369C7B1B8F7 /* OpenGLVertexArray.h */,
-			);
-			name = OpenGl;
-			sourceTree = "<group>";
-		};
-		D42483D002CAD7C25C0C3210 /* glm */ = {
-			isa = PBXGroup;
-			children = (
-				3CC0EB9D3682A80F7081A9DD /* common.hpp */,
-				34B89C858B4606F763BF1AC5 /* detail */,
-				2868D7997FCE4A8B31DC65D9 /* exponential.hpp */,
-				70F4C74171A7C433E5899581 /* ext */,
-				503305AD7FC4D49F5AD213ED /* ext.hpp */,
-				7C4A5DCDABDC2CBF86E96C0D /* fwd.hpp */,
-				F6DB87C9896951BBF241F609 /* geometric.hpp */,
-				5CAE8E8B8C405D7D674D9CCB /* glm.hpp */,
-				FD2ADC9BFDDDD98D71BFAADB /* gtc */,
-				1CA5AE451D58AB37913A7C85 /* gtx */,
-				C245DE6733687F59E92F2CA7 /* integer.hpp */,
-				7D54A82777166499B1156667 /* mat2x2.hpp */,
-				F722E989F0E4A5FB2AE3A7C9 /* mat2x3.hpp */,
-				70F12AEB6AB2E75DA4B1E92B /* mat2x4.hpp */,
-				A3B8CA099D7A867BD7798849 /* mat3x2.hpp */,
-				1D870B6B1748C7DD5147C9AB /* mat3x3.hpp */,
-				97554CCD9117093FCB160B0D /* mat3x4.hpp */,
-				CA1CEBEBC3DEA85DFDDDAA2B /* mat4x2.hpp */,
-				43EB2D4D3DACE9BF77ABEB8D /* mat4x3.hpp */,
-				BDB96EAFB77B2B21F17A2CEF /* mat4x4.hpp */,
-				DEF294F5D8B4516712B35335 /* matrix.hpp */,
-				BD8A11C52EACB2B7E4736005 /* packing.hpp */,
-				8100F89722EA94891A11A6D7 /* trigonometric.hpp */,
-				0EFC3ACB6A3D8E3D3D97D90B /* vec2.hpp */,
-				BBA8EFED16EA435FEA448E2D /* vec3.hpp */,
-				6855A50FC396F88196F1434F /* vec4.hpp */,
-				C3409005B437FDF7203B7E45 /* vector_relational.hpp */,
-			);
-			name = glm;
-			sourceTree = "<group>";
-		};
-		EF7DAEC91F0F7DBBFA1CBD09 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				9259D665E9BF49579BCD64A5 /* Windows.cpp */,
-				DD3186AF6FBF50A1D897F4EF /* Windows.h */,
-				981A62A58C19AC171104C0E5 /* WindowsInput.cpp */,
-				84F0E60F47B14681A4E6244F /* WindowsInput.h */,
-				BF26CE95B01E3C871C21BCD5 /* WindowsWindow.cpp */,
-				B0EDFC9F25484191A32BCADF /* WindowsWindow.h */,
-			);
-			name = Windows;
-			sourceTree = "<group>";
-		};
-		F4BDECDCA120AD0E5FA9231C /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				A7296581F9AF9073CBF3F3C1 /* glm */,
-				C0579C1312DDC705E5222A53 /* stb */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		FD2ADC9BFDDDD98D71BFAADB /* gtc */ = {
-			isa = PBXGroup;
-			children = (
-				A0D273BE0DFA82300F8D71FE /* bitfield.hpp */,
-				E16762144E8F708650226054 /* bitfield.inl */,
-				36843CECD86DD8DECF94EB2C /* color_space.hpp */,
-				FF46C162A1305D5498576FA2 /* color_space.inl */,
-				07CBAF925F312284113F3DD2 /* constants.hpp */,
-				5A0D3948B172AC3A6380C788 /* constants.inl */,
-				B329AD4C45B7773EAE901B8C /* epsilon.hpp */,
-				BCE7EC424F75B634B84E5A82 /* epsilon.inl */,
-				A86449B43AF213A6A3CAB7F4 /* integer.hpp */,
-				B22288AA44B0529CAD88F6EA /* integer.inl */,
-				E9BBC1A45E160696DBF98FE4 /* matrix_access.hpp */,
-				CD28F0DA418335CCBF66BF1A /* matrix_access.inl */,
-				8F7FF0DC837F3A4E086A4F1C /* matrix_integer.hpp */,
-				8B20FC387F2045AA040B5A78 /* matrix_inverse.hpp */,
-				DB42E2CECF422C40542D410E /* matrix_inverse.inl */,
-				E1A7A3F8EE32566A69172238 /* matrix_transform.hpp */,
-				A1D53D4EAE5FEFC02944BB8E /* matrix_transform.inl */,
-				ABE7CB141D0A6C06D2D11954 /* noise.hpp */,
-				9FF46F4A1117103CC6DDBD8A /* noise.inl */,
-				8FA8DC922236A6848B0F4AD2 /* packing.hpp */,
-				99671B882BF4E57A94CD89C8 /* packing.inl */,
-				E505F0E4AB93E85619960F24 /* quaternion.hpp */,
-				7E8781FA4515796CB317A03A /* quaternion.inl */,
-				267EDA72177648648379C8B2 /* quaternion_simd.inl */,
-				A61ED8BAEA6D7E2C2C94B6FA /* random.hpp */,
-				1ACED4505F1D79C2A144B290 /* random.inl */,
-				06A7B920CD35B0923B37D760 /* reciprocal.hpp */,
-				A0294A3666B741A8D4B96876 /* reciprocal.inl */,
-				CB350D683C57AE5AF21E5BA8 /* round.hpp */,
-				BF41B19E30645290E62AFFDE /* round.inl */,
-				E83F3162AAFF91D408346FA2 /* type_aligned.hpp */,
-				572121D24B206B44D00B8012 /* type_precision.hpp */,
-				A74308689B4251DA202D66A8 /* type_precision.inl */,
-				E382442650AA5298523D4266 /* type_ptr.hpp */,
-				2417327C913F40EE92D230BC /* type_ptr.inl */,
-				65E1D0FA96C5C8ECA9DDFF3A /* ulp.hpp */,
-				36E28A7067C682627ADEB8B0 /* ulp.inl */,
-				F2F8E496ECBAA10826B9A2D6 /* vec1.hpp */,
-			);
-			name = gtc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1182,9 +51,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */,
-				B500CA83AE66CBF5A20228C3 /* PBXTargetDependency */,
-				243C8F464A62BEF8B169B586 /* PBXTargetDependency */,
 			);
 			name = ODVM;
 			productName = ODVM;
@@ -1196,62 +62,17 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "ODVM" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				en,
-				Base,
-			);
 			mainGroup = 7BF008F6ED36B7287B28FF36 /* ODVM */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C7488D7AC0AE8EECB449EBBA /* Products */;
-					ProjectRef = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
-				},
-				{
-					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
-					ProjectRef = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
-				},
-				{
-					ProductGroup = 3684523D5CAA81EFC3B1787D /* Products */;
-					ProjectRef = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				6DD868AB9C7EBC9DF5C016EB /* ODVM */,
+				6DD868AB9C7EBC9DF5C016EB /* libODVM.a */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		17AE781D24392A8F9F1DF65D /* libGLFW.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGLFW.a;
-			remoteRef = 7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7848B3BD84D3662FFFB831FD /* libGlad.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGlad.a;
-			remoteRef = 01D9077A27FF372C8F062DBA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E5F40569C496A0DB7978A3A9 /* libImGui.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libImGui.a;
-			remoteRef = 588D649D43798A8F8B5F52DD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F75D34F59AA8BE27B5798B35 /* Resources */ = {
@@ -1268,61 +89,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E693CF692AA7A09B1E7925A9 /* stb_image.cpp in Sources */,
-				C3FBF2CD6763207F7E98D90D /* CameraControllers.cpp in Sources */,
-				2C5356BE2052A030A53DB4FE /* Application.cpp in Sources */,
-				C3CD0F1030F51D8232880D50 /* Layer.cpp in Sources */,
-				70CEB27CE528F76E630C80BC /* LayerStack.cpp in Sources */,
-				9786835ADBD528CC1DFC619A /* Log.cpp in Sources */,
-				65B208A0079BA492FEC2B6E0 /* Platform.cpp in Sources */,
-				18BB255E185E089052B2BB9E /* ImGuiBuild.cpp in Sources */,
-				53D390F85376742A8DCB2738 /* ImGuiLayer.cpp in Sources */,
-				1137C178B3215D6AAA486FB8 /* Buffer.cpp in Sources */,
-				D2E68BDC95A6EC4EF2DBCA1C /* Cameras.cpp in Sources */,
-				C4C24762A364E2D45846E5A2 /* RenderCommand.cpp in Sources */,
-				6E4EE692E2A92B84608CB4D2 /* Renderer.cpp in Sources */,
-				D142CD46DDCD7FB858B24B86 /* RendererAPI.cpp in Sources */,
-				2FEC8F92D1D62B84C8FD3DD2 /* Shader.cpp in Sources */,
-				17CFC306DA90237837C50146 /* Texture.cpp in Sources */,
-				D160515EDDEB03D058CFCF9E /* VertexArray.cpp in Sources */,
-				67D1B15F46744CD1FB564F9F /* OpenGLBuffer.cpp in Sources */,
-				5699F6D5685136C7DDBF2515 /* OpenGLContext.cpp in Sources */,
-				23F27FADBA1B919F7B81EDED /* OpenGLRendererAPI.cpp in Sources */,
-				B8BE8C79976127EB4C432AB9 /* OpenGLShader.cpp in Sources */,
-				3D708F6D4F27CF5FC495BDAD /* OpenGLTexture.cpp in Sources */,
-				4CD9CFC5E302E1B7A4693E05 /* OpenGLVertexArray.cpp in Sources */,
-				A86754BDA80A37EFE25EEAFD /* Windows.cpp in Sources */,
-				FDA631FDB09C3BAF01BE983D /* WindowsInput.cpp in Sources */,
-				419B1DED8A3A5C1FAD66142D /* WindowsWindow.cpp in Sources */,
-				5986C3BBCAA964AD807011FB /* odvmpch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		243C8F464A62BEF8B169B586 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libImGui.a;
-			targetProxy = AAC7D73695B3FD28DD99C576 /* PBXContainerItemProxy */;
-		};
-		B500CA83AE66CBF5A20228C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libGlad.a;
-			targetProxy = 54137A137A39A9C5E140A053 /* PBXContainerItemProxy */;
-		};
-		EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libGLFW.a;
-			targetProxy = CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		21A1BF7A6A12A3ACAEB175BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-x86_64/ODVM";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1334,7 +113,7 @@
 		26C5998711B1BF79599787C7 /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-x86_64/ODVM";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1346,7 +125,7 @@
 		57D2A0F4800D59A667A8E734 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-x86_64/ODVM";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1366,7 +145,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/odvmpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					_CRT_SECURE_NO_WARNINGS,
 					ODVM_DIST,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1374,9 +152,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Dist-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb";
 			};
 			name = Dist;
 		};
@@ -1391,7 +167,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/odvmpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					_CRT_SECURE_NO_WARNINGS,
 					ODVM_RELEASE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1399,9 +174,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OBJROOT = "../bin-int/Release-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Release-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb";
 			};
 			name = Release;
 		};
@@ -1418,7 +191,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/odvmpch.h;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					_CRT_SECURE_NO_WARNINGS,
 					ODVM_DEBUG,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1426,9 +198,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Debug-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb";
 			};
 			name = Debug;
 		};
@@ -1445,7 +215,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		75B0FCB418FC85E633CD52F4 /* Build configuration list for PBXNativeTarget "ODVM" */ = {
+		75B0FCB418FC85E633CD52F4 /* Build configuration list for PBXNativeTarget "libODVM.a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21A1BF7A6A12A3ACAEB175BA /* Debug */,
@@ -1456,6 +226,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-	};
-	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }

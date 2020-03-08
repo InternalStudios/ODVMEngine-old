@@ -1,8 +1,8 @@
 #include "odvmpch.h"
-#include "WindowsInput.h"
+#include "WindowsInput.hpp"
 
 #include <GLFW/glfw3.h>
-#include "ODVM/Core/Application.h"
+#include "ODVM/Core/Application.hpp"
 
 namespace ODVM
 {

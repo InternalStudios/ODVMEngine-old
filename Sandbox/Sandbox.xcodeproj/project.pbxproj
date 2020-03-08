@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2C86E3296342FE4D4D7D472 /* Application.cpp */; };
+		2AD9989EBD676290264006DE /* VulkanLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */; };
+		5F1CD3CCD03F74BE8606220C /* Sandbox2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */; };
 		BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C8D426268FBF466399382 /* libODVM.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4FEC7AF17612AAA3DD19A131 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
+			containerPortal = D917225C6E8DE18EDD2A389C /* ../ODVM/ODVM.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6DD868AB9C7EBC9DF5C016EB;
 			remoteInfo = libODVM.a;
 		};
 		FDB2085823D8380A8ADF2E98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
+			containerPortal = D917225C6E8DE18EDD2A389C /* ../ODVM/ODVM.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E322A965E6937B9768001FA5;
 			remoteInfo = libODVM.a;
@@ -29,9 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Sandbox2D.cpp; path = src/Sandbox2D.cpp; sourceTree = "<group>"; };
 		D2C86E3296342FE4D4D7D472 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = src/Application.cpp; sourceTree = "<group>"; };
-		D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ODVM.xcodeproj; path = ../ODVM/ODVM.xcodeproj; sourceTree = SOURCE_ROOT; };
-		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		D917225C6E8DE18EDD2A389C /* libODVM.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ODVM.xcodeproj"; path = ../ODVM/ODVM.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Sandbox; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VulkanLayer.cpp; path = src/VulkanLayer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				D2C86E3296342FE4D4D7D472 /* Application.cpp */,
+				B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */,
+				FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */,
 				A6C936B49B3FADE6EA134CF4 /* Products */,
 				9D968EAA920D05DCE0E0A4EA /* Projects */,
 			);
@@ -107,16 +113,9 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Sandbox" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				en,
-				Base,
-			);
 			mainGroup = 6849586FFB54B1614389A6AF /* Sandbox */;
 			projectDirPath = "";
 			projectReferences = (
@@ -158,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */,
+				5F1CD3CCD03F74BE8606220C /* Sandbox2D.cpp in Sources */,
+				2AD9989EBD676290264006DE /* VulkanLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +172,14 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		04F5F75AFE5BF8CCF1F7559A /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -192,21 +196,32 @@
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ODVM_DIST;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ODVM_DIST,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../ODVM/libs/Vulkan/latest/Lib,
+				);
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
 				SYMROOT = "../bin/Dist-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+				USER_HEADER_SEARCH_PATHS = (
+					../ODVM/libs/spdlog/include,
+					../ODVM/src,
+					../ODVM/libs/glm,
+					../ODVM/libs/ImGui,
+					../ODVM/libs/Vulkan/latest/Include,
+				);
 			};
 			name = Dist;
 		};
 		C5DDD7ADEC04075F530AFDED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -223,14 +238,25 @@
 				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
 				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ODVM_RELEASE;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ODVM_RELEASE,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../ODVM/libs/Vulkan/latest/Lib,
+				);
 				OBJROOT = "../bin-int/Release-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
 				SYMROOT = "../bin/Release-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+				USER_HEADER_SEARCH_PATHS = (
+					../ODVM/libs/spdlog/include,
+					../ODVM/src,
+					../ODVM/libs/glm,
+					../ODVM/libs/ImGui,
+					../ODVM/libs/Vulkan/latest/Include,
+				);
 			};
 			name = Release;
 		};
@@ -244,21 +270,32 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ODVM_DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ODVM_DEBUG,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../ODVM/libs/Vulkan/latest/Lib,
+				);
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = YES;
 				SYMROOT = "../bin/Debug-macosx-x86_64/Sandbox";
-				USER_HEADER_SEARCH_PATHS = "../ODVM/libs/spdlog/include ../ODVM/src ../ODVM/libs/glm ../ODVM/libs/ImGui";
+				USER_HEADER_SEARCH_PATHS = (
+					../ODVM/libs/spdlog/include,
+					../ODVM/src,
+					../ODVM/libs/glm,
+					../ODVM/libs/ImGui,
+					../ODVM/libs/Vulkan/latest/Include,
+				);
 			};
 			name = Debug;
 		};
 		FB7591E743E6761988854827 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-x86_64/Sandbox";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -291,6 +328,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-	};
-	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }

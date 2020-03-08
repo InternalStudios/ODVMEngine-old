@@ -11,7 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E398A4741AA5C79C3170087 /* libGlad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlad.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E398A4741AA5C79C3170087 /* libGlad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGlad.a; path = libGlad.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C88ACDEC31617509B8F2B1E /* glad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glad.h; path = include/glad/glad.h; sourceTree = "<group>"; };
 		9E78136F6C9B6721F3A9B9AF /* khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = khrplatform.h; path = include/KHR/khrplatform.h; sourceTree = "<group>"; };
 		B60713D1B977E6033AE48A11 /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = src/glad.c; sourceTree = "<group>"; };
@@ -104,21 +104,14 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Glad" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				en,
-				Base,
-			);
 			mainGroup = 3C43D298AD8A80CA3B7CC8D8 /* Glad */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B45B54D49EC093FA32D638D /* Glad */,
+				1B45B54D49EC093FA32D638D /* libGlad.a */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +137,9 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		76847C7422E73CA6E16FB2B4 /* Dist */ = {
 			isa = XCBuildConfiguration;
@@ -158,7 +154,9 @@
 				OBJROOT = "bin-int/Dist-macosx-x86_64/Glad";
 				ONLY_ACTIVE_ARCH = NO;
 				SYMROOT = "bin/Dist-macosx-x86_64/Glad";
-				USER_HEADER_SEARCH_PATHS = include;
+				USER_HEADER_SEARCH_PATHS = (
+					include,
+				);
 			};
 			name = Dist;
 		};
@@ -177,14 +175,16 @@
 				OBJROOT = "bin-int/Debug-macosx-x86_64/Glad";
 				ONLY_ACTIVE_ARCH = YES;
 				SYMROOT = "bin/Debug-macosx-x86_64/Glad";
-				USER_HEADER_SEARCH_PATHS = include;
+				USER_HEADER_SEARCH_PATHS = (
+					include,
+				);
 			};
 			name = Debug;
 		};
 		997E6829846A8E1BCC505669 /* Dist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "bin/Dist-macosx-x86_64/Glad";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -206,14 +206,16 @@
 				OBJROOT = "bin-int/Release-macosx-x86_64/Glad";
 				ONLY_ACTIVE_ARCH = NO;
 				SYMROOT = "bin/Release-macosx-x86_64/Glad";
-				USER_HEADER_SEARCH_PATHS = include;
+				USER_HEADER_SEARCH_PATHS = (
+					include,
+				);
 			};
 			name = Release;
 		};
 		E0D9845609143D08F0AFCA96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "bin/Release-macosx-x86_64/Glad";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -225,7 +227,7 @@
 		EB74625C33E5468E7884189C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "bin/Debug-macosx-x86_64/Glad";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -247,7 +249,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1E06BC96C15245C8DC2312D6 /* Build configuration list for PBXNativeTarget "Glad" */ = {
+		1E06BC96C15245C8DC2312D6 /* Build configuration list for PBXNativeTarget "libGlad.a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB74625C33E5468E7884189C /* Debug */,
@@ -258,6 +260,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-	};
-	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }

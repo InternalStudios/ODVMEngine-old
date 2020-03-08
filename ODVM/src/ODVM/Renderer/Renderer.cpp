@@ -1,8 +1,8 @@
 #include "odvmpch.h"
-#include "Renderer.h"
+#include "Renderer.hpp"
 
-#include "RenderCommand.h"
-#include "Renderer2D.h"
+#include "RenderCommand.hpp"
+#include "Renderer2D.hpp"
 
 namespace ODVM
 {

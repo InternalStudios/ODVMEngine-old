@@ -1,9 +1,9 @@
 #include "odvmpch.h"
-#include "Platform.h"
+#include "Platform.hpp"
 
-#include "ODVM/Core/Core.h"
+#include "ODVM/Core/Core.hpp"
 
-#include "Platform/Windows/Windows.h"
+#include "Platform/Windows/Windows.hpp"
 
 namespace ODVM
 {

@@ -1,8 +1,8 @@
 #include "odvmpch.h"
-#include "CameraControllers.h"
+#include "CameraControllers.hpp"
 
-#include "ODVM/Core/Input.h"
-#include "ODVM/Core/KeyCodes.h"
+#include "ODVM/Core/Input.hpp"
+#include "ODVM/Core/KeyCodes.hpp"
 
 namespace ODVM
 {

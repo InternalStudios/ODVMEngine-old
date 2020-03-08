@@ -34,13 +34,22 @@ project "ODVM"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	filter "action:vs2019"
+		pchheader "odvmpch.h"
+		pchsource "ODVM/src/odvmpch.cpp"
+	
+	filter "action:xcode4"
+		pchheader "src/odvmpch.h"
+		pchsource "ODVM/src/odvmpch.cpp"
 
-	pchheader "src/odvmpch.h"
-	pchsource "ODVM/src/odvmpch.cpp"
+	filter "action:gmake"
+		pchheader "../src/odvmpch.h"
+		pchsource "ODVM/src/odvmpch.cpp"
 	
 	files
 	{
 		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.hpp",
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/libs/stb/**.cpp",
 		"%{prj.name}/libs/stb/**.h",
@@ -79,7 +88,7 @@ project "ODVM"
 	{
 		"%{IncludeDir.vulkan}/Lib"
 	}
-	filter "system:windows"
+	filter "system:macosx"
 		
 	
 	filter "system:windows"

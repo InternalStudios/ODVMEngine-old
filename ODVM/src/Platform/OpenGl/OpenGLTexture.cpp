@@ -1,5 +1,5 @@
 #include "odvmpch.h"
-#include "OpenGLTexture.h"
+#include "OpenGLTexture.hpp"
 
 #include <stb_image.h>
 

@@ -1,15 +1,15 @@
 #include <odvmpch.h>
-#include "Application.h"
+#include "Application.hpp"
 
-#include "Log.h"
+#include "Log.hpp"
 
-#include "Input.h"
+#include "Input.hpp"
 
 #include <glm/glm.hpp>
 
 #include <glfw/glfw3.h>
 
-#include "ODVM/Renderer/RenderCommand.h"
+#include "ODVM/Renderer/RenderCommand.hpp"
 
 namespace ODVM
 {

@@ -13,9 +13,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "ODVM/Debug/Instrumentor.h"
+#include "ODVM/Debug/Instrumentor.hpp"
 
-#include "ODVM/Core/Log.h"
+#include "ODVM/Core/Log.hpp"
 
 #ifdef ODVM_PLATFORM_WINDOWS
 	#include <Windows.h>

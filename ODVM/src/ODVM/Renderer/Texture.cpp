@@ -1,15 +1,15 @@
 #include "odvmpch.h"
-#include "Texture.h"
+#include "Texture.hpp"
 
 #include <string.h>
 
-#include "Renderer.h"
-#include "Platform/OpenGl/OpenGLTexture.h"
+#include "Renderer.hpp"
+#include "Platform/OpenGl/OpenGLTexture.hpp"
 
 namespace ODVM
 {
 
-	ODVM::Ref<ODVM::Texture2D> Texture2D::Create(const std::string& path)
+	Ref<ODVM::Texture2D> Texture2D::Create(const std::string& path)
 	{
 		switch (Renderer::GetAPI())
 		{
@@ -21,7 +21,7 @@ namespace ODVM
 		return nullptr;
 	}
 
-	ODVM::Ref<ODVM::Texture2D> Texture2D::Create(uint32_t width, uint32_t height)
+	Ref<ODVM::Texture2D> Texture2D::Create(uint32_t width, uint32_t height)
 	{
 		switch (Renderer::GetAPI())
 		{

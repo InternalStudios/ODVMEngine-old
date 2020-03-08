@@ -1,10 +1,10 @@
 #include "odvmpch.h"
-#include "Buffer.h"
+#include "Buffer.hpp"
 
-#include "ODVM/Core/Core.h"
+#include "ODVM/Core/Core.hpp"
 
-#include "Platform/OpenGl/OpenGLBuffer.h"
-#include "Renderer.h"
+#include "Platform/OpenGl/OpenGLBuffer.hpp"
+#include "Renderer.hpp"
 
 namespace ODVM
 {
