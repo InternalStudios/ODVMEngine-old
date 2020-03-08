@@ -41,26 +41,35 @@ namespace ODVM
 
 	OpenGLVertexArray::OpenGLVertexArray()
 	{
+		ODVM_PROFILE_FUNCTION();
 		glCreateVertexArrays(1, &m_RendererID);
 	}
 
 	OpenGLVertexArray::~OpenGLVertexArray()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glDeleteVertexArrays(1, &m_RendererID);
 	}
 
 	void OpenGLVertexArray::Bind() const
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glBindVertexArray(m_RendererID);
 	}
 
 	void OpenGLVertexArray::Unbind() const
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glBindVertexArray(0);
 	}
 
 	void OpenGLVertexArray::AddVertexBuffer(const Ref<VertexBuffer>& buffer)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		ODVM_CORE_ASSERT(buffer->GetLayout().GetElements().size(), "Vertex Buffer has no layout!");
 		
 		glBindVertexArray(m_RendererID);
@@ -86,6 +95,8 @@ namespace ODVM
 
 	void OpenGLVertexArray::SetIndexBuffer(const Ref<IndexBuffer>& buffer)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glBindVertexArray(m_RendererID);
 		buffer->Bind();
 

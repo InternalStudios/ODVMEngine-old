@@ -1,2 +1,7 @@
-﻿  Application.cpp
+﻿  VulkanContext.cpp
+  VulkanRendererAPI.cpp
+  WindowsWindow.cpp
+  Generating Code...
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\Platform\Vulkan\VulkanContext.cpp(101): warning C4715: 'ODVM::VulkanContext::checkValidationLayerSupport': not all control paths return a value
+vulkan-1.lib(vulkan-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib

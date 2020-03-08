@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "ODVM/Debug/Instrumentor.h"
+
 #include "ODVM/Core/Log.h"
 
 #ifdef ODVM_PLATFORM_WINDOWS

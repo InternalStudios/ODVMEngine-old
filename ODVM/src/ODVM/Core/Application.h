@@ -49,6 +49,7 @@ namespace ODVM
 
 		bool m_Minimized = false;
 
+
 	private:
 		static Application* s_Instance;
 	};

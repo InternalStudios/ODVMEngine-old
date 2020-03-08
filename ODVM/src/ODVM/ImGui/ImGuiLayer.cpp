@@ -27,6 +27,8 @@ namespace ODVM
 
 	void ImGuiLayer::OnAttach()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		// Setup ImGui context
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
@@ -60,6 +62,8 @@ namespace ODVM
 
 	void ImGuiLayer::OnDetach()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
@@ -68,6 +72,7 @@ namespace ODVM
 
 	void ImGuiLayer::Begin()
 	{
+		ODVM_PROFILE_FUNCTION();
 
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
@@ -76,6 +81,8 @@ namespace ODVM
 
 	void ImGuiLayer::End()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
 		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());

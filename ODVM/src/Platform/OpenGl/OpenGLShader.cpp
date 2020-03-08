@@ -20,6 +20,8 @@ namespace ODVM
 	OpenGLShader::OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc)
 		: m_Name(name)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		std::unordered_map<GLenum, std::string> map;
 		map[GL_VERTEX_SHADER] = vertexSrc;
 		map[GL_FRAGMENT_SHADER] = fragmentSrc;
@@ -29,6 +31,8 @@ namespace ODVM
 
 	OpenGLShader::OpenGLShader(const std::string& path)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		std::string shaderSrc = ReadFile(path);
 
 		Compile(PreProcess(shaderSrc));
@@ -42,6 +46,8 @@ namespace ODVM
 
 	std::string OpenGLShader::ReadFile(const std::string& path)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		std::string result;
 		std::ifstream in(path, std::ios::in | std::ios::binary);
 		if (in)
@@ -63,6 +69,7 @@ namespace ODVM
 
 	std::unordered_map<GLenum, std::string> OpenGLShader::PreProcess(const std::string& src)
 	{
+		ODVM_PROFILE_FUNCTION();
 		std::unordered_map<GLenum, std::string> shaderSrcs;
 
 		const char* typeToken = "#type";
@@ -86,6 +93,8 @@ namespace ODVM
 
 	void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaderSrc)
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		GLuint program = glCreateProgram();
 		ODVM_CORE_ASSERT(shaderSrc.size() <= 2, "Too many shaders");
 		std::array<GLenum, 2> glShaderIDs;
@@ -168,16 +177,22 @@ namespace ODVM
 
 	OpenGLShader::~OpenGLShader()
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glDeleteProgram(m_RendererID);
 	}
 
 	void OpenGLShader::Bind() const
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glUseProgram(m_RendererID);
 	}
 
 	void OpenGLShader::Unbind() const
 	{
+		ODVM_PROFILE_FUNCTION();
+
 		glUseProgram(0);
 	}
 
@@ -187,6 +202,41 @@ namespace ODVM
 		glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(mat4));
 	}
 
+
+	void OpenGLShader::SetInt(const std::string& name, int value)
+	{
+		UploadUniformInt(name, value);
+	}
+
+	void OpenGLShader::SetFloat(const std::string& name, float value)
+	{
+		UploadUniformFloat(name, value);
+	}
+
+	void OpenGLShader::SetFloat2(const std::string& name, const glm::vec2& vec2)
+	{
+		UploadUniformFloat2(name, vec2);
+	}
+
+	void OpenGLShader::SetFloat3(const std::string& name, const glm::vec3& vec3)
+	{
+		UploadUniformFloat3(name, vec3);
+	}
+
+	void OpenGLShader::SetFloat4(const std::string& name, const glm::vec4& vec4)
+	{
+		UploadUniformFloat4(name, vec4);
+	}
+
+	void OpenGLShader::SetMat3(const std::string& name, const glm::mat3& mat3)
+	{
+		UploadUniformMat3(name, mat3);
+	}
+
+	void OpenGLShader::SetMat4(const std::string& name, const glm::mat4& mat4)
+	{
+		UploadUniformMat4(name, mat4);
+	}
 
 	void OpenGLShader::UploadUniformFloat4(const std::string& name, const glm::vec4& vec4)
 	{

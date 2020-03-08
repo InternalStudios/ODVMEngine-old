@@ -1,10 +1,14 @@
 #include <ODVM.h>
+#include <ODVM/Core/EntryPoint.h>
 
 #include <sstream>
 
 #include <glm/gtc/type_ptr.hpp>
 
 #include "imgui.h"
+
+#include "Sandbox2D.h"
+#include "VulkanLayer.h"
 
 class ExampleLayer : public ODVM::Layer
 {
@@ -15,7 +19,7 @@ public:
 		
 		color.r = 0.0f, color.g = 0.5f, color.b = 1.0f, color.a = 1.0f;
 
-		m_VertexArray.reset(ODVM::VertexArray::Create());
+		m_VertexArray = ODVM::VertexArray::Create();
 
 		float vertices[4 * 7] = {
 			-0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
@@ -24,7 +28,7 @@ public:
 			0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f
 		};
 		ODVM::Ref<ODVM::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(ODVM::VertexBuffer::Create(vertices, sizeof(vertices)));
+		vertexBuffer = ODVM::VertexBuffer::Create(vertices, sizeof(vertices));
 
 		ODVM::BufferLayout layout = {
 			{ODVM::ShaderDataType::Float3, "a_Position"},
@@ -36,12 +40,12 @@ public:
 
 		uint32_t indices[4] = { 0, 1, 2, 3 };
 		ODVM::Ref<ODVM::IndexBuffer> indexBuffer;
-		indexBuffer.reset(ODVM::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		indexBuffer = ODVM::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 
 
-		m_SquareVA.reset(ODVM::VertexArray::Create());
+		m_SquareVA = ODVM::VertexArray::Create();
 		float squareVertices[4 * 5] = {
 			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
 			0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
@@ -51,7 +55,7 @@ public:
 
 
 		ODVM::Ref<ODVM::VertexBuffer> squareVB;
-		squareVB.reset(ODVM::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		squareVB = ODVM::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 
 
 		ODVM::BufferLayout squareLayout = {
@@ -63,17 +67,17 @@ public:
 
 		uint32_t squareIndices[4] = { 0, 1, 2, 3 };
 		ODVM::Ref<ODVM::IndexBuffer> squareIB;
-		squareIB.reset(ODVM::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		squareIB = ODVM::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
-		m_Library.Load("assets/shaders/FlatColor.glsl");
+		ODVM::Ref<ODVM::Shader> flatColorShader = m_Library.Load("assets/shaders/FlatColor.glsl");
 
-		m_Library.Load("assets/shaders/Texture.glsl");
+		ODVM::Ref<ODVM::Shader> textureShader = m_Library.Load("assets/shaders/Texture.glsl");
 
 		m_Checkerboard = ODVM::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_Logo = ODVM::Texture2D::Create("assets/textures/ChernoLogo.png");
-		m_Library.GetShader("Texture")->Bind();
-		m_Library.GetShader("Texture")->UploadUniformInt("u_Texture", 0);
+		textureShader->Bind();
+		textureShader->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(ODVM::Timestep ts) override
@@ -202,7 +206,9 @@ class Sandbox : public ODVM::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
+		//PushLayer(new VulkanLayer());
 	}
 
 	~Sandbox()
