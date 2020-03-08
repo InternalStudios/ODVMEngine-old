@@ -1,34 +1,7 @@
-﻿  odvmpch.cpp
-D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.h(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  stb_image.cpp
-  CameraControllers.cpp
-  Application.cpp
-  Layer.cpp
-  LayerStack.cpp
-  Log.cpp
-  Platform.cpp
-  ImGuiBuild.cpp
-  ImGuiLayer.cpp
-  Buffer.cpp
-  Cameras.cpp
-  RenderCommand.cpp
-  Renderer.cpp
-  Renderer2D.cpp
-  RendererAPI.cpp
-  Shader.cpp
-  Texture.cpp
-  VertexArray.cpp
-  OpenGLBuffer.cpp
-  OpenGLContext.cpp
-  Generating Code...
-  Compiling...
-  OpenGLRendererAPI.cpp
-  OpenGLShader.cpp
-  OpenGLTexture.cpp
-  OpenGLVertexArray.cpp
-  VulkanContext.cpp
-  Windows.cpp
-  WindowsInput.cpp
+﻿  VulkanContext.cpp
+  VulkanRendererAPI.cpp
   WindowsWindow.cpp
   Generating Code...
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\Platform\Vulkan\VulkanContext.cpp(101): warning C4715: 'ODVM::VulkanContext::checkValidationLayerSupport': not all control paths return a value
+vulkan-1.lib(vulkan-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib

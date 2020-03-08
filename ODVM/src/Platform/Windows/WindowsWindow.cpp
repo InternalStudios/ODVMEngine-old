@@ -5,8 +5,9 @@
 #include "ODVM/Events/KeyEvent.h"
 #include "ODVM/Events/MouseEvent.h"
 
+#include "ODVM/Renderer/RendererAPI.h"
+
 #include "Platform/OpenGl/OpenGLContext.h"
-#include "Platform/Vulkan/VulkanContext.h"
 
 namespace ODVM
 {
@@ -53,7 +54,19 @@ namespace ODVM
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		++s_GLFWWindowCount;
 
-		m_Context = CreateScope<VulkanContext>(m_Window);
+		if (RendererAPI::GetAPI() == RendererAPI::API::Vulkan)
+		{
+			glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+			glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+			//m_Context = CreateScope<VulkanContext>(m_Window);
+		}
+		else
+		{
+			m_Context = CreateScope<OpenGLContext>(m_Window);
+
+		}
+
+
 		
 		m_Context->Init();
 
@@ -159,6 +172,9 @@ namespace ODVM
 			ODVM_CORE_INFO("Terminating GLFW");
 			glfwTerminate();
 		}
+
+		m_Context->Shutdown();
+		
 	}
 
 	void WindowsWindow::OnUpdate()

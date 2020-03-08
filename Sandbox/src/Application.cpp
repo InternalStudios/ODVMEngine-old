@@ -207,8 +207,8 @@ public:
 	Sandbox()
 	{
 		//PushLayer(new ExampleLayer());
-		//PushLayer(new Sandbox2D());
-		PushLayer(new VulkanLayer());
+		PushLayer(new Sandbox2D());
+		//PushLayer(new VulkanLayer());
 	}
 
 	~Sandbox()
