@@ -54,7 +54,7 @@ namespace ODVM
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		++s_GLFWWindowCount;
 
-		if (RendererAPI::GetAPI() == RendererAPI::API::Vulkan)
+		/*if (RendererAPI::GetAPI() == RendererAPI::API::Vulkan)
 		{
 			glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 			glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
@@ -64,7 +64,7 @@ namespace ODVM
 		{
 			m_Context = CreateScope<OpenGLContext>(m_Window);
 
-		}
+		}*/
 
 
 		

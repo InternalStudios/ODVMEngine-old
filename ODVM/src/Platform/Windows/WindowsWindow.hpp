@@ -23,7 +23,7 @@ namespace ODVM
 		virtual void SetVSync(bool enabled) override;
 		virtual bool IsVSync() const override;
 
-		inline virtual void* GetNativeWindow() const { return m_Window; }
+		inline virtual void* GetNativeWindow() const override { return m_Window; }
 
 		virtual void SetTitle(const char* title) override;
 

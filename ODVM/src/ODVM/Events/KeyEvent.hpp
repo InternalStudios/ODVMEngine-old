@@ -4,7 +4,7 @@
 
 namespace ODVM
 {
-	class ODVM_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,7 +17,7 @@ namespace ODVM
 		int m_KeyCode;
 	};
 
-	class ODVM_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -37,7 +37,7 @@ namespace ODVM
 		int m_RepeatCount;
 	};
 
-	class ODVM_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)
@@ -54,7 +54,7 @@ namespace ODVM
 		EVENT_CLASS_TYPE(KeyTyped)
 	};
 
-	class ODVM_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)

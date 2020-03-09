@@ -32,7 +32,7 @@ namespace ODVM
 			case RendererAPI::API::OpenGL: return std::make_shared<OpenGLIndexBuffer>(indices, size);
 		}
 
-		ODVM_CORE_ERROR(false, "Unknown API");
+		ODVM_CORE_ERROR("Unknown API");
 		return nullptr;
 
 	}

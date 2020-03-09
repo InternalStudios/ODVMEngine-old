@@ -49,8 +49,13 @@
 #endif
 
 #ifdef ODVM_ENABLE_ASSERTS
+#ifdef ODVM_PLATFORM_WINDOWS
 	#define ODVM_ASSERT(x, ...) {if(!(x)) { ODVM_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
 	#define ODVM_CORE_ASSERT(x, ...) {if(!(x)) { ODVM_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#else
+#define ODVM_ASSERT(x, ...) {if(!(x)) { ODVM_ERROR("Assertion Failed: {0}", __VA_ARGS__);}}
+#define ODVM_CORE_ASSERT(x, ...) {if(!(x)) { ODVM_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__);}}
+#endif
 #else
 	#define ODVM_ASSERT(x, ...)
 	#define ODVM_CORE_ASSERT(x, ...)

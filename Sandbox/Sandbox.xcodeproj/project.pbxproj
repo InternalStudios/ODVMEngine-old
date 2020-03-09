@@ -10,7 +10,11 @@
 		1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2C86E3296342FE4D4D7D472 /* Application.cpp */; };
 		2AD9989EBD676290264006DE /* VulkanLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */; };
 		5F1CD3CCD03F74BE8606220C /* Sandbox2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */; };
+		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
+		727DABE5CDDDD09710217225 /* libGLFW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3357984D8FDE9CBF1881568D /* libGLFW.a */; };
+		9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */; };
 		BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C8D426268FBF466399382 /* libODVM.a */; };
+		F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +24,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6DD868AB9C7EBC9DF5C016EB;
 			remoteInfo = libODVM.a;
+		};
+		7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA5D4C4862AA31FA90F13288 /* ../ODVM/libs/GLFW/GLFW.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB2B399FFE9C0BD18008AFDF;
+			remoteInfo = libGLFW.a;
+		};
+		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA5D4C4862AA31FA90F13288 /* ../ODVM/libs/GLFW/GLFW.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E92D9A59D392D97F67A87E5;
+			remoteInfo = libGLFW.a;
 		};
 		FDB2085823D8380A8ADF2E98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BACC980CF188B320DBC2FC0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		4522035E6D5CBC1054F8499E /* Sandbox2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = Sandbox2D.hpp; path = src/Sandbox2D.hpp; sourceTree = "<group>"; };
+		6B5B6D502EC72F026D6AD390 /* VulkanLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = VulkanLayer.hpp; path = src/VulkanLayer.hpp; sourceTree = "<group>"; };
+		8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Sandbox2D.cpp; path = src/Sandbox2D.cpp; sourceTree = "<group>"; };
+		CA5D4C4862AA31FA90F13288 /* libGLFW.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GLFW.xcodeproj"; path = ../ODVM/libs/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D2C86E3296342FE4D4D7D472 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = src/Application.cpp; sourceTree = "<group>"; };
 		D917225C6E8DE18EDD2A389C /* libODVM.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ODVM.xcodeproj"; path = ../ODVM/ODVM.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F8CF3E989D21DC4AAF5A24D8 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Sandbox; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,19 +67,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */,
+				713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */,
+				9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */,
 				BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */,
+				727DABE5CDDDD09710217225 /* libGLFW.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014014D2FAA61644EE417312 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3357984D8FDE9CBF1881568D /* libGLFW.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6849586FFB54B1614389A6AF /* Sandbox */ = {
 			isa = PBXGroup;
 			children = (
 				D2C86E3296342FE4D4D7D472 /* Application.cpp */,
 				B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */,
+				4522035E6D5CBC1054F8499E /* Sandbox2D.hpp */,
 				FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */,
+				6B5B6D502EC72F026D6AD390 /* VulkanLayer.hpp */,
+				BBF76781A7E87333FA200DC1 /* Frameworks */,
 				A6C936B49B3FADE6EA134CF4 /* Products */,
 				9D968EAA920D05DCE0E0A4EA /* Projects */,
 			);
@@ -66,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */,
+				CA5D4C4862AA31FA90F13288 /* GLFW.xcodeproj */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -76,6 +116,16 @@
 				F8CF3E989D21DC4AAF5A24D8 /* Sandbox */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF76781A7E87333FA200DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */,
+				0BACC980CF188B320DBC2FC0 /* IOKit.framework */,
+				8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FD75EA98F6DBEC0AEA7748D8 /* Products */ = {
@@ -101,6 +151,7 @@
 			);
 			dependencies = (
 				EB2E27A1E4942913D82F85E1 /* PBXTargetDependency */,
+				EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */,
 			);
 			name = Sandbox;
 			productInstallPath = "$(HOME)/bin";
@@ -123,6 +174,10 @@
 					ProductGroup = FD75EA98F6DBEC0AEA7748D8 /* Products */;
 					ProjectRef = D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */;
 				},
+				{
+					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
+					ProjectRef = CA5D4C4862AA31FA90F13288 /* GLFW.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -132,6 +187,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3357984D8FDE9CBF1881568D /* libGLFW.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGLFW.a;
+			remoteRef = 7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		479C8D426268FBF466399382 /* libODVM.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -170,6 +232,11 @@
 			name = libODVM.a;
 			targetProxy = 4FEC7AF17612AAA3DD19A131 /* PBXContainerItemProxy */;
 		};
+		EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libGLFW.a;
+			targetProxy = CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -202,8 +269,12 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../ODVM/libs/Vulkan/latest/Lib,
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR} /../ODVM/libs/spdlog/include\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/glm\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/ImGui\"",
+					"\"${PROJECT_DIR} /../ODVM/src\"",
+					"$(inherited)",
 				);
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
@@ -244,8 +315,12 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../ODVM/libs/Vulkan/latest/Lib,
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR} /../ODVM/libs/spdlog/include\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/glm\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/ImGui\"",
+					"\"${PROJECT_DIR} /../ODVM/src\"",
+					"$(inherited)",
 				);
 				OBJROOT = "../bin-int/Release-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = NO;
@@ -276,8 +351,12 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					../ODVM/libs/Vulkan/latest/Lib,
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR} /../ODVM/libs/spdlog/include\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/glm\"",
+					"\"${PROJECT_DIR} /../ODVM/libs/ImGui\"",
+					"\"${PROJECT_DIR} /../ODVM/src\"",
+					"$(inherited)",
 				);
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/Sandbox";
 				ONLY_ACTIVE_ARCH = YES;

@@ -1,5 +1,5 @@
 #include <ODVM.h>
-#include <ODVM/Core/EntryPoint.h>
+#include <ODVM/Core/EntryPoint.hpp>
 
 #include <sstream>
 
@@ -7,8 +7,8 @@
 
 #include "imgui.h"
 
-#include "Sandbox2D.h"
-#include "VulkanLayer.h"
+#include "Sandbox2D.hpp"
+#include "VulkanLayer.hpp"
 
 class ExampleLayer : public ODVM::Layer
 {

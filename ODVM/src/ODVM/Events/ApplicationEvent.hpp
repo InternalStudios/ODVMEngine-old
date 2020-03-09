@@ -4,7 +4,7 @@
 
 namespace ODVM
 {
-	class ODVM_API WindowResizeEvent : public Event
+	class WindowResizeEvent : public Event
 	{
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height)
@@ -26,7 +26,7 @@ namespace ODVM
 		unsigned int m_Width, m_Height;
 	};
 
-	class ODVM_API WindowCloseEvent : public Event
+	class WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent() {}
@@ -35,7 +35,7 @@ namespace ODVM
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class ODVM_API AppTickEvent : public Event
+	class AppTickEvent : public Event
 	{
 	public:
 		AppTickEvent() {}
@@ -44,7 +44,7 @@ namespace ODVM
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class ODVM_API AppUpdateEvent : public Event
+	class AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() {}
@@ -53,7 +53,7 @@ namespace ODVM
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class ODVM_API AppRenderEvent : public Event
+	class AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() {}
