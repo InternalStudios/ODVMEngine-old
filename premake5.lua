@@ -90,16 +90,12 @@ project "ODVM"
 
 		links
 		{
-			"Cocoa.framework",
-			"IOKit.framework",
 			"QuartzCore.framework"
 		}
 
 	filter "action:gmake"
 		links
 		{
-			"Cocoa.framework",
-			"IOKit.framework",
 			"QuartzCore.framework"
 		}
 
@@ -185,21 +181,20 @@ project "Sandbox"
 
 	links
 	{
-        "ODVM",
-        "Cocoa.framework",
-        "IOKit.framework",
-        "QuartzCore.framework",
+        	"ODVM",
+
 		"GLFW",
-		"Discord"
+		"Discord",
+		"Glad"
 	}
 
 	filter "action:xcode4"
 		sysincludedirs
 		{
 			"${PROJECT_DIR} /../ODVM/libs/spdlog/include",
-            "${PROJECT_DIR} /../ODVM/libs/glm",
-            "${PROJECT_DIR} /../ODVM/libs/ImGui",
-            "${PROJECT_DIR} /../ODVM/src"
+            		"${PROJECT_DIR} /../ODVM/libs/glm",
+            		"${PROJECT_DIR} /../ODVM/libs/ImGui",
+            		"${PROJECT_DIR} /../ODVM/src"
             
 		}
 		
@@ -212,12 +207,20 @@ project "Sandbox"
 		{
 		}
 
+
 	filter "system:macosx"
 		cppdialect "C++17"
 		systemversion "latest"
 
 		defines
 		{
+		}
+
+		links
+		{
+	        	"Cocoa.framework",
+        		"IOKit.framework",
+        		"QuartzCore.framework"
 		}
 
     filter "configurations:Debug"
