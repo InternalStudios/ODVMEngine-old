@@ -26,14 +26,14 @@ namespace ODVM
 		ODVM_CORE_INFO("  Renderer: {0},", glGetString(GL_RENDERER));
 		ODVM_CORE_INFO("  Version: {0},", glGetString(GL_VERSION));
 
-		#ifdef ODVM_ENABLE_ASSERTS
+		/*#ifdef ODVM_ENABLE_ASSERTS
 			int versionMajor;
 			int versionMinor;
 			glGetIntegerv(GL_MAJOR_VERSION, &versionMajor);
 			glGetIntegerv(GL_MINOR_VERSION, &versionMinor);
 
 			ODVM_CORE_ASSERT(versionMajor > 4 || (versionMajor == 4 && versionMinor >= 5), "ODVM Engine only supports OpenGL versions 4.5 or higher!");
-		#endif
+		#endif*/
 	}
 
 	void OpenGLContext::SwapBuffers()

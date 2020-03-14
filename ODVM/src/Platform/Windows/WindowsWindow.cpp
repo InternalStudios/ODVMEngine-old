@@ -9,6 +9,8 @@
 
 #include "Platform/OpenGl/OpenGLContext.hpp"
 
+#include <glad/glad.h>
+
 namespace ODVM
 {
 	static uint8_t s_GLFWWindowCount = 0;
@@ -50,6 +52,14 @@ namespace ODVM
 			ODVM_CORE_ASSERT(success, "Could not initalize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
+        
+        #ifdef ODVM_PLATFORM_MACOS
+                
+                glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+                glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+                glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+                glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        #endif
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		++s_GLFWWindowCount;
@@ -62,11 +72,11 @@ namespace ODVM
 		}
 		else
 		{
-			m_Context = CreateScope<OpenGLContext>(m_Window);
+			
 
 		}*/
 
-
+        m_Context = CreateScope<OpenGLContext>(m_Window);
 		
 		m_Context->Init();
 

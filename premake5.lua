@@ -174,6 +174,7 @@ project "Sandbox"
 		"ODVM/src",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.discord}/cpp",
 		"%{IncludeDir.vulkan}/Include"
 	}
@@ -182,21 +183,11 @@ project "Sandbox"
 	links
 	{
         	"ODVM",
-
 		"GLFW",
 		"Discord",
-		"Glad"
+		"Glad",
+		"ImGui"
 	}
-
-	filter "action:xcode4"
-		sysincludedirs
-		{
-			"${PROJECT_DIR} /../ODVM/libs/spdlog/include",
-            		"${PROJECT_DIR} /../ODVM/libs/glm",
-            		"${PROJECT_DIR} /../ODVM/libs/ImGui",
-            		"${PROJECT_DIR} /../ODVM/src"
-            
-		}
 		
 
 	filter "system:windows"
@@ -219,9 +210,7 @@ project "Sandbox"
 		links
 		{
 	        	"Cocoa.framework",
-        		"IOKit.framework",
-        		"QuartzCore.framework",
-			"CoreFoundation.framework"
+        		"IOKit.framework"
 		}
 
     filter "configurations:Debug"

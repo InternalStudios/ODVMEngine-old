@@ -72,7 +72,7 @@ ifneq (,$(ODVM_config))
 	@${MAKE} --no-print-directory -C ODVM -f Makefile config=$(ODVM_config)
 endif
 
-Sandbox: ODVM GLFW Discord Glad
+Sandbox: ODVM GLFW Discord Glad ImGui
 ifneq (,$(Sandbox_config))
 	@echo "==== Building Sandbox ($(Sandbox_config)) ===="
 	@${MAKE} --no-print-directory -C Sandbox -f Makefile config=$(Sandbox_config)
