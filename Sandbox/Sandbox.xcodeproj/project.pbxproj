@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E5857AAB0E6219C19BEC5EA /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2C86E3296342FE4D4D7D472 /* Application.cpp */; };
 		2AD9989EBD676290264006DE /* VulkanLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FECABDE6C2367F9800DA2426 /* VulkanLayer.cpp */; };
+		55566A454E2129F7D8959085 /* libDiscord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72450ADDAA3901FF29D6EED /* libDiscord.a */; };
 		5F1CD3CCD03F74BE8606220C /* Sandbox2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9AF8134E1EA39E6C985C774 /* Sandbox2D.cpp */; };
 		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
 		727DABE5CDDDD09710217225 /* libGLFW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3357984D8FDE9CBF1881568D /* libGLFW.a */; };
@@ -18,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B14ABE361A216553A1B2A23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117252100269C0026E6D4050 /* ../ODVM/libs/Discord/Discord.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DEE7BD07CD0E6F96F2EDFD;
+			remoteInfo = libDiscord.a;
+		};
 		4FEC7AF17612AAA3DD19A131 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D917225C6E8DE18EDD2A389C /* ../ODVM/ODVM.xcodeproj */;
@@ -31,6 +39,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = FB2B399FFE9C0BD18008AFDF;
 			remoteInfo = libGLFW.a;
+		};
+		B8DA394A0F67A3BCE7E0B78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117252100269C0026E6D4050 /* ../ODVM/libs/Discord/Discord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BAF90AB7BBAC07A92F8DD8F7;
+			remoteInfo = libDiscord.a;
 		};
 		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -50,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0BACC980CF188B320DBC2FC0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		117252100269C0026E6D4050 /* libDiscord.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Discord.xcodeproj"; path = ../ODVM/libs/Discord/Discord.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4522035E6D5CBC1054F8499E /* Sandbox2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = Sandbox2D.hpp; path = src/Sandbox2D.hpp; sourceTree = "<group>"; };
 		6B5B6D502EC72F026D6AD390 /* VulkanLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = VulkanLayer.hpp; path = src/VulkanLayer.hpp; sourceTree = "<group>"; };
 		8B91C4E06FD8CD12F3C5FB20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -72,6 +88,7 @@
 				9130093853F069AAB1254778 /* QuartzCore.framework in Frameworks */,
 				BF81B29A1982C98CE0C9C0DA /* libODVM.a in Frameworks */,
 				727DABE5CDDDD09710217225 /* libGLFW.a in Frameworks */,
+				55566A454E2129F7D8959085 /* libDiscord.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +118,20 @@
 			name = Sandbox;
 			sourceTree = "<group>";
 		};
+		8702C54ACF73A97C14127B8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A72450ADDAA3901FF29D6EED /* libDiscord.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
 			isa = PBXGroup;
 			children = (
 				D917225C6E8DE18EDD2A389C /* ODVM.xcodeproj */,
 				CA5D4C4862AA31FA90F13288 /* GLFW.xcodeproj */,
+				117252100269C0026E6D4050 /* Discord.xcodeproj */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -152,6 +178,7 @@
 			dependencies = (
 				EB2E27A1E4942913D82F85E1 /* PBXTargetDependency */,
 				EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */,
+				74BB0253BD2BE68501CAB893 /* PBXTargetDependency */,
 			);
 			name = Sandbox;
 			productInstallPath = "$(HOME)/bin";
@@ -178,6 +205,10 @@
 					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
 					ProjectRef = CA5D4C4862AA31FA90F13288 /* GLFW.xcodeproj */;
 				},
+				{
+					ProductGroup = 8702C54ACF73A97C14127B8A /* Products */;
+					ProjectRef = 117252100269C0026E6D4050 /* Discord.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -199,6 +230,13 @@
 			fileType = archive.ar;
 			path = libODVM.a;
 			remoteRef = FDB2085823D8380A8ADF2E98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A72450ADDAA3901FF29D6EED /* libDiscord.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDiscord.a;
+			remoteRef = B8DA394A0F67A3BCE7E0B78A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -227,6 +265,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		74BB0253BD2BE68501CAB893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libDiscord.a;
+			targetProxy = 0B14ABE361A216553A1B2A23 /* PBXContainerItemProxy */;
+		};
 		EB2E27A1E4942913D82F85E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libODVM.a;
@@ -284,6 +327,7 @@
 					../ODVM/src,
 					../ODVM/libs/glm,
 					../ODVM/libs/ImGui,
+					../ODVM/libs/discord/cpp,
 					../ODVM/libs/Vulkan/latest/Include,
 				);
 			};
@@ -330,6 +374,7 @@
 					../ODVM/src,
 					../ODVM/libs/glm,
 					../ODVM/libs/ImGui,
+					../ODVM/libs/discord/cpp,
 					../ODVM/libs/Vulkan/latest/Include,
 				);
 			};
@@ -366,6 +411,7 @@
 					../ODVM/src,
 					../ODVM/libs/glm,
 					../ODVM/libs/ImGui,
+					../ODVM/libs/discord/cpp,
 					../ODVM/libs/Vulkan/latest/Include,
 				);
 			};

@@ -5,6 +5,9 @@
 		location = "group:Sandbox/Sandbox.xcodeproj">
 	</FileRef>
 	<FileRef
+		location = "group:ODVM/libs/Discord/Discord.xcodeproj">
+	</FileRef>
+	<FileRef
 		location = "group:ODVM/libs/GLFW/GLFW.xcodeproj">
 	</FileRef>
 	<FileRef

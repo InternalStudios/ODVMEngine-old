@@ -23,6 +23,7 @@
 		5986C3BBCAA964AD807011FB /* odvmpch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A8B1A39AE36A55827EF7E3 /* odvmpch.cpp */; };
 		65B208A0079BA492FEC2B6E0 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BBB08285F0EBAAF6D6148 /* Platform.cpp */; };
 		67D1B15F46744CD1FB564F9F /* OpenGLBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86F33087869613B9C0EAC6C7 /* OpenGLBuffer.cpp */; };
+		685864150BBF91C722F54A55 /* libDiscord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7A627DF6F24FEF22D940BD /* libDiscord.a */; };
 		6E4EE692E2A92B84608CB4D2 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74FE0BAB979BD6CED6AA6FA /* Renderer.cpp */; };
 		70CEB27CE528F76E630C80BC /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F467724417053D675613D64 /* LayerStack.cpp */; };
 		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
@@ -51,6 +52,13 @@
 			remoteGlobalIDString = 3E398A4741AA5C79C3170087;
 			remoteInfo = libGlad.a;
 		};
+		0B14ABE361A216553A1B2A23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* libs/Discord/Discord.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DEE7BD07CD0E6F96F2EDFD;
+			remoteInfo = libDiscord.a;
+		};
 		54137A137A39A9C5E140A053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7697D01044BB23C2CBC97650 /* libs/Glad/Glad.xcodeproj */;
@@ -78,6 +86,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F03FB590F3B087C2751D2BD0;
 			remoteInfo = libImGui.a;
+		};
+		B8DA394A0F67A3BCE7E0B78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* libs/Discord/Discord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BAF90AB7BBAC07A92F8DD8F7;
+			remoteInfo = libDiscord.a;
 		};
 		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -153,6 +168,7 @@
 		27776A995AF6AA0B72F088D9 /* matrix_double2x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x3_precision.hpp; path = libs/glm/glm/ext/matrix_double2x3_precision.hpp; sourceTree = "<group>"; };
 		27BE2145428A8FF7465B2785 /* type_mat4x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x2.inl; path = libs/glm/glm/detail/type_mat4x2.inl; sourceTree = "<group>"; };
 		2868D7997FCE4A8B31DC65D9 /* exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exponential.hpp; path = libs/glm/glm/exponential.hpp; sourceTree = "<group>"; };
+		288C2FE0CA75CBD2C19CDE20 /* libDiscord.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Discord.xcodeproj"; path = libs/Discord/Discord.xcodeproj; sourceTree = SOURCE_ROOT; };
 		293E100DEFCC077F5DCE2E4D /* type_trait.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_trait.inl; path = libs/glm/glm/gtx/type_trait.inl; sourceTree = "<group>"; };
 		29A536D19D8DAE83BFDB5D11 /* _swizzle_func.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _swizzle_func.hpp; path = libs/glm/glm/detail/_swizzle_func.hpp; sourceTree = "<group>"; };
 		2AC087012A636A3364B81D41 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLShader.cpp; path = src/Platform/OpenGl/OpenGLShader.cpp; sourceTree = "<group>"; };
@@ -546,6 +562,7 @@
 				A32673B5908E06672D87F9F5 /* libGLFW.a in Frameworks */,
 				3EB28C552C1A1F07C9141295 /* libGlad.a in Frameworks */,
 				21012E61C876CA13713BD4A1 /* libImGui.a in Frameworks */,
+				685864150BBF91C722F54A55 /* libDiscord.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,12 +1016,21 @@
 			name = ODVM;
 			sourceTree = "<group>";
 		};
+		8702C54ACF73A97C14127B8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E7A627DF6F24FEF22D940BD /* libDiscord.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
 			isa = PBXGroup;
 			children = (
 				11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */,
 				7697D01044BB23C2CBC97650 /* Glad.xcodeproj */,
 				F86085996588940B671B83D9 /* ImGui.xcodeproj */,
+				288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -1220,6 +1246,7 @@
 				EEF851DBE85E534DDBF9B01B /* PBXTargetDependency */,
 				B500CA83AE66CBF5A20228C3 /* PBXTargetDependency */,
 				243C8F464A62BEF8B169B586 /* PBXTargetDependency */,
+				74BB0253BD2BE68501CAB893 /* PBXTargetDependency */,
 			);
 			name = ODVM;
 			productName = ODVM;
@@ -1249,6 +1276,10 @@
 					ProductGroup = 3684523D5CAA81EFC3B1787D /* Products */;
 					ProjectRef = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
 				},
+				{
+					ProductGroup = 8702C54ACF73A97C14127B8A /* Products */;
+					ProjectRef = 288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1263,6 +1294,13 @@
 			fileType = archive.ar;
 			path = libGLFW.a;
 			remoteRef = 7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E7A627DF6F24FEF22D940BD /* libDiscord.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDiscord.a;
+			remoteRef = B8DA394A0F67A3BCE7E0B78A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		7848B3BD84D3662FFFB831FD /* libGlad.a */ = {
@@ -1334,6 +1372,11 @@
 			isa = PBXTargetDependency;
 			name = libImGui.a;
 			targetProxy = AAC7D73695B3FD28DD99C576 /* PBXContainerItemProxy */;
+		};
+		74BB0253BD2BE68501CAB893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libDiscord.a;
+			targetProxy = 0B14ABE361A216553A1B2A23 /* PBXContainerItemProxy */;
 		};
 		B500CA83AE66CBF5A20228C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1430,6 +1473,7 @@
 					libs/ImGui,
 					libs/glm,
 					libs/stb,
+					libs/discord/cpp,
 					libs/Vulkan/latest/Include,
 				);
 			};
@@ -1478,6 +1522,7 @@
 					libs/ImGui,
 					libs/glm,
 					libs/stb,
+					libs/discord/cpp,
 					libs/Vulkan/latest/Include,
 				);
 			};
@@ -1528,6 +1573,7 @@
 					libs/ImGui,
 					libs/glm,
 					libs/stb,
+					libs/discord/cpp,
 					libs/Vulkan/latest/Include,
 				);
 			};

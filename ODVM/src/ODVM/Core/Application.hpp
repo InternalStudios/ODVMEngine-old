@@ -18,6 +18,7 @@
 
 #include "ODVM/Core/Timesteps.hpp"
 
+#include "discord.h"
 
 namespace ODVM
 {
@@ -28,6 +29,9 @@ namespace ODVM
 		virtual ~Application();
 
 		void run();
+        
+        /*void InitDiscord();
+        void UpdateDiscord();*/
 
 		void OnEvent(Event& e);
 		
@@ -49,7 +53,7 @@ namespace ODVM
 
 		bool m_Minimized = false;
 
-
+        //discord::Core* m_Core;
 	private:
 		static Application* s_Instance;
 	};

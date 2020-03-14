@@ -40,12 +40,30 @@ namespace ODVM
 
 	}
 
+
+
 	Application::~Application()
 	{
 		ODVM_PROFILE_FUNCTION();
 
 		Renderer::Shutdown();
 	}
+
+/*
+
+    void Application::InitDiscord()
+    {
+        auto result = discord::Core::Create(687948082150768665, DiscordCreateFlags_Default, &m_Core);
+        discord::Activity activity{};
+        activity.SetState("Making");
+        m_Core->ActivityManager().UpdateActivity(activity, [](discord::Result result){});
+        
+    }
+
+    void Application::UpdateDiscord()
+    {
+        
+    }*/
 
 	void Application::PushLayer(Layer* layer)
 	{

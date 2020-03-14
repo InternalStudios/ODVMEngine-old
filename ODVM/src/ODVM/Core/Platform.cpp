@@ -10,12 +10,11 @@ namespace ODVM
 
 	float Platform::GetTime()
 	{
-		#ifdef ODVM_PLATFORM_WINDOWS
-		return s_Instance->GetTimeImpl();
-		#else
+        #ifdef ODVM_UNSUPPORTED_PLATFORM
         ODVM_CORE_ERROR("ODVM Engine does not support this platform");
-		#endif
-
+        return 0.0f;
+        #endif
+		return s_Instance->GetTimeImpl();
 	}
 
 }

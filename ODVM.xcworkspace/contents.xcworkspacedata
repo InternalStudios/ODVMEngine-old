@@ -4,19 +4,18 @@
 	<FileRef
 		location = "group:Sandbox/Sandbox.xcodeproj">
 	</FileRef>
-	<Group
-		location = "container:"
-		name = "Dependencies">
-		<FileRef
-			location = "group:ODVM/libs/GLFW/GLFW.xcodeproj">
-		</FileRef>
-		<FileRef
-			location = "group:ODVM/libs/Glad/Glad.xcodeproj">
-		</FileRef>
-		<FileRef
-			location = "group:ODVM/libs/ImGui/ImGui.xcodeproj">
-		</FileRef>
-	</Group>
+	<FileRef
+		location = "group:ODVM/libs/Discord/Discord.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:ODVM/libs/GLFW/GLFW.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:ODVM/libs/Glad/Glad.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:ODVM/libs/ImGui/ImGui.xcodeproj">
+	</FileRef>
 	<FileRef
 		location = "group:ODVM/ODVM.xcodeproj">
 	</FileRef>

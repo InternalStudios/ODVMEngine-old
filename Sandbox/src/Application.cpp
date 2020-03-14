@@ -96,7 +96,6 @@ public:
 		ODVM::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
 		ODVM::RenderCommand::Clear();
 
-		glm::vec4 redColor(0.8f, 0.1f, 0.1f, 1.0f);
 		glm::vec4 magentaColor(1.0f, 0.0f, 1.0f, 1.0f);
 
 		ODVM::Renderer::BeginScene(m_CameraController.GetCamera());
@@ -135,7 +134,7 @@ public:
 
 	}
 
-	virtual void OnImGuiRender()
+	virtual void OnImGuiRender() override
 	{
 		ImGui::Begin("Settings", nullptr, (ImGuiWindowFlags)ImGuiWindowFlags_MenuBar);
 		if (ImGui::BeginMenuBar())

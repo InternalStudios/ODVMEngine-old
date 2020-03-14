@@ -177,6 +177,15 @@ project "Sandbox"
 		"%{IncludeDir.vulkan}/Include"
 	}
 
+	links
+	{
+        "ODVM",
+        "Cocoa.framework",
+        "IOKit.framework",
+        "QuartzCore.framework",
+		"GLFW"
+	}
+
 	filter "action:xcode4"
 		sysincludedirs
 		{
@@ -186,17 +195,7 @@ project "Sandbox"
             "${PROJECT_DIR} /../ODVM/src"
             
 		}
-
-	filter {}
-
-	links
-	{
-        "ODVM",
-        "Cocoa.framework",
-        "IOKit.framework",
-        "QuartzCore.framework",
-        "GLFW"
-	}
+		
 
 	filter "system:windows"
 		cppdialect "C++17"
