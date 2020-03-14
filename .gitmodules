@@ -2,10 +2,6 @@
 	path = ODVM/libs/spdlog
 	url = https://github.com/gabime/spdlog.git
 	branch = v1.x
-[submodule "ODVM/libs/GLFW"]
-	path = ODVM/libs/GLFW
-	url = https://github.com/Internal-media-group/glfw
-	branch = master
 [submodule "ODVM/libs/ImGui"]
 	path = ODVM/libs/ImGui
 	url = https://github.com/TheCherno/imgui

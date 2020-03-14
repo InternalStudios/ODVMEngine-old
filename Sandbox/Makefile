@@ -47,7 +47,7 @@ OBJDIR = ../bin-int/Debug-macosx-x86_64/Sandbox
 DEFINES += -DODVM_DEBUG
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
-LIBS += ../bin/Debug-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Debug-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Debug-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Debug-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore
+LIBS += ../bin/Debug-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Debug-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Debug-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Debug-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore -framework CoreFoundation
 LDDEPS += ../bin/Debug-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Debug-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Debug-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Debug-macosx-x86_64/Glad/libGlad.a
 
 else ifeq ($(config),release)
@@ -57,7 +57,7 @@ OBJDIR = ../bin-int/Release-macosx-x86_64/Sandbox
 DEFINES += -DODVM_RELEASE
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
-LIBS += ../bin/Release-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Release-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Release-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Release-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore
+LIBS += ../bin/Release-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Release-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Release-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Release-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore -framework CoreFoundation
 LDDEPS += ../bin/Release-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Release-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Release-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Release-macosx-x86_64/Glad/libGlad.a
 
 else ifeq ($(config),dist)
@@ -67,7 +67,7 @@ OBJDIR = ../bin-int/Dist-macosx-x86_64/Sandbox
 DEFINES += -DODVM_DIST
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
-LIBS += ../bin/Dist-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Dist-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Dist-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Dist-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore
+LIBS += ../bin/Dist-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Dist-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Dist-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Dist-macosx-x86_64/Glad/libGlad.a -framework Cocoa -framework IOKit -framework QuartzCore -framework CoreFoundation
 LDDEPS += ../bin/Dist-macosx-x86_64/ODVM/libODVM.a ../ODVM/libs/GLFW/bin/Dist-macosx-x86_64/GLFW/libGLFW.a ../ODVM/libs/Discord/bin/Dist-macosx-x86_64/Discord/libDiscord.a ../ODVM/libs/Glad/bin/Dist-macosx-x86_64/Glad/libGlad.a
 
 else

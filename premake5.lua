@@ -220,7 +220,8 @@ project "Sandbox"
 		{
 	        	"Cocoa.framework",
         		"IOKit.framework",
-        		"QuartzCore.framework"
+        		"QuartzCore.framework",
+			"CoreFoundation.framework"
 		}
 
     filter "configurations:Debug"
