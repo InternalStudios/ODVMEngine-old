@@ -42,7 +42,11 @@ namespace ODVM
 	OpenGLVertexArray::OpenGLVertexArray()
 	{
 		ODVM_PROFILE_FUNCTION();
-		glCreateVertexArrays(1, &m_RendererID);
+        #ifdef ODVM_PLATFORM_MACOS
+            glGenVertexArrays(1, &m_RendererID);
+        #else
+            glCreateVertexArrays(1, &m_RendererID);
+        #endif
 	}
 
 	OpenGLVertexArray::~OpenGLVertexArray()

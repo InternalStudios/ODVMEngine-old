@@ -47,56 +47,56 @@
 /* Begin PBXContainerItemProxy section */
 		01D9077A27FF372C8F062DBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7697D01044BB23C2CBC97650 /* libs/Glad/Glad.xcodeproj */;
+			containerPortal = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3E398A4741AA5C79C3170087;
 			remoteInfo = libGlad.a;
 		};
 		0B14ABE361A216553A1B2A23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* libs/Discord/Discord.xcodeproj */;
+			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 64DEE7BD07CD0E6F96F2EDFD;
 			remoteInfo = libDiscord.a;
 		};
 		54137A137A39A9C5E140A053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7697D01044BB23C2CBC97650 /* libs/Glad/Glad.xcodeproj */;
+			containerPortal = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B45B54D49EC093FA32D638D;
 			remoteInfo = libGlad.a;
 		};
 		588D649D43798A8F8B5F52DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F86085996588940B671B83D9 /* libs/ImGui/ImGui.xcodeproj */;
+			containerPortal = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B27392EA23FEAB5CD2FFD12A;
 			remoteInfo = libImGui.a;
 		};
 		7AC179D2A0E7A98407EEA012 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 11AD0618DFD059CA66DEAC58 /* libs/GLFW/GLFW.xcodeproj */;
+			containerPortal = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FB2B399FFE9C0BD18008AFDF;
 			remoteInfo = libGLFW.a;
 		};
 		AAC7D73695B3FD28DD99C576 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F86085996588940B671B83D9 /* libs/ImGui/ImGui.xcodeproj */;
+			containerPortal = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F03FB590F3B087C2751D2BD0;
 			remoteInfo = libImGui.a;
 		};
 		B8DA394A0F67A3BCE7E0B78A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* libs/Discord/Discord.xcodeproj */;
+			containerPortal = 288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BAF90AB7BBAC07A92F8DD8F7;
 			remoteInfo = libDiscord.a;
 		};
 		CCFBEC6BF3221C1D5A2912AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 11AD0618DFD059CA66DEAC58 /* libs/GLFW/GLFW.xcodeproj */;
+			containerPortal = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6E92D9A59D392D97F67A87E5;
 			remoteInfo = libGLFW.a;
@@ -129,7 +129,7 @@
 		0F890CA1406D049353853AE1 /* bit.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = bit.inl; path = libs/glm/glm/gtx/bit.inl; sourceTree = "<group>"; };
 		10067A91D76B3583622308D1 /* matrix_float4x2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_float4x2_precision.hpp; path = libs/glm/glm/ext/matrix_float4x2_precision.hpp; sourceTree = "<group>"; };
 		10E9C49F6AEADB913231D2DF /* matrix_relational.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_relational.inl; path = libs/glm/glm/ext/matrix_relational.inl; sourceTree = "<group>"; };
-		11AD0618DFD059CA66DEAC58 /* libGLFW.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GLFW.xcodeproj"; path = libs/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
+		11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLFW.xcodeproj; path = libs/GLFW/GLFW.xcodeproj; sourceTree = SOURCE_ROOT; };
 		139A419DD65AA20F338F7FDD /* vector_query.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_query.hpp; path = libs/glm/glm/gtx/vector_query.hpp; sourceTree = "<group>"; };
 		140E97BF080DE1318CF8F5FF /* gradient_paint.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = gradient_paint.hpp; path = libs/glm/glm/gtx/gradient_paint.hpp; sourceTree = "<group>"; };
 		1565C149ADB2A6FBDBF9A789 /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _features.hpp; path = libs/glm/glm/detail/_features.hpp; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		27776A995AF6AA0B72F088D9 /* matrix_double2x3_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_double2x3_precision.hpp; path = libs/glm/glm/ext/matrix_double2x3_precision.hpp; sourceTree = "<group>"; };
 		27BE2145428A8FF7465B2785 /* type_mat4x2.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_mat4x2.inl; path = libs/glm/glm/detail/type_mat4x2.inl; sourceTree = "<group>"; };
 		2868D7997FCE4A8B31DC65D9 /* exponential.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = exponential.hpp; path = libs/glm/glm/exponential.hpp; sourceTree = "<group>"; };
-		288C2FE0CA75CBD2C19CDE20 /* libDiscord.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Discord.xcodeproj"; path = libs/Discord/Discord.xcodeproj; sourceTree = SOURCE_ROOT; };
+		288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Discord.xcodeproj; path = libs/Discord/Discord.xcodeproj; sourceTree = SOURCE_ROOT; };
 		293E100DEFCC077F5DCE2E4D /* type_trait.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_trait.inl; path = libs/glm/glm/gtx/type_trait.inl; sourceTree = "<group>"; };
 		29A536D19D8DAE83BFDB5D11 /* _swizzle_func.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = _swizzle_func.hpp; path = libs/glm/glm/detail/_swizzle_func.hpp; sourceTree = "<group>"; };
 		2AC087012A636A3364B81D41 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLShader.cpp; path = src/Platform/OpenGl/OpenGLShader.cpp; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		761B4406CD80B6F87F8ED246 /* ImGuiBuild.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiBuild.cpp; path = src/ODVM/ImGui/ImGuiBuild.cpp; sourceTree = "<group>"; };
 		764CD3E33B022A55EF70D223 /* vector_double4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_double4_precision.hpp; path = libs/glm/glm/ext/vector_double4_precision.hpp; sourceTree = "<group>"; };
 		7672D5C5D2F9DA375B9C9405 /* matrix_major_storage.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_major_storage.inl; path = libs/glm/glm/gtx/matrix_major_storage.inl; sourceTree = "<group>"; };
-		7697D01044BB23C2CBC97650 /* libGlad.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Glad.xcodeproj"; path = libs/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
+		7697D01044BB23C2CBC97650 /* Glad.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Glad.xcodeproj; path = libs/Glad/Glad.xcodeproj; sourceTree = SOURCE_ROOT; };
 		775867C7EB40DF790D8E8E07 /* OpenGLContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = OpenGLContext.hpp; path = src/Platform/OpenGl/OpenGLContext.hpp; sourceTree = "<group>"; };
 		77FF01B90E2813ABCF8E6FF9 /* vector_float4_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float4_precision.hpp; path = libs/glm/glm/ext/vector_float4_precision.hpp; sourceTree = "<group>"; };
 		78019BC3D488A0355D2B5A03 /* quaternion_transform.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_transform.inl; path = libs/glm/glm/ext/quaternion_transform.inl; sourceTree = "<group>"; };
@@ -493,7 +493,7 @@
 		E16762144E8F708650226054 /* bitfield.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = bitfield.inl; path = libs/glm/glm/gtc/bitfield.inl; sourceTree = "<group>"; };
 		E199E4DD25E88A4F680FC31D /* extend.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = extend.hpp; path = libs/glm/glm/gtx/extend.hpp; sourceTree = "<group>"; };
 		E1A7A3F8EE32566A69172238 /* matrix_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_transform.hpp; path = libs/glm/glm/gtc/matrix_transform.hpp; sourceTree = "<group>"; };
-		E322A965E6937B9768001FA5 /* libODVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libODVM.a; path = libODVM.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E322A965E6937B9768001FA5 /* libODVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libODVM.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E382442650AA5298523D4266 /* type_ptr.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = type_ptr.hpp; path = libs/glm/glm/gtc/type_ptr.hpp; sourceTree = "<group>"; };
 		E397AA6557F1EF57D5D578A5 /* matrix_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix_common.hpp; path = libs/glm/glm/ext/matrix_common.hpp; sourceTree = "<group>"; };
 		E3A8C2233DA9D91504F0D063 /* fast_trigonometry.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fast_trigonometry.inl; path = libs/glm/glm/gtx/fast_trigonometry.inl; sourceTree = "<group>"; };
@@ -535,7 +535,7 @@
 		F6C0E1295347E59BDBEA9F69 /* quaternion_geometric.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_geometric.inl; path = libs/glm/glm/ext/quaternion_geometric.inl; sourceTree = "<group>"; };
 		F6DB87C9896951BBF241F609 /* geometric.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = geometric.hpp; path = libs/glm/glm/geometric.hpp; sourceTree = "<group>"; };
 		F722E989F0E4A5FB2AE3A7C9 /* mat2x3.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = mat2x3.hpp; path = libs/glm/glm/mat2x3.hpp; sourceTree = "<group>"; };
-		F86085996588940B671B83D9 /* libImGui.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ImGui.xcodeproj"; path = libs/ImGui/ImGui.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F86085996588940B671B83D9 /* ImGui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImGui.xcodeproj; path = libs/ImGui/ImGui.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F8A7C44DECA70DBF7192228D /* color_encoding.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = color_encoding.inl; path = libs/glm/glm/gtx/color_encoding.inl; sourceTree = "<group>"; };
 		F9471CB58F702EA750D68AF5 /* vector_float2_precision.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = vector_float2_precision.hpp; path = libs/glm/glm/ext/vector_float2_precision.hpp; sourceTree = "<group>"; };
 		F95D0B47535E22391AA51987 /* quaternion_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = quaternion_common.hpp; path = libs/glm/glm/ext/quaternion_common.hpp; sourceTree = "<group>"; };
@@ -1258,32 +1258,39 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "ODVM" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 7BF008F6ED36B7287B28FF36 /* ODVM */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
-					ProjectRef = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
+					ProductGroup = 8702C54ACF73A97C14127B8A /* Products */;
+					ProjectRef = 288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */;
 				},
 				{
 					ProductGroup = C7488D7AC0AE8EECB449EBBA /* Products */;
 					ProjectRef = 7697D01044BB23C2CBC97650 /* Glad.xcodeproj */;
 				},
 				{
-					ProductGroup = 3684523D5CAA81EFC3B1787D /* Products */;
-					ProjectRef = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
+					ProductGroup = 014014D2FAA61644EE417312 /* Products */;
+					ProjectRef = 11AD0618DFD059CA66DEAC58 /* GLFW.xcodeproj */;
 				},
 				{
-					ProductGroup = 8702C54ACF73A97C14127B8A /* Products */;
-					ProjectRef = 288C2FE0CA75CBD2C19CDE20 /* Discord.xcodeproj */;
+					ProductGroup = 3684523D5CAA81EFC3B1787D /* Products */;
+					ProjectRef = F86085996588940B671B83D9 /* ImGui.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				6DD868AB9C7EBC9DF5C016EB /* libODVM.a */,
+				6DD868AB9C7EBC9DF5C016EB /* ODVM */,
 			);
 		};
 /* End PBXProject section */
@@ -1390,9 +1397,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		21A1BF7A6A12A3ACAEB175BA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1461,21 +1465,9 @@
 				);
 				OBJROOT = "../bin-int/Dist-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Dist-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = (
-					src,
-					libs/spdlog/include,
-					libs/GLFW/include,
-					libs/Glad/include,
-					libs/ImGui,
-					libs/glm,
-					libs/stb,
-					libs/discord/cpp,
-					libs/Vulkan/latest/Include,
-				);
+				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb libs/discord/cpp libs/Vulkan/latest/Include";
 			};
 			name = Dist;
 		};
@@ -1510,21 +1502,9 @@
 				);
 				OBJROOT = "../bin-int/Release-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Release-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = (
-					src,
-					libs/spdlog/include,
-					libs/GLFW/include,
-					libs/Glad/include,
-					libs/ImGui,
-					libs/glm,
-					libs/stb,
-					libs/discord/cpp,
-					libs/Vulkan/latest/Include,
-				);
+				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb libs/discord/cpp libs/Vulkan/latest/Include";
 			};
 			name = Release;
 		};
@@ -1561,21 +1541,9 @@
 				);
 				OBJROOT = "../bin-int/Debug-macosx-x86_64/ODVM";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-lopengl32.lib",
-				);
+				OTHER_LDFLAGS = "-lopengl32.lib";
 				SYMROOT = "../bin/Debug-macosx-x86_64/ODVM";
-				USER_HEADER_SEARCH_PATHS = (
-					src,
-					libs/spdlog/include,
-					libs/GLFW/include,
-					libs/Glad/include,
-					libs/ImGui,
-					libs/glm,
-					libs/stb,
-					libs/discord/cpp,
-					libs/Vulkan/latest/Include,
-				);
+				USER_HEADER_SEARCH_PATHS = "src libs/spdlog/include libs/GLFW/include libs/Glad/include libs/ImGui libs/glm libs/stb libs/discord/cpp libs/Vulkan/latest/Include";
 			};
 			name = Debug;
 		};
@@ -1592,7 +1560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		75B0FCB418FC85E633CD52F4 /* Build configuration list for PBXNativeTarget "libODVM.a" */ = {
+		75B0FCB418FC85E633CD52F4 /* Build configuration list for PBXNativeTarget "ODVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21A1BF7A6A12A3ACAEB175BA /* Debug */,
@@ -1603,6 +1571,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-};
-rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }
