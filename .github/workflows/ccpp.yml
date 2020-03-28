@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: make premake executable
+      run: chmod +ux vendor/bin/premake5linux
     - name: configure
       run: vendor/bin/premake/premake5linux gmake2
     - name: make
