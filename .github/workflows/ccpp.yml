@@ -16,7 +16,7 @@ jobs:
       with:
         submodules: true
     - name: get dependancies
-      run: sudo apt install libxcursor-dev libxrandr-dev
+      run: sudo apt install libxcursor-dev libxrandr-dev libxinerama-dev
     - name: make premake executable
       run: chmod +x ./vendor/bin/premake/premake5linux
     - name: configure
