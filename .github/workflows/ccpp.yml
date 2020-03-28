@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: true
     - name: make premake executable
       run: chmod +x ./vendor/bin/premake/premake5linux
     - name: configure
