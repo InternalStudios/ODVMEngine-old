@@ -15,7 +15,7 @@ void Sandbox2D::OnAttach()
 	{
 		ODVM_PROFILE_SCOPE("Checkerboard");
 
-		m_Texture = ODVM::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_Texture = ODVM::Texture2D::Create("./assets/textures/Checkerboard.png");
 	}
 	
 	//m_TextureLogo = ODVM::Texture2D::Create("assets/textures/ChernoLogo.png");

@@ -51,6 +51,11 @@ project "ODVM"
 
     filter {}
 
+	defines
+	{
+		"GLFW_INCLUDE_NONE"
+	}
+
 	files
 	{
         "%{prj.name}/src/**.h",
@@ -96,7 +101,7 @@ project "ODVM"
 	filter "action:gmake"
 		links
 		{
-			"QuartzCore.framework"
+			
 		}
 
 	filter {}
@@ -134,6 +139,25 @@ project "ODVM"
 		{
 			"ODVM_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
+		}
+
+	filter "system:linux"	
+		systemversion "latest"
+		defines
+		{
+			"_GLFW_X11"
+		}
+		links
+		{
+			"dl",
+			"m",
+			"X11",
+			"Xinerama",
+			"Xi",
+			"Xcursor",
+			"pthread",
+			"Xrandr",
+			"rt"
 		}
 
     filter "configurations:Debug"
@@ -211,6 +235,25 @@ project "Sandbox"
 		{
 	        	"Cocoa.framework",
         		"IOKit.framework"
+		}
+
+		filter "system:linux"	
+		systemversion "latest"
+		defines
+		{
+			"_GLFW_X11"
+		}
+		links
+		{
+			"dl",
+			"m",
+			"X11",
+			"Xinerama",
+			"Xi",
+			"Xcursor",
+			"pthread",
+			"Xrandr",
+			"rt"
 		}
 
     filter "configurations:Debug"

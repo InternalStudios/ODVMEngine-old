@@ -18,8 +18,6 @@
 
 #include "ODVM/Core/Timesteps.hpp"
 
-#include "discord.h"
-
 namespace ODVM
 {
 	class Application

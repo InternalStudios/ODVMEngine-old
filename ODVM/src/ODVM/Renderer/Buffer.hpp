@@ -27,7 +27,7 @@ namespace ODVM
 		}
 
 		ODVM_CORE_ASSERT(false, "Unknown ShaderDataType!");
-		return NULL;										 
+		return 0;										 
 														 
 	}													 
 														 

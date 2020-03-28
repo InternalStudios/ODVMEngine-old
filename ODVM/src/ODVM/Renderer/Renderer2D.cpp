@@ -50,7 +50,7 @@ namespace ODVM
 		vertexBuffer->SetLayout(layout);
 		s_Data->QuadVA->AddVertexBuffer(vertexBuffer);
 
-		uint32_t indices[4] = { 0, 1, 2, 3 };
+		uint32_t indices[6] = { 0, 1, 2, 2, 3, 0 };
 		Ref<IndexBuffer> indexBuffer;
 		indexBuffer = IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		s_Data->QuadVA->SetIndexBuffer(indexBuffer);
@@ -59,7 +59,7 @@ namespace ODVM
 		uint32_t whiteTextureData = 0xffffffff;
 		s_Data->WhiteTexture->SetData(&whiteTextureData, sizeof(uint32_t));
 
-		s_Data->TS = Shader::Create("assets/shaders/Texture.glsl");
+		s_Data->TS = Shader::Create("./assets/shaders/Texture.glsl");
 		s_Data->TS->Bind();
 		s_Data->TS->SetInt("u_Texture", 0);
 	}
