@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ODVM" Database="" SWTLW="No">
+  <Project Name="Discord" Path="ODVM/libs/Discord/Discord.project"/>
+  <Project Name="GLFW" Path="ODVM/libs/GLFW/GLFW.project"/>
+  <Project Name="Glad" Path="ODVM/libs/Glad/Glad.project"/>
+  <Project Name="ImGui" Path="ODVM/libs/ImGui/ImGui.project"/>
+  <Project Name="ODVM" Path="ODVM/ODVM.project"/>
+  <Project Name="Sandbox" Path="Sandbox/Sandbox.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="Discord" ConfigName="Debug"/>
+      <Project Name="GLFW" ConfigName="Debug"/>
+      <Project Name="Glad" ConfigName="Debug"/>
+      <Project Name="ImGui" ConfigName="Debug"/>
+      <Project Name="ODVM" ConfigName="Debug"/>
+      <Project Name="Sandbox" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="Discord" ConfigName="Release"/>
+      <Project Name="GLFW" ConfigName="Release"/>
+      <Project Name="Glad" ConfigName="Release"/>
+      <Project Name="ImGui" ConfigName="Release"/>
+      <Project Name="ODVM" ConfigName="Release"/>
+      <Project Name="Sandbox" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Dist" Selected="yes">
+      <Project Name="Discord" ConfigName="Dist"/>
+      <Project Name="GLFW" ConfigName="Dist"/>
+      <Project Name="Glad" ConfigName="Dist"/>
+      <Project Name="ImGui" ConfigName="Dist"/>
+      <Project Name="ODVM" ConfigName="Dist"/>
+      <Project Name="Sandbox" ConfigName="Dist"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

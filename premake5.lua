@@ -23,7 +23,7 @@ IncludeDir["vulkan"] = "ODVM/libs/Vulkan/latest"
 
 include "ODVM/libs/GLFW"
 include "ODVM/libs/Glad"
-include "ODVM/libs/imgui"
+include "ODVM/libs/ImGui"
 include "ODVM/libs/Discord"
 
 project "ODVM"
