@@ -1,1 +1,9 @@
-﻿  Sandbox.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
+﻿  Application.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Sandbox2D.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  VulkanLayer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Generating Code...
+  LINK : ..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe not found or not built by the last incremental link; performing full link
+  Sandbox.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe

@@ -63,7 +63,7 @@ namespace ODVM
 
 		uint32_t* quadIndices = new uint32_t[s_Data.MaxIndices];
 		
-		uint32_t offset;
+		uint32_t offset = 0;
 		for(uint32_t i = 0; i < s_Data.MaxIndices; i+=6)
 		{
 			quadIndices[i+0] = offset + 0;

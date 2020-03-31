@@ -1,7 +1,68 @@
-﻿  VulkanContext.cpp
-  VulkanRendererAPI.cpp
-  WindowsWindow.cpp
+﻿  stb_image.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  CameraControllers.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Application.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Layer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  LayerStack.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Log.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Platform.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  ImGuiBuild.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(155,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(156,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(90): message : see declaration of 'strcat'
+D:\Dev\Game-Engine\ODVMEngine\ODVM\libs\ImGui\examples\imgui_impl_opengl3.cpp(458,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+  ImGuiLayer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Buffer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Cameras.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  RenderCommand.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Renderer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Renderer2D.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Renderer\Renderer2D.cpp(116,21): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+  RendererAPI.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Shader.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Texture.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  VertexArray.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  OpenGLBuffer.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  OpenGLContext.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   Generating Code...
-D:\Dev\Game-Engine\ODVMEngine\ODVM\src\Platform\Vulkan\VulkanContext.cpp(101): warning C4715: 'ODVM::VulkanContext::checkValidationLayerSupport': not all control paths return a value
-vulkan-1.lib(vulkan-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Renderer\Renderer2D.cpp(69): warning C4700: uninitialized local variable 'offset' used
+  Compiling...
+  OpenGLRendererAPI.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  OpenGLShader.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  OpenGLTexture.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  OpenGLVertexArray.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Windows.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  WindowsInput.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  WindowsWindow.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  odvmpch.cpp
+D:\Dev\Game-Engine\ODVMEngine\ODVM\src\ODVM\Debug\Instrumentor.hpp(115,1): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Generating Code...
   ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Debug-windows-x86_64\ODVM\ODVM.lib
