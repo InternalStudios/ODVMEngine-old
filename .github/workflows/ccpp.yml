@@ -1,0 +1,26 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: get dependancies
+      run: sudo apt install libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev
+    - name: make premake executable
+      run: chmod +x ./vendor/bin/premake/premake5linux
+    - name: configure
+      run: vendor/bin/premake/premake5linux gmake2
+    - name: make
+      run: make
+
