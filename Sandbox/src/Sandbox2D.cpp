@@ -50,7 +50,15 @@ void Sandbox2D::OnUpdate(ODVM::Timestep ts)
 	//ODVM::Renderer2D::DrawQuad({0.5f, 0.2f}, glm::vec2(1.0f, 1.0f), m_TextureLogo);
 	//ODVM::Renderer2D::DrawQuad({0.0f, 0.0f, -0.1f}, glm::vec2(20.0f, 20.0f), m_Texture, 20.0f);
 	//ODVM::Renderer2D::DrawRotatedQuad({-0.5f, 0.2f}, glm::vec2(1.0f, 2.0f), glm::radians(45.0f), m_Color);
-	ODVM::Renderer2D::DrawQuad({0.0f, 0.0f, 0.0f}, {1.0f, 1.0f}, m_Color);
+	for(int x = 0; x <=100; x++)
+	{
+		for (int y = 0; y<=100; y++)
+		{
+			glm::vec3 pos = { x * 0.11f, y * 0.11f, 0.0f};
+			ODVM::Renderer2D::DrawQuad(pos, {0.1f, 0.1f}, m_Color);
+		}
+	}
+
 	ODVM::Renderer2D::EndScene();
 }
 

@@ -124,11 +124,11 @@ namespace ODVM
 	};
 }
 
-#define ODVM_PROFILE 0
+#define ODVM_PROFILE 1
 #if ODVM_PROFILE
 #define ODVM_PROFILE_BEGIN_SESSION(name, filepath) ::ODVM::Instrumentor::Get().BeginSession(name, filepath)
 #define ODVM_PROFILE_END_SESSION() ::ODVM::Instrumentor::Get().EndSession()
-#define ODVM_PROFILE_FUNCTION() ODVM_PROFILE_SCOPE(__FUNCSIG__)
+#define ODVM_PROFILE_FUNCTION() ODVM_PROFILE_SCOPE(__func__)
 #define ODVM_PROFILE_SCOPE(name) ::ODVM::InstrumentationTimer time##__LINE__(name);
 #else
 #define ODVM_PROFILE_BEGIN_SESSION(name, filepath)
