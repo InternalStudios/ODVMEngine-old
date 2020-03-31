@@ -48,9 +48,10 @@
         <IncludePath Value="../ODVM/libs/GLFW/include"/>
         <IncludePath Value="../ODVM/libs/discord/cpp"/>
         <IncludePath Value="../ODVM/libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_DEBUG"/>
       </Compiler>
-      <Linker Options="-m64;../bin/Debug-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Debug-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Debug-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Debug-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Debug-linux-x86_64/ImGui/libImGui.a" Required="yes"/>
+      <Linker Options="-m64;../bin/Debug-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Debug-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Debug-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Debug-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Debug-linux-x86_64/ImGui/libImGui.a;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Debug-linux-x86_64/Sandbox/Sandbox" IntermediateDirectory="../bin-int/Debug-linux-x86_64/Sandbox" Command="../bin/Debug-linux-x86_64/Sandbox/Sandbox" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
@@ -94,9 +95,10 @@
         <IncludePath Value="../ODVM/libs/GLFW/include"/>
         <IncludePath Value="../ODVM/libs/discord/cpp"/>
         <IncludePath Value="../ODVM/libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_DIST"/>
       </Compiler>
-      <Linker Options="-m64;../bin/Dist-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Dist-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Dist-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Dist-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Dist-linux-x86_64/ImGui/libImGui.a" Required="yes"/>
+      <Linker Options="-m64;../bin/Dist-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Dist-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Dist-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Dist-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Dist-linux-x86_64/ImGui/libImGui.a;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Dist-linux-x86_64/Sandbox/Sandbox" IntermediateDirectory="../bin-int/Dist-linux-x86_64/Sandbox" Command="../bin/Dist-linux-x86_64/Sandbox/Sandbox" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
@@ -140,9 +142,10 @@
         <IncludePath Value="../ODVM/libs/GLFW/include"/>
         <IncludePath Value="../ODVM/libs/discord/cpp"/>
         <IncludePath Value="../ODVM/libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_RELEASE"/>
       </Compiler>
-      <Linker Options="-m64;../bin/Release-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Release-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Release-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Release-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Release-linux-x86_64/ImGui/libImGui.a" Required="yes"/>
+      <Linker Options="-m64;../bin/Release-linux-x86_64/ODVM/libODVM.a;../ODVM/libs/GLFW/bin/Release-linux-x86_64/GLFW/libGLFW.a;../ODVM/libs/Discord/bin/Release-linux-x86_64/Discord/libDiscord.a;../ODVM/libs/Glad/bin/Release-linux-x86_64/Glad/libGlad.a;../ODVM/libs/ImGui/bin/Release-linux-x86_64/ImGui/libImGui.a;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Release-linux-x86_64/Sandbox/Sandbox" IntermediateDirectory="../bin-int/Release-linux-x86_64/Sandbox" Command="../bin/Release-linux-x86_64/Sandbox/Sandbox" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>

@@ -15,3 +15,4 @@
 -I/home/sfulham/dev/ODVMEngine/ODVM/libs/discord/cpp
 -I/home/sfulham/dev/ODVMEngine/ODVM/libs/Vulkan/latest/Include
 -DODVM_DEBUG
+-D_GLFW_X11

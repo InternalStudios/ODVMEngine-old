@@ -529,9 +529,11 @@
         <IncludePath Value="libs/stb"/>
         <IncludePath Value="libs/discord/cpp"/>
         <IncludePath Value="libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="GLFW_INCLUDE_NONE"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_DEBUG"/>
       </Compiler>
-      <Linker Options="-m64;libs/GLFW/bin/Debug-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Debug-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Debug-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Debug-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib" Required="yes"/>
+      <Linker Options="-m64;libs/GLFW/bin/Debug-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Debug-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Debug-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Debug-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Debug-linux-x86_64/ODVM/libODVM.a" IntermediateDirectory="../bin-int/Debug-linux-x86_64/ODVM" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
@@ -577,9 +579,11 @@
         <IncludePath Value="libs/stb"/>
         <IncludePath Value="libs/discord/cpp"/>
         <IncludePath Value="libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="GLFW_INCLUDE_NONE"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_DIST"/>
       </Compiler>
-      <Linker Options="-m64;libs/GLFW/bin/Dist-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Dist-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Dist-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Dist-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib" Required="yes"/>
+      <Linker Options="-m64;libs/GLFW/bin/Dist-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Dist-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Dist-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Dist-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Dist-linux-x86_64/ODVM/libODVM.a" IntermediateDirectory="../bin-int/Dist-linux-x86_64/ODVM" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
@@ -625,9 +629,11 @@
         <IncludePath Value="libs/stb"/>
         <IncludePath Value="libs/discord/cpp"/>
         <IncludePath Value="libs/Vulkan/latest/Include"/>
+        <Preprocessor Value="GLFW_INCLUDE_NONE"/>
+        <Preprocessor Value="_GLFW_X11"/>
         <Preprocessor Value="ODVM_RELEASE"/>
       </Compiler>
-      <Linker Options="-m64;libs/GLFW/bin/Release-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Release-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Release-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Release-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib" Required="yes"/>
+      <Linker Options="-m64;libs/GLFW/bin/Release-linux-x86_64/GLFW/libGLFW.a;libs/Glad/bin/Release-linux-x86_64/Glad/libGlad.a;libs/ImGui/bin/Release-linux-x86_64/ImGui/libImGui.a;libs/Discord/bin/Release-linux-x86_64/Discord/libDiscord.a;-lopengl32.lib;-ldl;-lm;-lX11;-lXinerama;-lXi;-lXcursor;-lpthread;-lXrandr;-lrt" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../bin/Release-linux-x86_64/ODVM/libODVM.a" IntermediateDirectory="../bin-int/Release-linux-x86_64/ODVM" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>

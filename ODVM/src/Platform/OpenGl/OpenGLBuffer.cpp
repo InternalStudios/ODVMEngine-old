@@ -6,6 +6,17 @@
 namespace ODVM
 {
 	//--------------------------VERTEX BUFFER--------------------------
+    OpenGLVertexBuffer::OpenGLVertexBuffer(uint32_t size)
+    {
+        ODVM_PROFILE_FUNCTION();
+        #if defined(ODVM_PLATFORM_MACOS)
+            glGenBuffers(1, &m_RendererID);
+        #else
+            glCreateBuffers(1, &m_RendererID);
+        #endif
+		glBindBuffer(GL_ARRAY_BUFFER, m_RendererID);
+		glBufferData(GL_ARRAY_BUFFER, size, nullptr, GL_DYNAMIC_DRAW);
+    }
 	OpenGLVertexBuffer::OpenGLVertexBuffer(float* vertices, uint32_t size)
 	{
 		ODVM_PROFILE_FUNCTION();
@@ -37,6 +48,12 @@ namespace ODVM
 		ODVM_PROFILE_FUNCTION();
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
+	}
+	
+	void OpenGLVertexBuffer::SetData(const void* data, uint32_t size)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, m_RendererID);
+		glBufferSubData(GL_ARRAY_BUFFER, 0, size, data);
 	}
 
 	//--------------------------INDEX BUFFER--------------------------
@@ -76,4 +93,6 @@ namespace ODVM
 	}
 
 }
+
+
 
