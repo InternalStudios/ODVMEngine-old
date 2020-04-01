@@ -30,7 +30,7 @@
         ]
     },
     "dependencies": {
-        "vscode-languageclient": "~4.3.0"
+        "vscode-languageclient": "4.3.0"
     },
     "activationEvents": [
         "*"
