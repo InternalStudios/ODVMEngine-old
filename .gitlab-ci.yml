@@ -15,3 +15,4 @@ build:
   artifacts:
     paths:
       - bin/Debug-linux-x86_64/Sandbox/Sandbox
+      - bin/Debug-linux-x86_64/ODVM/libODVM.a
