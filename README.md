@@ -3,9 +3,22 @@ A game engine based on the Hazel Engine
 
 Join the discord server at https://discord.gg/8aHh4Fg
 
-# Status
+## Installation
+### Windows
 
-![C/C++ CI](https://github.com/Internal-Media-Group/ODVMEngine/workflows/C/C++%20CI/badge.svg)
+Run `GenProj.bat`
+Open the solution file in Visual Studio.
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Internal-Media-Group/ODVMEngine)](https://dependabot.com)
+### Linux
 
+Open a terminal in the repository directory and execute `vendor/bin/premake/premake5linux gmake2`
+Run `make`
+
+### MacOS
+
+Open a terminal in the repository directory and execute `vendor/bin/premake/premake5 gmake2`
+Run `make`
+
+## Examples
+
+The example is in the Sandbox directory.
