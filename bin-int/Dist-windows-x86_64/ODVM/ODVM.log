@@ -1,5 +1,0 @@
-﻿  OpenGLContext.cpp
-  WindowsWindow.cpp
-  Generating Code...
-vulkan-1.lib(vulkan-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
-  ODVM.vcxproj -> D:\Dev\Game-Engine\ODVMEngine\ODVM\..\bin\Dist-windows-x86_64\ODVM\ODVM.lib
