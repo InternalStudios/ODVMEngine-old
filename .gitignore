@@ -6,3 +6,15 @@
 
 bin/
 bin-int/
+
+**.xcworkspace/
+.vscode/
+.codelite/
+.build-debug/
+.github/
+
+Makefile
+**.workspace
+**.ini
+**.zip
+.DS_Store
