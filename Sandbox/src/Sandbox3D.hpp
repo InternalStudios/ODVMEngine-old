@@ -20,7 +20,8 @@ public:
 	virtual void OnEvent(ODVM::Event& event) override;
 
 private:
-	ODVM::Ref<ODVM::PerspectiveCamera> m_Camera;
+	ODVM::PerspectiveCameraController m_CameraController;
 
+	ODVM::Ref<ODVM::Texture2D> texture;
 	// Temp
 };

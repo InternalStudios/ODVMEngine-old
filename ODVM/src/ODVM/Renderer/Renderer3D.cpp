@@ -18,6 +18,10 @@ namespace ODVM
         Ref<IndexBuffer> CubeIB;
         Ref<VertexArray> CubeVA;
         Ref<Shader> TDShader;
+        Ref<Shader> TDTShader;
+        Ref<VertexBuffer> CubeTVB;
+        Ref<IndexBuffer> CubeTIB;
+        Ref<VertexArray> CubeTVA;
     };
 
     static Renderer3DData s_3DData;
@@ -29,7 +33,7 @@ namespace ODVM
         s_3DData.CubeVA = VertexArray::Create();
 
         float cubeVertices[36 * 3] = {
-            -0.5f, -0.5f, -0.5f,  
+            -0.5f, -0.5f, -0.5f, 
             0.5f, -0.5f, -0.5f,  
             0.5f,  0.5f, -0.5f,  
             0.5f,  0.5f, -0.5f,  
@@ -64,7 +68,7 @@ namespace ODVM
             0.5f,  0.5f,  0.5f,  
             0.5f,  0.5f,  0.5f,  
             -0.5f,  0.5f,  0.5f,  
-            -0.5f,  0.5f, -0.5f,  
+            -0.5f,  0.5f, -0.5f
         };
         
         s_3DData.CubeVB = VertexBuffer::Create(cubeVertices, sizeof(cubeVertices));
@@ -81,6 +85,68 @@ namespace ODVM
         s_3DData.CubeVA->SetIndexBuffer(s_3DData.CubeIB);
 
         s_3DData.TDShader = Shader::Create("assets/shaders/3D.glsl");
+
+        s_3DData.CubeTVA = VertexArray::Create();
+
+        float cubeTVertices[36 * 5] = {
+        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+         0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
+         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+
+        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+         0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+         0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+
+        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+         0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+         0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+         0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+         0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
+         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+
+        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
+        };
+        
+        s_3DData.CubeTVB = VertexBuffer::Create(cubeTVertices, sizeof(cubeTVertices));
+
+        BufferLayout Tlayout = {
+            {ShaderDataType::Float3, "a_Position"},
+            {ShaderDataType::Float2, "a_TextureCoords"}
+        };
+        
+        s_3DData.CubeTVB->SetLayout(Tlayout);
+        s_3DData.CubeTVA->AddVertexBuffer(s_3DData.CubeTVB);
+
+        uint32_t Tindices[36] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35};
+        s_3DData.CubeTIB = IndexBuffer::Create(Tindices, sizeof(Tindices) / sizeof(uint32_t));
+        s_3DData.CubeTVA->SetIndexBuffer(s_3DData.CubeTIB);
+
+        s_3DData.TDTShader = Shader::Create("assets/shaders/3DTS.glsl");
     }
 
     void Renderer3D::BeginScene(const PerspectiveCamera& camera)
@@ -88,6 +154,10 @@ namespace ODVM
         s_3DData.TDShader->Bind();
         s_3DData.TDShader->SetMat4("u_View", camera.GetViewMatrix());
         s_3DData.TDShader->SetMat4("u_Projection", camera.GetProjectionMatrix());
+
+        s_3DData.TDTShader->Bind();
+        s_3DData.TDTShader->SetMat4("u_View", camera.GetViewMatrix());
+        s_3DData.TDTShader->SetMat4("u_Projection", camera.GetProjectionMatrix());
 
     }
 
@@ -102,10 +172,25 @@ namespace ODVM
         s_3DData.TDShader->SetFloat4("u_Color", color);
         
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
         s_3DData.TDShader->SetMat4("u_Model", model);
 
-        RenderCommand::DrawIndexed(s_3DData.CubeVA);
+        RenderCommand::DrawIndexed(s_3DData.CubeVA, 36);
+        ODVM_CORE_INFO("{0} Vertices", s_3DData.CubeVA->GetIndexBuffer()->GetCount());
+    }
+
+    void Renderer3D::DrawCube(const glm::vec3& pos, const Ref<Texture2D> texture)
+    {
+        s_3DData.TDTShader->Bind();
+        texture->Bind();
+        s_3DData.TDTShader->SetInt("u_Texture", 0);
+        
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+
+        s_3DData.TDTShader->SetMat4("u_Model", model);
+
+        RenderCommand::DrawIndexed(s_3DData.CubeTVA, 36);
     }
 }

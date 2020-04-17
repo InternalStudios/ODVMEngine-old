@@ -27,14 +27,14 @@ namespace ODVM
 		ODVM_PROFILE_FUNCTION();
 
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), m_Position);
-		transform = glm::rotate(transform, glm::radians(m_Rotation.z), glm::vec3(0, 0, 1));
+		transform = glm::rotate(transform, glm::radians(m_Rotation.y), glm::vec3(0, 0, 1));
 
 		m_ViewMatrix = glm::inverse(transform);
 		m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 	}
 
 	PerspectiveCamera::PerspectiveCamera(float aspectRatio)
-		: m_ProjectionMatrix(glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f)), m_ViewMatrix(1.0f)
+		: m_ProjectionMatrix(glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f)), m_ViewMatrix(1.0f), m_Position(0.0f, 0.0f, 3.0f)
 	{
 		ODVM_PROFILE_FUNCTION();
 
@@ -47,7 +47,8 @@ namespace ODVM
 	{
 		ODVM_PROFILE_FUNCTION();
 
-		m_ProjectionMatrix = glm::ortho(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
+		m_ProjectionMatrix = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
+		//m_ProjectionMatrix = glm::ortho(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
 		m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 	}
 
@@ -55,11 +56,11 @@ namespace ODVM
 	{
 		ODVM_PROFILE_FUNCTION();
 
-		glm::mat4 transform = glm::translate(glm::mat4(1.0f), m_Position);
+		/*glm::mat4 transform = glm::translate(glm::mat4(1.0f), m_Position);
 		transform = glm::rotate(transform, glm::radians(m_Rotation.z), glm::vec3(0, 0, 1));
 
 		m_ViewMatrix = glm::inverse(transform);
-		m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
+		m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;*/
 	}
 
 }
