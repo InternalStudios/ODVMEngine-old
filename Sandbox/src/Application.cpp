@@ -8,7 +8,7 @@
 #include "imgui.h"
 
 #include "Sandbox2D.hpp"
-#include "VulkanLayer.hpp"
+#include "Sandbox3D.hpp"
 
 class ExampleLayer : public ODVM::Layer
 {
@@ -206,8 +206,8 @@ public:
 	Sandbox()
 	{
 		//PushLayer(new ExampleLayer());
-		PushLayer(new Sandbox2D());
-		//PushLayer(new VulkanLayer());
+		//PushLayer(new Sandbox2D());
+		PushLayer(new Sandbox3D());
 	}
 
 	~Sandbox()

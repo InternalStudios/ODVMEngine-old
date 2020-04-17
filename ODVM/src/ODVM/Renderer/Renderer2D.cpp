@@ -1,6 +1,8 @@
 #include "odvmpch.h"
 #include "Renderer2D.hpp"
 
+#include <vector>
+
 #include "ODVM/Renderer/Buffer.hpp"
 #include "ODVM/Renderer/VertexArray.hpp"
 #include "ODVM/Renderer/Shader.hpp"
@@ -26,6 +28,8 @@ namespace ODVM
 		const uint32_t MaxVertices = MaxQuads * 4;
 		const uint32_t MaxIndices = MaxQuads * 6;
 
+		static const uint32_t MaxTexSlots = 20;
+
 		Ref<VertexArray> QuadVA;
 		Ref<VertexBuffer> QuadVB;
 		Ref<Shader> TS;
@@ -35,6 +39,9 @@ namespace ODVM
 
 		QuadVertex* QuadVertexBufferBase = nullptr;
 		QuadVertex* QuadVertexBufferPtr = nullptr;
+
+		std::array<uint32_t, MaxTexSlots> TexSlots;
+		uint32_t TextureSlotIndex = 1; //0 = White
 	};
     
 
@@ -44,7 +51,6 @@ namespace ODVM
 	void Renderer2D::Init()
 	{
 		ODVM_PROFILE_FUNCTION();
-
 
 		s_Data.QuadVA = ODVM::VertexArray::Create();
 
@@ -105,6 +111,8 @@ namespace ODVM
 		s_Data.TS->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
 
 		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
+
+		s_Data.TextureSlotIndex = 1;
 
 		return true;
 	}
@@ -179,6 +187,35 @@ namespace ODVM
 	{
 		ODVM_PROFILE_FUNCTION();
 
+		constexpr glm::vec4 color = { 1.0f, 1.0f, 1.0f, 1.0f };
+		
+
+
+		s_Data.QuadVertexBufferPtr->Position = pos;
+		s_Data.QuadVertexBufferPtr->Color = color;
+		s_Data.QuadVertexBufferPtr->TexCoord = { 0.0f, 0.0f };
+		s_Data.QuadVertexBufferPtr++;
+		
+		s_Data.QuadVertexBufferPtr->Position = { pos.x + size.x, pos.y, 0.0f };
+		s_Data.QuadVertexBufferPtr->Color = color;
+		s_Data.QuadVertexBufferPtr->TexCoord = { 1.0f, 0.0f };
+		s_Data.QuadVertexBufferPtr++;
+		
+		s_Data.QuadVertexBufferPtr->Position = { pos.x + size.x, pos.y + size.y, 0.0f };
+		s_Data.QuadVertexBufferPtr->Color = color;
+		s_Data.QuadVertexBufferPtr->TexCoord = { 1.0f, 1.0f };
+		s_Data.QuadVertexBufferPtr++;
+		
+		s_Data.QuadVertexBufferPtr->Position = { pos.x, pos.y + size.y, 0.0f };
+		s_Data.QuadVertexBufferPtr->Color = color;
+		s_Data.QuadVertexBufferPtr->TexCoord = { 0.0f, 1.0f };
+		s_Data.QuadVertexBufferPtr++;
+		
+		s_Data.QuadIndexCount += 6;
+
+		#if OLD_PATH
+		ODVM_PROFILE_FUNCTION();
+
 		s_Data.TS->Bind();
 
 		texture->Bind();
@@ -195,7 +232,7 @@ namespace ODVM
 		s_Data.QuadVA->Bind();
 		RenderCommand::DrawIndexed(s_Data.QuadVA);
 
-
+		#endif
 	}
 
 	void Renderer2D::DrawRotatedQuad(const glm::vec2& pos, const glm::vec2& size, float rotation, const glm::vec4& color)

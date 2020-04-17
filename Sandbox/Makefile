@@ -79,6 +79,7 @@ OBJECTS :=
 
 OBJECTS += $(OBJDIR)/Application.o
 OBJECTS += $(OBJDIR)/Sandbox2D.o
+OBJECTS += $(OBJDIR)/Sandbox3D.o
 OBJECTS += $(OBJDIR)/VulkanLayer.o
 
 # Rules
@@ -145,6 +146,9 @@ $(OBJDIR)/Application.o: src/Application.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Sandbox2D.o: src/Sandbox2D.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Sandbox3D.o: src/Sandbox3D.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/VulkanLayer.o: src/VulkanLayer.cpp

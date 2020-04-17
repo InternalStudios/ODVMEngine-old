@@ -33,4 +33,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "ODVM/Renderer/Renderer3D.hpp"
+
 //#include <vulkan/vulkan.h>

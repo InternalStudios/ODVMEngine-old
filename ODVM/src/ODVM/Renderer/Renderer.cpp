@@ -3,6 +3,7 @@
 
 #include "RenderCommand.hpp"
 #include "Renderer2D.hpp"
+#include "Renderer3D.hpp"
 
 namespace ODVM
 {
@@ -15,6 +16,7 @@ namespace ODVM
 
 		RenderCommand::Init();
 		Renderer2D::Init();
+		Renderer3D::Init();
 	}
 
 	void Renderer::Shutdown()

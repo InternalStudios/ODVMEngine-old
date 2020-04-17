@@ -96,6 +96,7 @@ OBJECTS += $(OBJDIR)/Platform.o
 OBJECTS += $(OBJDIR)/RenderCommand.o
 OBJECTS += $(OBJDIR)/Renderer.o
 OBJECTS += $(OBJDIR)/Renderer2D.o
+OBJECTS += $(OBJDIR)/Renderer3D.o
 OBJECTS += $(OBJDIR)/RendererAPI.o
 OBJECTS += $(OBJDIR)/Shader.o
 OBJECTS += $(OBJDIR)/Texture.o
@@ -206,6 +207,9 @@ $(OBJDIR)/Renderer.o: src/ODVM/Renderer/Renderer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Renderer2D.o: src/ODVM/Renderer/Renderer2D.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Renderer3D.o: src/ODVM/Renderer/Renderer3D.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/RendererAPI.o: src/ODVM/Renderer/RendererAPI.cpp

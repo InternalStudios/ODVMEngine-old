@@ -104,14 +104,16 @@ project "ODVM"
 			
 		}
 
+	
 	filter {}
+
 
 	links
 	{
 		"GLFW",
 		"Glad",
-        	"ImGui",
-        	"opengl32.lib",
+        "ImGui",
+        "opengl32.lib",
 		"Discord"
 	}
 
