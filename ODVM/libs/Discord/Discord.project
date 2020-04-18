@@ -1,39 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="Discord" InternalType="Library" Version="11000">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="Discord" InternalType="Library">
+  <Plugins/>
   <Description/>
-  <VirtualDirectory Name="Discord">
-    <File Name="cpp/achievement_manager.cpp"/>
-    <File Name="cpp/achievement_manager.h"/>
-    <File Name="cpp/activity_manager.cpp"/>
-    <File Name="cpp/activity_manager.h"/>
-    <File Name="cpp/application_manager.cpp"/>
-    <File Name="cpp/application_manager.h"/>
-    <File Name="cpp/core.cpp"/>
-    <File Name="cpp/core.h"/>
-    <File Name="cpp/discord.h"/>
-    <File Name="cpp/event.h"/>
-    <File Name="cpp/ffi.h"/>
-    <File Name="cpp/image_manager.cpp"/>
-    <File Name="cpp/image_manager.h"/>
-    <File Name="cpp/lobby_manager.cpp"/>
-    <File Name="cpp/lobby_manager.h"/>
-    <File Name="cpp/network_manager.cpp"/>
-    <File Name="cpp/network_manager.h"/>
-    <File Name="cpp/overlay_manager.cpp"/>
-    <File Name="cpp/overlay_manager.h"/>
-    <File Name="cpp/relationship_manager.cpp"/>
-    <File Name="cpp/relationship_manager.h"/>
-    <File Name="cpp/storage_manager.cpp"/>
-    <File Name="cpp/storage_manager.h"/>
-    <File Name="cpp/store_manager.cpp"/>
-    <File Name="cpp/store_manager.h"/>
-    <File Name="cpp/types.cpp"/>
-    <File Name="cpp/types.h"/>
-    <File Name="cpp/user_manager.cpp"/>
-    <File Name="cpp/user_manager.h"/>
-    <File Name="cpp/voice_manager.cpp"/>
-    <File Name="cpp/voice_manager.h"/>
-  </VirtualDirectory>
+<VirtualDirectory Name="Discord">
+  <File Name="cpp/achievement_manager.cpp"/>
+  <File Name="cpp/achievement_manager.h"/>
+  <File Name="cpp/activity_manager.cpp"/>
+  <File Name="cpp/activity_manager.h"/>
+  <File Name="cpp/application_manager.cpp"/>
+  <File Name="cpp/application_manager.h"/>
+  <File Name="cpp/core.cpp"/>
+  <File Name="cpp/core.h"/>
+  <File Name="cpp/discord.h"/>
+  <File Name="cpp/event.h"/>
+  <File Name="cpp/ffi.h"/>
+  <File Name="cpp/image_manager.cpp"/>
+  <File Name="cpp/image_manager.h"/>
+  <File Name="cpp/lobby_manager.cpp"/>
+  <File Name="cpp/lobby_manager.h"/>
+  <File Name="cpp/network_manager.cpp"/>
+  <File Name="cpp/network_manager.h"/>
+  <File Name="cpp/overlay_manager.cpp"/>
+  <File Name="cpp/overlay_manager.h"/>
+  <File Name="cpp/relationship_manager.cpp"/>
+  <File Name="cpp/relationship_manager.h"/>
+  <File Name="cpp/storage_manager.cpp"/>
+  <File Name="cpp/storage_manager.h"/>
+  <File Name="cpp/store_manager.cpp"/>
+  <File Name="cpp/store_manager.h"/>
+  <File Name="cpp/types.cpp"/>
+  <File Name="cpp/types.h"/>
+  <File Name="cpp/user_manager.cpp"/>
+  <File Name="cpp/user_manager.h"/>
+  <File Name="cpp/voice_manager.cpp"/>
+  <File Name="cpp/voice_manager.h"/>
+</VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
   <Dependencies Name="Dist"/>
@@ -48,11 +49,12 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-m64;-g;-std=c++17" C_Options="-m64;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
-      <Linker Options="-m64" Required="yes"/>
+      <Compiler Options="-m64;-g;-std=c++17" C_Options="-m64;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="bin/Debug-linux-x86_64/Discord/libDiscord.a" IntermediateDirectory="bin-int/Debug-linux-x86_64/Discord" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
-      <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
@@ -61,55 +63,7 @@
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
-      <PreBuild/>
-      <PostBuild/>
-      <CustomBuild Enabled="no">
-        <RebuildCommand/>
-        <CleanCommand/>
-        <BuildCommand/>
-        <PreprocessFileCommand/>
-        <SingleFileCommand/>
-        <MakefileGenerationCommand/>
-        <ThirdPartyToolName/>
-        <WorkingDirectory/>
-      </CustomBuild>
-      <AdditionalRules>
-        <CustomPostBuild/>
-        <CustomPreBuild/>
-      </AdditionalRules>
-      <Completion EnableCpp11="no" EnableCpp14="no">
-        <ClangCmpFlagsC/>
-        <ClangCmpFlags/>
-        <ClangPP/>
-        <SearchPaths/>
-      </Completion>
-    </Configuration>
-    <Configuration Name="Dist" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-m64;-std=c++17" C_Options="-m64" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
-      <Linker Options="-m64" Required="yes"/>
-      <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="bin/Dist-linux-x86_64/Discord/libDiscord.a" IntermediateDirectory="bin-int/Dist-linux-x86_64/Discord" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
-      <BuildSystem Name="Default"/>
-      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
-        <![CDATA[]]>
-      </Environment>
-      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
-        <DebuggerSearchPaths/>
-        <PostConnectCommands/>
-        <StartupCommands/>
-      </Debugger>
-      <PreBuild/>
-      <PostBuild/>
-      <CustomBuild Enabled="no">
-        <RebuildCommand/>
-        <CleanCommand/>
-        <BuildCommand/>
-        <PreprocessFileCommand/>
-        <SingleFileCommand/>
-        <MakefileGenerationCommand/>
-        <ThirdPartyToolName/>
-        <WorkingDirectory/>
-      </CustomBuild>
+      <CustomBuild Enabled="no"/>
       <AdditionalRules>
         <CustomPostBuild/>
         <CustomPreBuild/>
@@ -122,11 +76,12 @@
       </Completion>
     </Configuration>
     <Configuration Name="Release" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-m64;-O2;-std=c++17" C_Options="-m64;-O2" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
-      <Linker Options="-m64" Required="yes"/>
+      <Compiler Options="-m64;-O2;-std=c++17" C_Options="-m64;-O2" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="bin/Release-linux-x86_64/Discord/libDiscord.a" IntermediateDirectory="bin-int/Release-linux-x86_64/Discord" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
-      <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
@@ -135,18 +90,34 @@
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
-      <PreBuild/>
-      <PostBuild/>
-      <CustomBuild Enabled="no">
-        <RebuildCommand/>
-        <CleanCommand/>
-        <BuildCommand/>
-        <PreprocessFileCommand/>
-        <SingleFileCommand/>
-        <MakefileGenerationCommand/>
-        <ThirdPartyToolName/>
-        <WorkingDirectory/>
-      </CustomBuild>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Dist" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-std=c++17" C_Options="-m64" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="bin/Dist-linux-x86_64/Discord/libDiscord.a" IntermediateDirectory="bin-int/Dist-linux-x86_64/Discord" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
       <AdditionalRules>
         <CustomPostBuild/>
         <CustomPreBuild/>

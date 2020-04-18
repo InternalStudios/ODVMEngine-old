@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=Sandbox
 ConfigurationName      :=Debug
-WorkspacePath          :=/home/sfulham/dev/ODVMEngine
-ProjectPath            :=/home/sfulham/dev/ODVMEngine/Sandbox
+WorkspacePath          :=/home/sfulham/odvmengine/ODVMEngine
+ProjectPath            :=/home/sfulham/odvmengine/ODVMEngine/Sandbox
 IntermediateDirectory  :=../bin-int/Debug-linux-x86_64/Sandbox
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Shaun Fulham
-Date                   :=31/03/20
+User                   :=
+Date                   :=04/18/20
 CodeLitePath           :=/home/sfulham/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Sandbox3D.cpp$(ObjectSuffix) 
 
 
 
@@ -118,23 +118,37 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix): src/VulkanLayer.cpp
+$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix): src/VulkanLayer.cpp $(IntermediateDirectory)/src_VulkanLayer.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/odvmengine/ODVMEngine/Sandbox/src/VulkanLayer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_VulkanLayer.cpp$(DependSuffix): src/VulkanLayer.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_VulkanLayer.cpp$(DependSuffix) -MM src/VulkanLayer.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/dev/ODVMEngine/Sandbox/src/VulkanLayer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_VulkanLayer.cpp$(ObjectSuffix) $(IncludePath)
+
 $(IntermediateDirectory)/src_VulkanLayer.cpp$(PreprocessSuffix): src/VulkanLayer.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_VulkanLayer.cpp$(PreprocessSuffix) src/VulkanLayer.cpp
 
-$(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix): src/Application.cpp
+$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix): src/Sandbox2D.cpp $(IntermediateDirectory)/src_Sandbox2D.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/odvmengine/ODVMEngine/Sandbox/src/Sandbox2D.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Sandbox2D.cpp$(DependSuffix): src/Sandbox2D.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Sandbox2D.cpp$(DependSuffix) -MM src/Sandbox2D.cpp
+
+$(IntermediateDirectory)/src_Sandbox2D.cpp$(PreprocessSuffix): src/Sandbox2D.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Sandbox2D.cpp$(PreprocessSuffix) src/Sandbox2D.cpp
+
+$(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix): src/Application.cpp $(IntermediateDirectory)/src_Application.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/odvmengine/ODVMEngine/Sandbox/src/Application.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Application.cpp$(DependSuffix): src/Application.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Application.cpp$(DependSuffix) -MM src/Application.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/dev/ODVMEngine/Sandbox/src/Application.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Application.cpp$(ObjectSuffix) $(IncludePath)
+
 $(IntermediateDirectory)/src_Application.cpp$(PreprocessSuffix): src/Application.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Application.cpp$(PreprocessSuffix) src/Application.cpp
 
-$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix): src/Sandbox2D.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Sandbox2D.cpp$(DependSuffix) -MM src/Sandbox2D.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/dev/ODVMEngine/Sandbox/src/Sandbox2D.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Sandbox2D.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Sandbox2D.cpp$(PreprocessSuffix): src/Sandbox2D.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Sandbox2D.cpp$(PreprocessSuffix) src/Sandbox2D.cpp
+$(IntermediateDirectory)/src_Sandbox3D.cpp$(ObjectSuffix): src/Sandbox3D.cpp $(IntermediateDirectory)/src_Sandbox3D.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/sfulham/odvmengine/ODVMEngine/Sandbox/src/Sandbox3D.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Sandbox3D.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Sandbox3D.cpp$(DependSuffix): src/Sandbox3D.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Sandbox3D.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Sandbox3D.cpp$(DependSuffix) -MM src/Sandbox3D.cpp
+
+$(IntermediateDirectory)/src_Sandbox3D.cpp$(PreprocessSuffix): src/Sandbox3D.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Sandbox3D.cpp$(PreprocessSuffix) src/Sandbox3D.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

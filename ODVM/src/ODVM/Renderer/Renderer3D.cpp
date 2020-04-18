@@ -204,31 +204,30 @@ namespace ODVM
 
         bool loadout = loader.LoadFile(path);
         
-        uint32_t size = loader.LoadedVertices.size() * 3;
-
+        uint64_t size = loader.LoadedIndices.size() * 3;
         float vertices[size];
 
-        int offset = 0;
-        uint32_t indices[size];
+        uint32_t offset = 0;
+        uint32_t indices[loader.LoadedIndices.size()];
+        for(int i = 0; i < loader.LoadedIndices.size(); i++)
+        {
+            indices[i] = loader.LoadedIndices[i];
+        }
         if(loadout)
         {
-            for (int i = 0; i < loader.LoadedVertices.size(); i++)
+            for(int i = 0; i < loader.LoadedMeshes.size(); i++)
             {
-                for(int j = 0; j < 3; j++)
+                
+                objl::Mesh mesh = loader.LoadedMeshes[i];
+                
+                for(int j = 0; j < mesh.Vertices.size(); j++)
                 {
-                    switch(j)
-                    {
-                        case 0: 
-                            vertices[j + offset] = loader.LoadedVertices[i].Position.X;
-                            indices[j + offset] = j + offset;
-                        case 1:
-                            vertices[j + offset] = loader.LoadedVertices[i].Position.Y;
-                            indices[j + offset] = j + offset;
-                        case 2:
-                            vertices[j + offset] = loader.LoadedVertices[i].Position.Z;
-                            indices[j + offset] = j + offset;
-                            offset += 3;
-                    }
+                    vertices[offset] = mesh.Vertices[j].Position.X;
+                    offset++;
+                    vertices[offset] = mesh.Vertices[j].Position.Y;
+                    offset++;
+                    vertices[offset] = mesh.Vertices[j].Position.Z;
+                    offset++;
                 }
             }
         }

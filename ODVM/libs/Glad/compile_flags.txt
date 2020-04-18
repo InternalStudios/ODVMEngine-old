@@ -1,10 +1,8 @@
--I/usr/include/c++/9
--I/usr/include/x86_64-linux-gnu/c++/9
--I/usr/include/c++/9/backward
--I/usr/lib/gcc/x86_64-linux-gnu/9/include
+-I/usr/include/c++/9.3.0
+-I/usr/include/c++/9.3.0/x86_64-pc-linux-gnu
+-I/usr/include/c++/9.3.0/backward
 -I/usr/local/include
--I/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed
--I/usr/include/x86_64-linux-gnu
+-I/usr/lib/clang/9.0.1/include
 -I/usr/include
--I/home/sfulham/dev/ODVMEngine/ODVM/libs/Glad
--I/home/sfulham/dev/ODVMEngine/ODVM/libs/Glad/include
+-I/home/sfulham/odvmengine/ODVMEngine/ODVM/libs/Glad
+-I/home/sfulham/odvmengine/ODVMEngine/ODVM/libs/Glad/include

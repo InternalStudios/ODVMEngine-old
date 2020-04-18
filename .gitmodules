@@ -13,3 +13,6 @@
 [submodule "ODVM/libs/GLFW"]
 	path = ODVM/libs/GLFW
 	url = https://github.com/Internal-Media-Group/glfw
+[submodule "ODVM/libs/assimp"]
+	path = ODVM/libs/assimp
+	url = https://github.com/assimp/assimp
