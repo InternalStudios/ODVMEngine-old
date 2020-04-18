@@ -202,7 +202,7 @@ namespace ODVM
     {
         s_3DData.TDShader->Bind();
 
-        bool loaded;
+        bool loaded = false;
         objl::Loader loader;
 
         for(auto i = s_3DData.loadedModels.begin(); i != s_3DData.loadedModels.end(); i++)
@@ -213,6 +213,7 @@ namespace ODVM
                 loader = i->second;
             }
         }
+
         if(!loaded)
         {
             bool loadout = loader.LoadFile(path);

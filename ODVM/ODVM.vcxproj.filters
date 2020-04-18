@@ -1281,6 +1281,9 @@
     <ClInclude Include="src\ODVM\Renderer\Renderer2D.hpp">
       <Filter>src\ODVM\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\ODVM\Renderer\Renderer3D.hpp">
+      <Filter>src\ODVM\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\ODVM\Renderer\RendererAPI.hpp">
       <Filter>src\ODVM\Renderer</Filter>
     </ClInclude>
@@ -1365,6 +1368,9 @@
       <Filter>src\ODVM\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ODVM\Renderer\Renderer2D.cpp">
+      <Filter>src\ODVM\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ODVM\Renderer\Renderer3D.cpp">
       <Filter>src\ODVM\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\ODVM\Renderer\RendererAPI.cpp">
