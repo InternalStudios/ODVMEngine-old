@@ -1,11 +1,13 @@
  #include "Sandbox3D.hpp"
 
+#include <string>
 
 
 Sandbox3D::Sandbox3D()
 	: Layer("Sandbox2D"), m_CameraController((float)ODVM::Application::Get().GetWindow().GetWidth() / (float)ODVM::Application::Get().GetWindow().GetHeight())
 {
 	texture = ODVM::Texture2D::Create("assets/textures/Checkerboard.png");
+	path = "assets/textures/cube.obj";
 }
 
 void Sandbox3D::OnAttach()
@@ -44,6 +46,7 @@ void Sandbox3D::OnUpdate(ODVM::Timestep ts)
 	//ODVM::Renderer2D::DrawRotatedQuad({-0.5f, 0.2f}, glm::vec2(1.0f, 2.0f), glm::radians(45.0f), m_Color);
     ODVM::Renderer3D::DrawCube({0.0f, 0.0f, 0.0f}, texture);
     //ODVM::Renderer3D::DrawCube({10.0f, 0.0f, 0.0f}, {1.0f, 1.0f, 0.0f, 1.0f});
+	//ODVM::Renderer3D::DrawModel({10.0f, 0.0f, 0.0f}, path, {1.0f, 1.0f, 1.0f, 1.0f});
 	ODVM::Renderer3D::EndScene();
 }
 

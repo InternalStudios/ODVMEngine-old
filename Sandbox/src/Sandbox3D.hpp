@@ -23,5 +23,7 @@ private:
 	ODVM::PerspectiveCameraController m_CameraController;
 
 	ODVM::Ref<ODVM::Texture2D> texture;
+	std::string path;
+
 	// Temp
 };

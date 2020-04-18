@@ -10,6 +10,8 @@
 
 #include "RenderCommand.hpp"
 
+#include "OBJ_Loader.h"
+
 namespace ODVM
 {
     struct Renderer3DData
@@ -192,5 +194,60 @@ namespace ODVM
         s_3DData.TDTShader->SetMat4("u_Model", model);
 
         RenderCommand::DrawIndexed(s_3DData.CubeTVA, 36);
+    }
+
+    void Renderer3D::DrawModel(const glm::vec3& pos, std::string& path, const glm::vec4& color)
+    {
+        s_3DData.TDShader->Bind();
+
+        objl::Loader loader;
+
+        bool loadout = loader.LoadFile(path);
+        
+        uint32_t size = loader.LoadedVertices.size() * 3;
+
+        float vertices[size];
+
+        int offset = 0;
+        uint32_t indices[size];
+        if(loadout)
+        {
+            for (int i = 0; i < loader.LoadedVertices.size(); i++)
+            {
+                for(int j = 0; j < 3; j++)
+                {
+                    switch(j)
+                    {
+                        case 0: 
+                            vertices[j + offset] = loader.LoadedVertices[i].Position.X;
+                            indices[j + offset] = j + offset;
+                        case 1:
+                            vertices[j + offset] = loader.LoadedVertices[i].Position.Y;
+                            indices[j + offset] = j + offset;
+                        case 2:
+                            vertices[j + offset] = loader.LoadedVertices[i].Position.Z;
+                            indices[j + offset] = j + offset;
+                            offset += 3;
+                    }
+                }
+            }
+        }
+
+        Ref<VertexArray> mVA = VertexArray::Create();
+        Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, sizeof(vertices));
+        BufferLayout layout = {
+            {ShaderDataType::Float3, "a_Position"}
+        };
+        mVB->SetLayout(layout);
+        mVA->AddVertexBuffer(mVB);
+        Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
+        mVA->SetIndexBuffer(mIB);
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        s_3DData.TDTShader->SetMat4("u_Model", model);
+
+        s_3DData.TDShader->SetFloat4("u_Color", color);
+
+        RenderCommand::DrawIndexed(mVA);
     }
 }

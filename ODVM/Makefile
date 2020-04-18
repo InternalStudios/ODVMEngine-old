@@ -19,7 +19,7 @@ endif
 # #############################################
 
 RESCOMP = windres
-INCLUDES += -Isrc -Ilibs/spdlog/include -Ilibs/GLFW/include -Ilibs/Glad/include -Ilibs/ImGui -Ilibs/glm -Ilibs/stb -Ilibs/discord/cpp -Ilibs/Vulkan/latest/Include
+INCLUDES += -Isrc -Ilibs/spdlog/include -Ilibs/GLFW/include -Ilibs/Glad/include -Ilibs/ImGui -Ilibs/glm -Ilibs/objloader -Ilibs/stb -Ilibs/discord/cpp
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)

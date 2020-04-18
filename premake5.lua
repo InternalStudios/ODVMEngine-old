@@ -75,9 +75,9 @@ project "ODVM"
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
         "%{IncludeDir.glm}",
+		"ODVM/libs/objloader",
         "%{IncludeDir.stb}",
-	"%{IncludeDir.discord}/cpp",
-        "%{IncludeDir.vulkan}/Include"
+	"%{IncludeDir.discord}/cpp"
 	}
 
 	filter "action:xcode4"
