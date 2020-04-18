@@ -220,33 +220,62 @@ namespace ODVM
             loaded = loadout;
             s_3DData.loadedModels.emplace(path, loader);
         }
-        uint64_t size = loader.LoadedIndices.size() * 3;
-        float* vertices = new float[size];
+        uint64_t size = 0;
+        float* vertices;
 
         uint32_t offset = 0;
-        uint32_t* indices = new uint32_t[loader.LoadedIndices.size()];
+        uint32_t* indices;
+        uint32_t indicesSize = 0;
         if(loaded)
         {
             for(int i = 0; i < loader.LoadedMeshes.size(); i++)
             {
                 
                 objl::Mesh mesh = loader.LoadedMeshes[i];
-                
+                size += mesh.Vertices.size() * 3;
                 for(int j = 0; j < mesh.Vertices.size(); j++)
                 {
-                    vertices[offset] = mesh.Vertices[j].Position.X;
-                    offset++;
-                    vertices[offset] = mesh.Vertices[j].Position.Y;
-                    offset++;
-                    vertices[offset] = mesh.Vertices[j].Position.Z;
-                    offset++;
+                    //vertices[offset] = mesh.Vertices[j].Position.X;
+                    //offset++;
+                    //vertices[offset] = mesh.Vertices[j].Position.Y;
+                    //offset++;
+                    //vertices[offset] = mesh.Vertices[j].Position.Z;
+                    //offset++;
                     //ODVM_CORE_INFO("{0}", vertices[offset]);
                 }
                 for(int j = 0; j < mesh.Indices.size(); j++)
                 {
-                    indices[j] = mesh.Indices[j];
+                    //indices[j] = mesh.Indices[j];
                 }
+                indicesSize += mesh.Indices.size();
             }
+        }
+
+
+
+        indices = new uint32_t[indicesSize];
+        vertices = new float[size];
+
+        for (int i = 0; i < loader.LoadedMeshes.size(); i++)
+        {
+
+            objl::Mesh mesh = loader.LoadedMeshes[i];
+            //size += mesh.Vertices.size() * 3;
+            for (int j = 0; j < mesh.Vertices.size(); j++)
+            {
+                vertices[offset] = mesh.Vertices[j].Position.X;
+                offset++;
+                vertices[offset] = mesh.Vertices[j].Position.Y;
+                offset++;
+                vertices[offset] = mesh.Vertices[j].Position.Z;
+                offset++;
+                //ODVM_CORE_INFO("{0}", vertices[offset]);
+            }
+            for (int j = 0; j < mesh.Indices.size(); j++)
+            {
+                indices[j] = mesh.Indices[j];
+            }
+            //indicesSize += mesh.Indices.size();
         }
         
         Ref<VertexArray> mVA = VertexArray::Create();
