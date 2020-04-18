@@ -89,8 +89,8 @@ namespace ODVM
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
-		//glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
+		glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+		m_Data.m_Focused = true;
 
 		//Set GLFW callbacks
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
@@ -118,6 +118,11 @@ namespace ODVM
 				{
 				case GLFW_PRESS:
 				{
+					if(key == GLFW_KEY_ESCAPE && data.m_Focused == true)
+					{
+						glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+						data.m_Focused = false;
+					}
 					KeyPressedEvent event(key, 0);
 					data.EventCallback(event);
 					break;
@@ -152,6 +157,11 @@ namespace ODVM
 				{
 				case GLFW_PRESS:
 				{
+					if(button == GLFW_MOUSE_BUTTON_1 && data.m_Focused == false)
+					{
+						glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+						data.m_Focused = true;
+					}
 					MouseButtonPressedEvent event(button);
 					data.EventCallback(event);
 					break;

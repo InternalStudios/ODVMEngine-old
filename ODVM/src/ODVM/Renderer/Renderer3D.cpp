@@ -10,6 +10,8 @@
 
 #include "RenderCommand.hpp"
 
+#include <unordered_map>
+
 #include "OBJ_Loader.h"
 
 namespace ODVM
@@ -24,6 +26,7 @@ namespace ODVM
         Ref<VertexBuffer> CubeTVB;
         Ref<IndexBuffer> CubeTIB;
         Ref<VertexArray> CubeTVA;
+        std::unordered_map<std::string, objl::Loader> loadedModels;
     };
 
     static Renderer3DData s_3DData;
@@ -179,7 +182,6 @@ namespace ODVM
         s_3DData.TDShader->SetMat4("u_Model", model);
 
         RenderCommand::DrawIndexed(s_3DData.CubeVA, 36);
-        ODVM_CORE_INFO("{0} Vertices", s_3DData.CubeVA->GetIndexBuffer()->GetCount());
     }
 
     void Renderer3D::DrawCube(const glm::vec3& pos, const Ref<Texture2D> texture)
@@ -200,20 +202,33 @@ namespace ODVM
     {
         s_3DData.TDShader->Bind();
 
+        bool loaded;
         objl::Loader loader;
 
-        bool loadout = loader.LoadFile(path);
-        
+        for(auto i = s_3DData.loadedModels.begin(); i != s_3DData.loadedModels.end(); i++)
+        {
+            loaded = i->first == path;
+            if(loaded)
+            {
+                loader = i->second;
+            }
+        }
+        if(!loaded)
+        {
+            bool loadout = loader.LoadFile(path);
+            loaded = loadout;
+            s_3DData.loadedModels.emplace(path, loader);
+        }
         uint64_t size = loader.LoadedIndices.size() * 3;
-        float vertices[size];
+        float* vertices = new float[size];
 
         uint32_t offset = 0;
-        uint32_t indices[loader.LoadedIndices.size()];
+        uint32_t* indices = new uint32_t[loader.LoadedIndices.size()];
         for(int i = 0; i < loader.LoadedIndices.size(); i++)
         {
             indices[i] = loader.LoadedIndices[i];
         }
-        if(loadout)
+        if(loaded)
         {
             for(int i = 0; i < loader.LoadedMeshes.size(); i++)
             {
@@ -228,10 +243,11 @@ namespace ODVM
                     offset++;
                     vertices[offset] = mesh.Vertices[j].Position.Z;
                     offset++;
+                    //ODVM_CORE_INFO("{0}", vertices[offset]);
                 }
             }
         }
-
+        
         Ref<VertexArray> mVA = VertexArray::Create();
         Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, sizeof(vertices));
         BufferLayout layout = {
@@ -242,7 +258,7 @@ namespace ODVM
         Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
         mVA->SetIndexBuffer(mIB);
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        model = glm::translate(glm::mat4(1.0f), pos);
         s_3DData.TDTShader->SetMat4("u_Model", model);
 
         s_3DData.TDShader->SetFloat4("u_Color", color);
