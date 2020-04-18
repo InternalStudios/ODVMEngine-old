@@ -224,10 +224,6 @@ namespace ODVM
 
         uint32_t offset = 0;
         uint32_t* indices = new uint32_t[loader.LoadedIndices.size()];
-        for(int i = 0; i < loader.LoadedIndices.size(); i++)
-        {
-            indices[i] = loader.LoadedIndices[i];
-        }
         if(loaded)
         {
             for(int i = 0; i < loader.LoadedMeshes.size(); i++)
@@ -245,20 +241,24 @@ namespace ODVM
                     offset++;
                     //ODVM_CORE_INFO("{0}", vertices[offset]);
                 }
+                for(int j = 0; j < mesh.Indices.size(); j++)
+                {
+                    indices[j] = mesh.Indices[j];
+                }
             }
         }
         
         Ref<VertexArray> mVA = VertexArray::Create();
-        Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, sizeof(vertices));
+        Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, sizeof(*vertices));
         BufferLayout layout = {
             {ShaderDataType::Float3, "a_Position"}
         };
         mVB->SetLayout(layout);
         mVA->AddVertexBuffer(mVB);
-        Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
+        Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, sizeof(*indices) / sizeof(uint32_t));
         mVA->SetIndexBuffer(mIB);
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(glm::mat4(1.0f), pos);
+        model = glm::translate(model, pos);
         s_3DData.TDTShader->SetMat4("u_Model", model);
 
         s_3DData.TDShader->SetFloat4("u_Color", color);
