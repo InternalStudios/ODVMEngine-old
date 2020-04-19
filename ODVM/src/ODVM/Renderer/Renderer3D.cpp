@@ -279,19 +279,24 @@ namespace ODVM
         }
         
         Ref<VertexArray> mVA = VertexArray::Create();
-        Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, sizeof(*vertices));
+        mVA->Bind();
+        Ref<VertexBuffer> mVB = VertexBuffer::Create(vertices, size * sizeof(float));
+        mVB->Bind();
         BufferLayout layout = {
             {ShaderDataType::Float3, "a_Position"}
         };
         mVB->SetLayout(layout);
+
         mVA->AddVertexBuffer(mVB);
-        Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, sizeof(*indices) / sizeof(uint32_t));
+        Ref<IndexBuffer> mIB = IndexBuffer::Create(indices, indicesSize);
+        mIB->Bind();
         mVA->SetIndexBuffer(mIB);
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, pos);
-        s_3DData.TDTShader->SetMat4("u_Model", model);
+        s_3DData.TDShader->SetMat4("u_Model", model);
 
         s_3DData.TDShader->SetFloat4("u_Color", color);
+
 
         RenderCommand::DrawIndexed(mVA);
     }
